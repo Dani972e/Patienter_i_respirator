@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Patienter_i_respirator</string>
+    <string name="title_activity_communication">CommunicationActivity</string>
 </resources>
