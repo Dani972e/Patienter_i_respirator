@@ -5,17 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton home_btn;
+    private ImageView home_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        ImageButton home_btn = (ImageButton) findViewById(R.id.home_btn);
+        ImageView home_btn = (ImageView) findViewById(R.id.home_btn);
         home_btn.setOnClickListener(this);
     }
 

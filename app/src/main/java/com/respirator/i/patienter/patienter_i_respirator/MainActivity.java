@@ -5,21 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton game_btn;
-    private ImageButton communication_btn;
-    private ImageButton call_btn;
+    private ImageView game_btn;
+    private ImageView communication_btn;
+    private ImageView call_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton game_btn = (ImageButton) findViewById(R.id.game_btn);
-        ImageButton communication_btn = (ImageButton) findViewById(R.id.communication_btn);
-        ImageButton call_btn = (ImageButton) findViewById(R.id.call_btn);
+        ImageView game_btn = (ImageView) findViewById(R.id.game_btn);
+        ImageView communication_btn = (ImageView) findViewById(R.id.communication_btn);
+        ImageView call_btn = (ImageView) findViewById(R.id.call_btn);
 
         game_btn.setOnClickListener(this);
         communication_btn.setOnClickListener(this);

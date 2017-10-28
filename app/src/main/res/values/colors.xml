@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
     <color name="backgroundColor">#E6E6E6</color>
     <color name="white">#FFFFFF</color>
-    <color name="grey">#585858</color>
+    <color name="grey">#696969</color>
+    <color name="darkGrey">#383838</color>
     <color name="blue">#2D7D9A</color>
     <color name="darkBlue">#18485A</color>
     <color name="orange">#FF8C00</color>

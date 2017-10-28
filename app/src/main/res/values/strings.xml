@@ -1,4 +1,69 @@
 <resources>
     <string name="app_name">Patienter_i_respirator</string>
     <string name="title_activity_communication">CommunicationActivity</string>
+
+
+    //Dansk
+    <string name="kald">Kald</string>
+    <string name="tastatur">Tastatur</string>
+    <string name="kommunikation">Kommunikation</string>
+    <string name="lyd">Lyd</string>
+    <string name="skriftstørrelse">Skriftstørrelse</string>
+    <string name="spil">Spil</string>
+    <string name="sprog">Sprog</string>
+    <string name="tilbage">Tilbage</string>
+    <string name="startside">Startside</string>
+    <string name="hovedstyring">Hovedstyring</string>
+    <string name="touch">Touch</string>
+    <string name="svar">Svar</string>
+    <string name="hvSpørgsmål">Hvad, hvorfor, hvornår, hvor ...</string>
+    <string name="jegVilGerne">Jeg vil gerne ...</string>
+    <string name="jeg">Jeg ...</string>
+    <string name="smerte">Smerte</string>
+    <string name="jegVedIkke">Jeg ved ikke</string>
+    <string name="tak">Tak</string>
+    <string name="senere">Senere</string>
+    <string name="jegErGlad">Jeg er glad</string>
+    <string name="jegErTilpas">Jeg er tilpas</string>
+    <string name="jegErTræt">Jeg er træt</string>
+    <string name="jegErFrustreret">Jeg er frustreret</string>
+    <string name="jegErBange">Jeg er bange</string>
+    <string name="jegErBekymret">Jeg er bekymret</string>
+    <string name="jegKederMig">Jeg keder mig</string>
+    <string name="jegKanIkkeFåLuft">Jeg kan ikke få luft</string>
+    <string name="jegErTørstig">Jeg er tørstig</string>
+    <string name="jegErVarm">Jeg er varm</string>
+    <string name="jegErKold">Jeg er kold</string>
+    <string name="jegErØm">Jeg er øm</string>
+    <string name="jegVilGerneHaveSmertestillende">Jeg vil gerne have smertestillende</string>
+    <string name="jegVilGerneSuges">Jeg vil gerne suges</string>
+    <string name="jegVilGerneHaveLuft">Jeg vil gerne have luft</string>
+    <string name="jegVilGerneIkkeSeFjernsyn">Jeg vil gerne/ikke se fjernsyn</string>
+    <string name="jegVilGerneHaveTændtSlukketLys">Jeg vil gerne have tændt/slukket lys</string>
+    <string name="jegVilGerneHaveRo">Jeg vil gerne have ro</string>
+    <string name="jegVilGerneSiddeIStolen">Jeg vil gerne sidde i stolen</string>
+    <string name="jegVilGerneLiggeISengen">Jeg vil gerne ligge i sengen</string>
+    <string name="jegVilGerneVendes">Jeg vil gerne vendes</string>
+    <string name="jegVilGernePåTur">Jeg vil gerne på tur</string>
+    <string name="jegVilGerneHaveBesøg">Jeg vil gerne have besøg</string>
+    <string name="jegVilGernePåToilettet">Jeg vil gerne på toilettet</string>
+    <string name="hvadErKlokken">Hvad er klokken?</string>
+    <string name="hvadGørI">Hvad gør I?</string>
+    <string name="hvadSagdeDu">Hvad sagde du?</string>
+    <string name="hvadFejlerJeg">Hvad fejler jeg?</string>
+    <string name="hvadSkalDerSkeIDag">Hvad skal der ske i dag?</string>
+    <string name="hvorforErJegHer">Hvorfor er jeg her?</string>
+    <string name="hvornårKanJegDrikke">Hvornår kan jeg drikke?</string>
+    <string name="hvornårErDerStuegang">Hvornår er der stuegang?</string>
+    <string name="hvornårSkalJegTilUndersøgelse">Hvornår skal jeg til undersøgelse??</string>
+    <string name="hvorErJeg">Hvor er jeg?</string>
+    <string name="hvorLængeHarJegLiggetHer">Hvor længe har jeg ligget her?</string>
+    <string name="huskespil">Huskespil</string>
+    <string name="krydsOgBolle">Kryds og bolle</string>
+    <string name="puslespil">Puslespil</string>
+    <string name="popBalloner">Pop Balloner</string>
+    <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
+    <string name="vælgEtSpil">Vælg et spil</string>
+
+
 </resources>
