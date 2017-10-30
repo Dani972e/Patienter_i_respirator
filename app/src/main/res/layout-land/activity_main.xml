@@ -75,7 +75,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/smerte_btn"
         app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/kald" />
+        app:srcCompat="@drawable/call" />
 
     <TextView
         android:id="@+id/call_view"
