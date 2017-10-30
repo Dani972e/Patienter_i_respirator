@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/mineSvar_btn"
+        android:id="@+id/answer_btn"
         android:layout_width="250dp"
         android:layout_height="112dp"
         android:layout_marginLeft="10dp"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/ic_svar" />
 
     <ImageView
-        android:id="@+id/jeg..._btn"
+        android:id="@+id/i_btn"
         android:layout_width="250dp"
         android:layout_height="112dp"
         android:layout_marginLeft="10dp"
@@ -41,12 +41,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mineSvar_btn"
+        app:layout_constraintTop_toBottomOf="@+id/answer_btn"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_jeg" />
 
     <ImageView
-        android:id="@+id/jegVilGerne_btn"
+        android:id="@+id/iWantTo_btn"
         android:layout_width="250dp"
         android:layout_height="112dp"
         android:layout_marginLeft="10dp"
@@ -60,12 +60,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jeg..._btn"
+        app:layout_constraintTop_toBottomOf="@+id/i_btn"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_jeg" />
 
     <ImageView
-        android:id="@+id/hvSpørgsmål_btn"
+        android:id="@+id/wsQuestions_btn"
         android:layout_width="250dp"
         android:layout_height="112dp"
         android:layout_marginLeft="10dp"
@@ -78,12 +78,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jegVilGerne_btn"
+        app:layout_constraintTop_toBottomOf="@+id/iWantTo_btn"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_question" />
 
     <ImageView
-        android:id="@+id/smerte_btn"
+        android:id="@+id/pain_btn"
         android:layout_width="250dp"
         android:layout_height="112dp"
         android:layout_marginLeft="10dp"
@@ -96,7 +96,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hvSpørgsmål_btn"
+        app:layout_constraintTop_toBottomOf="@+id/wsQuestions_btn"
         app:srcCompat="@drawable/ic_pain" />
 
     <ImageView
@@ -177,7 +177,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/mineSvar_view"
+        android:id="@+id/answer_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -188,34 +188,33 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/mineSvar_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/answer_btn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toLeftOf="@+id/mineSvar_btn"
-        app:layout_constraintRight_toRightOf="@+id/mineSvar_btn"
-        app:layout_constraintTop_toTopOf="@+id/mineSvar_btn"
+        app:layout_constraintLeft_toLeftOf="@+id/answer_btn"
+        app:layout_constraintRight_toRightOf="@+id/answer_btn"
+        app:layout_constraintTop_toTopOf="@+id/answer_btn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/jeg_view"
+        android:id="@+id/i_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/jeg"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/jeg..._btn"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="@+id/jeg..._btn"
-        app:layout_constraintRight_toRightOf="@+id/jeg..._btn"
-        app:layout_constraintTop_toTopOf="@+id/jeg..._btn"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/i_btn"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/i_btn"
+        app:layout_constraintTop_toTopOf="@+id/i_btn"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/i_btn"
+        android:layout_marginBottom="8dp"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/jegVilGerne_view"
+        android:id="@+id/iWantTo_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -226,14 +225,14 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/jegVilGerne_btn"
-        app:layout_constraintLeft_toLeftOf="@+id/jegVilGerne_btn"
-        app:layout_constraintRight_toRightOf="@+id/jegVilGerne_btn"
-        app:layout_constraintTop_toTopOf="@+id/jegVilGerne_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/iWantTo_btn"
+        app:layout_constraintLeft_toLeftOf="@+id/iWantTo_btn"
+        app:layout_constraintRight_toRightOf="@+id/iWantTo_btn"
+        app:layout_constraintTop_toTopOf="@+id/iWantTo_btn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/hvSpørgsmål_view"
+        android:id="@+id/wsQuestion_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -245,14 +244,14 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/hvSpørgsmål_btn"
-        app:layout_constraintLeft_toLeftOf="@+id/hvSpørgsmål_btn"
-        app:layout_constraintRight_toRightOf="@+id/hvSpørgsmål_btn"
-        app:layout_constraintTop_toTopOf="@+id/hvSpørgsmål_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/wsQuestions_btn"
+        app:layout_constraintLeft_toLeftOf="@+id/wsQuestions_btn"
+        app:layout_constraintRight_toRightOf="@+id/wsQuestions_btn"
+        app:layout_constraintTop_toTopOf="@+id/wsQuestions_btn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/smerte_view"
+        android:id="@+id/pain_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -263,10 +262,10 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/smerte_btn"
-        app:layout_constraintLeft_toLeftOf="@+id/smerte_btn"
-        app:layout_constraintRight_toRightOf="@+id/smerte_btn"
-        app:layout_constraintTop_toTopOf="@+id/smerte_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/pain_btn"
+        app:layout_constraintLeft_toLeftOf="@+id/pain_btn"
+        app:layout_constraintRight_toRightOf="@+id/pain_btn"
+        app:layout_constraintTop_toTopOf="@+id/pain_btn"
         app:layout_constraintVertical_bias="1.0" />
 
     <android.support.constraint.Guideline
