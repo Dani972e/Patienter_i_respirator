@@ -102,7 +102,7 @@
     <ImageView
         android:id="@+id/home_btn"
         android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_height="112dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -116,6 +116,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_home" />
+
+    <ImageView
+        android:id="@+id/keyboard_btn"
+        android:layout_width="110dp"
+        android:layout_height="112dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@color/blue"
+        android:paddingBottom="20dp"
+        android:scaleType="center"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81"
+        app:srcCompat="@drawable/ic_keyboard" />
+
+    <TextView
+        android:id="@+id/keyboard_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginRight="10dp"
+        android:text="@string/tastatur"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/keyboard_btn"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintTop_toTopOf="@+id/keyboard_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/keyboard_btn"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/keyboard_btn"
+        app:layout_constraintHorizontal_bias="0.55" />
 
     <TextView
         android:id="@+id/home_view"
