@@ -65,7 +65,7 @@
         app:srcCompat="@drawable/ic_puzzle" />
 
     <ImageView
-        android:id="@+id/tictactoe_btn"
+        android:id="@+id/ticTacToe_btn"
         android:layout_width="350dp"
         android:layout_height="230dp"
         android:layout_marginLeft="8dp"
@@ -149,10 +149,10 @@
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/tictactoe_btn"
-        app:layout_constraintLeft_toLeftOf="@+id/tictactoe_btn"
-        app:layout_constraintRight_toRightOf="@+id/tictactoe_btn"
-        app:layout_constraintTop_toTopOf="@+id/tictactoe_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/ticTacToe_btn"
+        app:layout_constraintLeft_toLeftOf="@+id/ticTacToe_btn"
+        app:layout_constraintRight_toRightOf="@+id/ticTacToe_btn"
+        app:layout_constraintTop_toTopOf="@+id/ticTacToe_btn"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
