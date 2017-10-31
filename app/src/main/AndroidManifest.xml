@@ -22,7 +22,8 @@
         <activity android:name=".TicTacToeActivity" />
         <activity android:name=".PuzzleActivity" />
         <activity android:name=".MemoryGameActivity" />
-        <activity android:name=".PopBalloonsActivity"></activity>
+        <activity android:name=".PopBalloonsActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

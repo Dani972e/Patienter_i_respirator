@@ -65,6 +65,9 @@
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
     <string name="vælgEtSpil">Vælg et spil</string>
     <string name="mineSvar">Mine svar</string>
+    <string name="settingsView">Vælg en kategori i venstre side</string>
+    <string name="inputmetode">Indputmetode</string>
+    <string name="gendan">Gendan</string>
 
     //Engelsk
 
