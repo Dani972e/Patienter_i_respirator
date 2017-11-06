@@ -125,7 +125,6 @@
         android:layout_height="112dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="16dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/blue"
         android:paddingBottom="20sp"
@@ -144,13 +143,12 @@
         android:id="@+id/keyboard_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/tastatur"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/keyboard_btn"
-        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintLeft_toLeftOf="@+id/keyboard_btn"
         app:layout_constraintRight_toRightOf="@+id/keyboard_btn"
         app:layout_constraintTop_toTopOf="@+id/keyboard_btn"
@@ -162,10 +160,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/startside"
         android:textColor="@color/white"
@@ -270,19 +266,22 @@
         app:layout_constraintTop_toTopOf="@+id/pain_btn"
         app:layout_constraintVertical_bias="1.0" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.015625" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+    <TextView
+        android:id="@+id/communication_view"
+        android:layout_width="711dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/CategoryView"
+        android:textColor="@color/blue"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iWantTo_btn"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,9 +1,11 @@
 package com.respirator.i.patienter.patienter_i_respirator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Switch;
 
 public class CommunicationActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,7 +39,10 @@ public class CommunicationActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.answer_btn:
 
+        }
 
     }
 }
