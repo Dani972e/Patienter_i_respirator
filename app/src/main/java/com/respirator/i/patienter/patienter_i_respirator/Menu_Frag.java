@@ -41,10 +41,13 @@ public class Menu_Frag extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v == game_btn) {
-            getFragmentManager().beginTransaction().setCustomAnimations(R.anim.pop_in, R.anim.pop_in, R.anim.pop_in, R.anim.pop_in)
+            getFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_left)
                     .replace(R.id.fragment_container, new Game_Frag())
                     .addToBackStack(null)
                     .commit();
+            // setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_left)
+            // setCustomAnimations(R.anim.pop_in, R.anim.pop_out, R.anim.pop_in, R.anim.pop_out)
         }
 
     }
