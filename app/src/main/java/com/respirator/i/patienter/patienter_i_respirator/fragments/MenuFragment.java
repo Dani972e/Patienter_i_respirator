@@ -13,9 +13,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class MenuFragment extends Fragment implements View.OnClickListener {
 
-    private ImageView game_btn;
-    private ImageView communication_btn;
-    private ImageView settings_btn;
+    private ImageView game_btn, communication_btn, settings_btn;
     private ViewGroup menu;
 
     @Nullable

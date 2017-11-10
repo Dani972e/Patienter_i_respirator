@@ -13,10 +13,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class GameFragment extends Fragment implements View.OnClickListener {
 
-    private ImageView balloon_btn;
-    private ImageView memory_game_btn;
-    private ImageView ticTacToe_btn;
-    private ImageView puzzle_btn;
+    private ImageView balloon_btn, memory_game_btn, ticTacToe_btn, puzzle_btn;
     private ViewGroup menu;
 
     @Nullable
@@ -25,10 +22,10 @@ public class GameFragment extends Fragment implements View.OnClickListener {
 
         menu = (ViewGroup) inflater.inflate(R.layout.game_fragment, container, false);
 
-        ImageView balloon_btn = (ImageView) menu.findViewById(R.id.balloon_btn);
-        ImageView memory_game_btn = (ImageView) menu.findViewById(R.id.memoryGame_btn);
-        ImageView ticTacToe_btn = (ImageView) menu.findViewById(R.id.ticTacToe_btn);
-        ImageView puzzle_btn = (ImageView) menu.findViewById(R.id.puzzle_btn);
+        balloon_btn = menu.findViewById(R.id.balloon_btn);
+        memory_game_btn = menu.findViewById(R.id.memoryGame_btn);
+        ticTacToe_btn = menu.findViewById(R.id.ticTacToe_btn);
+        puzzle_btn = menu.findViewById(R.id.puzzle_btn);
 
 
         balloon_btn.setOnClickListener(this);
@@ -36,9 +33,7 @@ public class GameFragment extends Fragment implements View.OnClickListener {
         ticTacToe_btn.setOnClickListener(this);
         puzzle_btn.setOnClickListener(this);
 
-
         return menu;
-
 
     }
 
