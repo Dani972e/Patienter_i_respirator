@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/answer_btn"
         android:layout_width="250dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -30,7 +30,7 @@
     <ImageView
         android:id="@+id/i_btn"
         android:layout_width="250dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -49,7 +49,7 @@
     <ImageView
         android:id="@+id/iWantTo_btn"
         android:layout_width="250dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -68,7 +68,7 @@
     <ImageView
         android:id="@+id/wsQuestions_btn"
         android:layout_width="250dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -86,14 +86,12 @@
     <ImageView
         android:id="@+id/pain_btn"
         android:layout_width="250dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/blue"
         android:paddingBottom="25dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
         android:scaleType="center"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -104,7 +102,7 @@
     <ImageView
         android:id="@+id/home_btn"
         android:layout_width="110dp"
-        android:layout_height="112dp"
+        android:layout_height="116dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -122,9 +120,9 @@
     <ImageView
         android:id="@+id/keyboard_btn"
         android:layout_width="110dp"
-        android:layout_height="112dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="116dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="514dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/blue"
         android:paddingBottom="20sp"
@@ -136,7 +134,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_keyboard" />
 
     <TextView
@@ -149,10 +147,11 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/keyboard_btn"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintLeft_toLeftOf="@+id/keyboard_btn"
         app:layout_constraintRight_toRightOf="@+id/keyboard_btn"
         app:layout_constraintTop_toTopOf="@+id/keyboard_btn"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.987"
         app:layout_goneMarginRight="10dp" />
 
     <TextView
@@ -278,10 +277,10 @@
         android:textColor="@color/blue"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/keyboard_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iWantTo_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/home_view" />
 
 
 </android.support.constraint.ConstraintLayout>

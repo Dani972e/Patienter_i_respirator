@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/call_btn"
         android:layout_width="1300dp"
-        android:layout_height="110dp"
+        android:layout_height="112dp"
         android:layout_marginTop="8dp"
         android:background="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"

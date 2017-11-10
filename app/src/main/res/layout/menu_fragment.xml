@@ -15,7 +15,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_rounded"
-        android:padding="30dp"
+        android:tint="@color/white"
+        android:paddingBottom="50dp"
+        android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -34,7 +36,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/blue"
-        android:padding="50dp"
+        android:paddingBottom="30dp"
+        android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -78,13 +81,13 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/game_btn"
         app:layout_constraintTop_toTopOf="@+id/game_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.98" />
 
     <TextView
         android:id="@+id/communication_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="7dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -97,6 +100,6 @@
         app:layout_constraintEnd_toEndOf="@+id/communication_btn"
         app:layout_constraintStart_toStartOf="@+id/communication_btn"
         app:layout_constraintTop_toTopOf="@+id/communication_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.98" />
 
 </android.support.constraint.ConstraintLayout>

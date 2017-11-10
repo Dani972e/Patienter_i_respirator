@@ -16,7 +16,7 @@
     <string name="hovedstyring">Hovedstyring</string>
     <string name="touch">Touch</string>
     <string name="svar">Svar</string>
-    <string name="hvSpørgsmål">Hvad, hvorfor,\n hvornår, hvor ...</string>
+    <string name="hvSpørgsmål">Hvad, hvorfor,\nhvornår, hvor ...</string>
     <string name="jegVilGerne">Jeg vil gerne ...</string>
     <string name="jeg">Jeg ...</string>
     <string name="smerte">Smerte</string>
