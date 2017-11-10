@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MenuFragment;
 
@@ -25,9 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
 
-        ImageView call_btn = (ImageView) findViewById(R.id.call_btn);
 
-
+        call_btn = (ImageView) findViewById(R.id.call_btn);
         call_btn.setOnClickListener(this);
 
 
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent call_main = new Intent(this, CallActivity.class);
                 startActivity(call_main);
                 break;
-
         }
 
     }
