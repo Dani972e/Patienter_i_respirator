@@ -1,5 +1,6 @@
 package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.activities.SettingsActivity;
 
 
 public class MenuFragment extends Fragment implements View.OnClickListener {
@@ -41,7 +43,10 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
             case R.id.communication_btn:
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CommFragment()).addToBackStack(null).commit();
                 break;
-
+            case R.id.settings_btn:
+                Intent settingsMenu = new Intent(getActivity(), SettingsActivity.class);
+                startActivity(settingsMenu);
+                break;
 
 
         }
