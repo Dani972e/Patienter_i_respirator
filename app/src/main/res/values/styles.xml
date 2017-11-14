@@ -1,16 +1,14 @@
 <resources>
     <!-- Customize your theme here. -->
-    <style name="MyTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:windowFullscreen">true</item>
 
 
     </style>
 
     <style name="MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    
-
-
     <style name="MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

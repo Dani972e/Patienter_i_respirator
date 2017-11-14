@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/input_btn"
         android:layout_width="250dp"
-        android:layout_height="133dp"
+        android:layout_height="138dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -27,7 +27,7 @@
     <ImageView
         android:id="@+id/sound_btn"
         android:layout_width="250dp"
-        android:layout_height="133dp"
+        android:layout_height="138dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -46,7 +46,7 @@
     <ImageView
         android:id="@+id/fontsize_btn"
         android:layout_width="250dp"
-        android:layout_height="133dp"
+        android:layout_height="139dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -65,7 +65,7 @@
     <ImageView
         android:id="@+id/language_btn"
         android:layout_width="250dp"
-        android:layout_height="133dp"
+        android:layout_height="139dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
@@ -84,7 +84,7 @@
     <ImageView
         android:id="@+id/reset_btn"
         android:layout_width="250dp"
-        android:layout_height="133dp"
+        android:layout_height="138dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded"
