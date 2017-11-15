@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.InputFragment;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,11 +19,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
-
-
-        if (savedInstanceState == null) {
-
-        }
 
         indput_btn = (ImageView) findViewById(R.id.input_btn);
         sound_btn = (ImageView) findViewById(R.id.sound_btn);
