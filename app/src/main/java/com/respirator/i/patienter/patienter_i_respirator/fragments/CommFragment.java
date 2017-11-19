@@ -41,6 +41,7 @@ public class CommFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.answer_btn:
 
+
         }
 
     }
