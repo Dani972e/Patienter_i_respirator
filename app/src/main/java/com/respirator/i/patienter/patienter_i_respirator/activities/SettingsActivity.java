@@ -1,9 +1,6 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,11 +9,11 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn;
+    private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn, call_btn;
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 

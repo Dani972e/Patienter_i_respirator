@@ -12,11 +12,14 @@
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CallActivity"></activity>
-        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.CallActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.CommActivity" />
+        <activity android:name=".activities.GameActivity"></activity>
     </application>
 
 </manifest>

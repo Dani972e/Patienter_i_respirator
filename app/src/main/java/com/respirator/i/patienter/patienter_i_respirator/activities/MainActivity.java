@@ -1,35 +1,34 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.MenuFragment;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView call_btn;
+    private ImageView call_btn, game_btn, communication_btn, settings_btn;
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
         call_btn = (ImageView) findViewById(R.id.call_btn);
+        game_btn = (ImageView) findViewById(R.id.game_btn);
+        communication_btn = (ImageView) findViewById(R.id.communication_btn);
+        settings_btn = (ImageView) findViewById(R.id.settings_btn);
+
         call_btn.setOnClickListener(this);
+        game_btn.setOnClickListener(this);
+        communication_btn.setOnClickListener(this);
+        settings_btn.setOnClickListener(this);
 
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new MenuFragment()).commit();
-        }
 
     }
 
@@ -37,9 +36,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.call_btn:
-                Intent call_main = new Intent(this, CallActivity.class);
-                startActivity(call_main);
+                Intent call_act = new Intent(this, CallActivity.class);
+                startActivity(call_act);
                 break;
+            case R.id.communication_btn:
+                Intent comm_act = new Intent(this, CommActivity.class);
+                startActivity(comm_act);
+                break;
+            case R.id.settings_btn:
+                Intent settings_act = new Intent(this, SettingsActivity.class);
+                startActivity(settings_act);
+                break;
+            case R.id.game_btn:
+                Intent game_act = new Intent(this, GameActivity.class);
+                startActivity(game_act);
+                break;
+
         }
 
     }
