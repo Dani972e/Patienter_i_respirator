@@ -213,7 +213,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/jeg"
+        android:text="@string/jeg..."
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"

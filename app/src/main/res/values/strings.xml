@@ -18,23 +18,26 @@
     <string name="svar">Svar</string>
     <string name="hvSpørgsmål">Hvad, hvorfor,\nhvornår, hvor ...</string>
     <string name="jegVilGerne">Jeg vil gerne ...</string>
-    <string name="jeg">Jeg ...</string>
+    <string name="jeg...">Jeg ...</string>
+    <string name="jeg">Jeg</string>
+    <string name="jegKan">Jeg kan</string>
     <string name="smerte">Smerte</string>
     <string name="jegVedIkke">Jeg ved ikke</string>
     <string name="tak">Tak</string>
     <string name="senere">Senere</string>
-    <string name="jegErGlad">Jeg er glad</string>
-    <string name="jegErTilpas">Jeg er tilpas</string>
-    <string name="jegErTræt">Jeg er træt</string>
-    <string name="jegErFrustreret">Jeg er frustreret</string>
-    <string name="jegErBange">Jeg er bange</string>
-    <string name="jegErBekymret">Jeg er bekymret</string>
-    <string name="jegKederMig">Jeg keder mig</string>
-    <string name="jegKanIkkeFåLuft">Jeg kan ikke få luft</string>
-    <string name="jegErTørstig">Jeg er tørstig</string>
-    <string name="jegErVarm">Jeg er varm</string>
-    <string name="jegErKold">Jeg er kold</string>
-    <string name="jegErØm">Jeg er øm</string>
+    <string name="jegEr">Jeg er</string>
+    <string name="glad">glad</string>
+    <string name="Tilpas">tilpas</string>
+    <string name="Træt">træt</string>
+    <string name="Frustreret">frustreret</string>
+    <string name="Bange">bange</string>
+    <string name="Bekymret">bekymret</string>
+    <string name="KederMig">keder mig</string>
+    <string name="FåLuft">ikke få luft</string>
+    <string name="Tørstig">tørstig</string>
+    <string name="Varm">varm</string>
+    <string name="Kold">kold</string>
+    <string name="Øm">øm</string>
     <string name="jegVilGerneHaveSmertestillende">Jeg vil gerne have smertestillende</string>
     <string name="jegVilGerneSuges">Jeg vil gerne suges</string>
     <string name="jegVilGerneHaveLuft">Jeg vil gerne have luft</string>
@@ -69,8 +72,7 @@
     <string name="inputmetode">Inputmetode</string>
     <string name="gendan">Nulstil</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 
     //Engelsk

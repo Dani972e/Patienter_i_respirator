@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.IAmFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragment;
 
 import static com.respirator.i.patienter.patienter_i_respirator.R.color.backgroundColor;
@@ -53,6 +54,10 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.answer_btn:
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MyAnswerFragment()).addToBackStack(null).commit();
+                communication_view.setVisibility(View.INVISIBLE);
+                break;
+            case R.id.i_btn:
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IAmFragment()).addToBackStack(null).commit();
                 communication_view.setVisibility(View.INVISIBLE);
                 break;
 
