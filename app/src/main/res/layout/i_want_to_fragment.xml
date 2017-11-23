@@ -1,0 +1,281 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.respirator.i.patienter.patienter_i_respirator.fragments.IWantToFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout
+        android:id="@+id/i_want_to_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/row_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/pain_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_pain_reliever"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sucked_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/sucked_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_sucked"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/breath_btn2"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="65dp"
+                    android:paddingStart="17dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_breath"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/sucked_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp">
+
+
+                <ImageView
+                    android:id="@+id/tv_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_tv"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/scared_btn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/lightOn_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_light"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/silence_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_silence"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/scared_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/chair_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_chair"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/breath_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/bed_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_bed"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/turnAround_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_turn_around"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/breath_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/walk_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:paddingRight="30dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_walk"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cold_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/visit_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:paddingRight="35dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_visit"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/toilet_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_toilet"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cold_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+</FrameLayout>
