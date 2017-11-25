@@ -11,6 +11,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.IAmFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.IWantToFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFragment;
 
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -59,6 +60,10 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.iWantTo_btn:
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IWantToFragment()).addToBackStack(null).commit();
+                communication_view.setVisibility(View.INVISIBLE);
+                break;
+            case R.id.wsQuestions_btn:
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new WsQuestionsFragment()).addToBackStack(null).commit();
                 communication_view.setVisibility(View.INVISIBLE);
                 break;
 
