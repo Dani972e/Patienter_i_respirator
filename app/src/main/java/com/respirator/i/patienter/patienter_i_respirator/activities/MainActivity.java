@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        call_btn = (ImageView) findViewById(R.id.call_btn);
-        game_btn = (ImageView) findViewById(R.id.game_btn);
-        communication_btn = (ImageView) findViewById(R.id.communication_btn);
-        settings_btn = (ImageView) findViewById(R.id.settings_btn);
+        call_btn = findViewById(R.id.call_btn);
+        game_btn = findViewById(R.id.game_btn);
+        communication_btn = findViewById(R.id.communication_btn);
+        settings_btn = findViewById(R.id.settings_btn);
 
         call_btn.setOnClickListener(this);
         game_btn.setOnClickListener(this);

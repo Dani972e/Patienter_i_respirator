@@ -18,11 +18,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_activity);
 
-        call_btn = (ImageView) findViewById(R.id.call_btn);
-        balloon_btn = (ImageView) findViewById(R.id.balloon_btn);
-        memoryGame_btn = (ImageView) findViewById(R.id.memoryGame_btn);
-        ticTacToe_btn = (ImageView) findViewById(R.id.ticTacToe_btn);
-        puzzle_btn = (ImageView) findViewById(R.id.puzzle_btn);
+        call_btn = findViewById(R.id.call_btn);
+        balloon_btn = findViewById(R.id.balloon_btn);
+        memoryGame_btn = findViewById(R.id.memoryGame_btn);
+        ticTacToe_btn = findViewById(R.id.ticTacToe_btn);
+        puzzle_btn = findViewById(R.id.puzzle_btn);
 
         balloon_btn.setOnClickListener(this);
         memoryGame_btn.setOnClickListener(this);

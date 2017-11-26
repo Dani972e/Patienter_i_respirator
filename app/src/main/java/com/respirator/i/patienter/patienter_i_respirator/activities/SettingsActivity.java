@@ -9,7 +9,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn, call_btn;
+    private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn;
 
 
     @Override
@@ -17,11 +17,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 
-        indput_btn = (ImageView) findViewById(R.id.input_btn);
-        sound_btn = (ImageView) findViewById(R.id.sound_btn);
-        fontsize_btn = (ImageView) findViewById(R.id.fontsize_btn);
-        language_btn = (ImageView) findViewById(R.id.language_btn);
-        reset_btn = (ImageView) findViewById(R.id.reset_btn);
+        indput_btn = findViewById(R.id.input_btn);
+        sound_btn = findViewById(R.id.sound_btn);
+        fontsize_btn = findViewById(R.id.fontsize_btn);
+        language_btn = findViewById(R.id.language_btn);
+        reset_btn = findViewById(R.id.reset_btn);
 
         indput_btn.setOnClickListener(this);
         sound_btn.setOnClickListener(this);

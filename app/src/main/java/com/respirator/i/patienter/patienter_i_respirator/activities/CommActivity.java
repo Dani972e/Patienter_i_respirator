@@ -13,6 +13,8 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.IWantToFragme
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFragment;
 
+import static com.respirator.i.patienter.patienter_i_respirator.R.drawable.on_click_button;
+
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView answer_btn, i_btn, iWantTo_btn, wsQuestion_btn, pain_btn, call_btn;
@@ -24,13 +26,14 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.comm_activity);
 
-        call_btn = (ImageView) findViewById(R.id.call_btn);
-        answer_btn = (ImageView) findViewById(R.id.answer_btn);
-        i_btn = (ImageView) findViewById(R.id.i_btn);
-        iWantTo_btn = (ImageView) findViewById(R.id.iWantTo_btn);
-        wsQuestion_btn = (ImageView) findViewById(R.id.wsQuestions_btn);
-        pain_btn = (ImageView) findViewById(R.id.pain_btn);
-        communication_view = (TextView) findViewById(R.id.communication_view);
+
+        call_btn = findViewById(R.id.call_btn);
+        answer_btn = findViewById(R.id.answer_btn);
+        i_btn = findViewById(R.id.i_btn);
+        iWantTo_btn = findViewById(R.id.iWantTo_btn);
+        wsQuestion_btn = findViewById(R.id.wsQuestions_btn);
+        pain_btn = findViewById(R.id.pain_btn);
+        communication_view = findViewById(R.id.communication_view);
 
         answer_btn.setOnClickListener(this);
         i_btn.setOnClickListener(this);
