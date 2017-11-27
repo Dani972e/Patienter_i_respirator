@@ -1,6 +1,8 @@
 # Patienter_i_respirator
 
-Gruppe 06
+(Group 06)
+
+## Information
 
 Daniel Anusic (s155005)
 Thomas Kristian Lorentzen (s154424)
