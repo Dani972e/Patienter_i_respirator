@@ -14,7 +14,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/button_rounded"
+        android:background="@drawable/button_rounded_blue"
         android:backgroundTint="@color/red"
         android:text="@string/kaldSygeplejerske"
         android:textAlignment="center"

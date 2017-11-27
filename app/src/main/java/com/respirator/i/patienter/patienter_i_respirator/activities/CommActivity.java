@@ -45,6 +45,15 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    public void resetButtonColor() {
+        answer_btn.setBackgroundResource(R.drawable.button_rounded_blue);
+        i_btn.setBackgroundResource(R.drawable.button_rounded_blue);
+        iWantTo_btn.setBackgroundResource(R.drawable.button_rounded_blue);
+        wsQuestion_btn.setBackgroundResource(R.drawable.button_rounded_blue);
+
+    }
+
+
 
     @Override
     public void onClick(View view) {
@@ -54,24 +63,35 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(call_act);
                 break;
             case R.id.answer_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MyAnswerFragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MyAnswerFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
+                resetButtonColor();
+                answer_btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
                 break;
             case R.id.i_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IAmFragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IAmFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
+                resetButtonColor();
+                i_btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
                 break;
             case R.id.iWantTo_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IWantToFragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IWantToFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
+                resetButtonColor();
+                iWantTo_btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
                 break;
             case R.id.wsQuestions_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new WsQuestionsFragment()).addToBackStack(null).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new WsQuestionsFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
+                resetButtonColor();
+                wsQuestion_btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
                 break;
 
         }
+
+
     }
-
-
 }
+
+
+
