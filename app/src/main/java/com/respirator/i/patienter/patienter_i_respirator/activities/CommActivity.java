@@ -13,8 +13,6 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.IWantToFragme
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFragment;
 
-import static com.respirator.i.patienter.patienter_i_respirator.R.drawable.on_click_button;
-
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView answer_btn, i_btn, iWantTo_btn, wsQuestion_btn, pain_btn, call_btn;
