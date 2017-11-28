@@ -17,10 +17,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private TextView settings_view;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
+
 
         indput_btn = findViewById(R.id.input_btn);
         sound_btn = findViewById(R.id.sound_btn);
@@ -37,10 +39,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-
-
     @Override
     public void onClick(View view) {
+
         switch (view.getId()) {
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputmetodeFragment()).commit();
@@ -59,4 +60,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (hasFocus) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
+    }
 }
