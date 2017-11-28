@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.InputmetodeFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.LydFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.SkriftFragment;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -35,6 +37,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -43,6 +47,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 settings_view.setVisibility(View.INVISIBLE);
                 break;
 
+            case R.id.sound_btn:
+                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LydFragment()).commit();
+                settings_view.setVisibility(View.INVISIBLE);
+                break;
+
+            case R.id.fontsize_btn:
+                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SkriftFragment()).commit();
+                settings_view.setVisibility(View.INVISIBLE);
         }
 
     }
