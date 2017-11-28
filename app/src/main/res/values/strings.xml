@@ -71,6 +71,19 @@
     <string name="CategoryView">Vælg en kategori i venstre side</string>
     <string name="inputmetode">Inputmetode</string>
     <string name="gendan">Nulstil</string>
+    <string name="lydstyrke">Lydstyrke</string>
+    <string name="kaldelyd">Kaldelyd</string>
+    <string name="twenty">20%</string>
+    <string name="forty">40%</string>
+    <string name="sixty">60%</string>
+    <string name="eighty">80%</string>
+    <string name="hundred">100%</string>
+    <string name="kaldelyd_1">kaldelyd 1</string>
+    <string name="kaldelyd_2">kaldelyd 2</string>
+    <string name="lille">lille</string>
+    <string name="mellem">mellem</string>
+    <string name="stor">stor</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
