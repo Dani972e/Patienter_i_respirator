@@ -12,10 +12,10 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SkriftFragment extends Fragment {
+public class FontsizeFragment extends Fragment {
 
 
-    public SkriftFragment() {
+    public FontsizeFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class SkriftFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.skrift_fragment, container, false);
+        return inflater.inflate(R.layout.fontsize_fragment, container, false);
     }
 
 }

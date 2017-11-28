@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.respirator.i.patienter.patienter_i_respirator.fragments.SkriftFragment">
+    tools:context="com.respirator.i.patienter.patienter_i_respirator.fragments.FontsizeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/Skriftstørrelse"
+            android:id="@+id/fontsize_view"
             android:layout_width="307dp"
             android:layout_height="80dp"
             android:layout_marginBottom="8dp"
@@ -31,7 +31,7 @@
             app:layout_constraintVertical_bias="0.17" />
 
         <Button
-            android:id="@+id/lilleskrift"
+            android:id="@+id/fontsize_small_btn"
             android:layout_width="140dp"
             android:layout_height="100dp"
             android:layout_marginBottom="8dp"
@@ -50,7 +50,7 @@
             app:layout_constraintVertical_bias="0.331" />
 
         <Button
-            android:id="@+id/Mellemskrift"
+            android:id="@+id/fontsize_middle_btn"
             android:layout_width="140dp"
             android:layout_height="100dp"
             android:layout_marginBottom="8dp"
@@ -69,7 +69,7 @@
             app:layout_constraintVertical_bias="0.544" />
 
         <Button
-            android:id="@+id/Storskrift"
+            android:id="@+id/fontsize_big_btn"
             android:layout_width="140dp"
             android:layout_height="100dp"
             android:layout_marginBottom="8dp"
