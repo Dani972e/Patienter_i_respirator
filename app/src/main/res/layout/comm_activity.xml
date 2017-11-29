@@ -121,7 +121,7 @@
         android:layout_height="112dp"
         android:background="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/call" />
@@ -130,8 +130,8 @@
         android:id="@+id/home_btn"
         android:layout_width="110dp"
         android:layout_height="116dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/button_rounded_blue"
         android:backgroundTint="@color/grey"
         android:paddingBottom="15dp"

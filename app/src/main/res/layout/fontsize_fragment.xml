@@ -28,7 +28,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.100000024" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/fontsize_small_btn"
@@ -42,11 +42,12 @@
             android:text="@string/lille"
             android:textColor="@color/white"
             android:textSize="15sp"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintVertical_bias="0.19" />
 
         <Button
             android:id="@+id/fontsize_middle_btn"
@@ -60,11 +61,11 @@
             android:text="@string/mellem"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/fontsize_big_btn"
@@ -78,11 +79,12 @@
             android:text="@string/stor"
             android:textColor="@color/white"
             android:textSize="30sp"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.9" />
+            app:layout_constraintVertical_bias="0.8" />
 
     </android.support.constraint.ConstraintLayout>
 

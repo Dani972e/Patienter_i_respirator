@@ -12,12 +12,12 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
  * Created by Johnny on 29/11/17.
  */
 
-public class Reset_Frag extends Fragment {
+public class ResetFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.reset_frag, container, false);
+        return inflater.inflate(R.layout.reset_fragment, container, false);
     }
 
 

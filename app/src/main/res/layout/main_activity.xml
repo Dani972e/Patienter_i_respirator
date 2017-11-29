@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_rounded_green"
-        android:paddingBottom="50dp"
+        android:paddingBottom="60dp"
         android:scaleType="center"
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_rounded_blue"
-        android:paddingBottom="30dp"
+        android:paddingBottom="40dp"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,14 +86,14 @@
         android:layout_marginTop="8dp"
         android:text="@string/spil"
         android:textColor="@color/white"
-        android:textSize="42sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/game_btn"
         app:layout_constraintEnd_toEndOf="@+id/game_btn"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/game_btn"
         app:layout_constraintTop_toTopOf="@+id/game_btn"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.97" />
 
     <TextView
         android:id="@+id/communication_view"
@@ -106,13 +106,13 @@
         android:text="@string/kommunikation"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="42sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/communication_btn"
         app:layout_constraintEnd_toEndOf="@+id/communication_btn"
         app:layout_constraintStart_toStartOf="@+id/communication_btn"
         app:layout_constraintTop_toTopOf="@+id/communication_btn"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.97" />
 
 
     <TextView
@@ -123,7 +123,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Kald"
+        android:text="@string/kald"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="43sp"

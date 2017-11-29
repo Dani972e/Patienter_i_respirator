@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
 
-public class languagefragment extends Fragment {
+public class LanguageFragment extends Fragment {
 
 
-    public languagefragment() {
+    public LanguageFragment() {
         // Required empty public constructor
     }
 
@@ -28,7 +28,7 @@ public class languagefragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
             savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.languagefragment, container, false);
+        return inflater.inflate(R.layout.language_fragment, container, false);
     }
 
 

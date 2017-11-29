@@ -25,7 +25,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.100000024" />
 
         <Button
             android:id="@+id/touch_btn"
@@ -45,7 +45,7 @@
             app:layout_constraintHorizontal_bias="0.301"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.139" />
+            app:layout_constraintVertical_bias="0.3" />
 
 
         <Button
@@ -63,10 +63,10 @@
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.715"
+            app:layout_constraintHorizontal_bias="0.7"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.138" />
+            app:layout_constraintVertical_bias="0.3" />
 
     </android.support.constraint.ConstraintLayout>
 
