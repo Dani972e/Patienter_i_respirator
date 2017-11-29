@@ -7,15 +7,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.InputmetodeFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.FontsizeFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.InputMethodFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn;
     private TextView settings_view;
-
 
 
     @Override
@@ -44,18 +43,18 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         switch (view.getId()) {
             case R.id.input_btn:
-                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputmetodeFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
                 break;
-
             case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
                 break;
-
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                break;
+
         }
 
     }

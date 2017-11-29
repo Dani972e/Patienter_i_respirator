@@ -12,10 +12,10 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InputmetodeFragment extends Fragment {
+public class InputMethodFragment extends Fragment {
 
 
-    public InputmetodeFragment() {
+    public InputMethodFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class InputmetodeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.inputmetode_fragment, container, false);
+        return inflater.inflate(R.layout.input_method_fragment, container, false);
     }
 
 }
