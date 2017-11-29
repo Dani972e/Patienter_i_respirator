@@ -16,6 +16,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        onWindowFocusChanged(true);
+
         setContentView(R.layout.game_activity);
 
         call_btn = findViewById(R.id.call_btn);

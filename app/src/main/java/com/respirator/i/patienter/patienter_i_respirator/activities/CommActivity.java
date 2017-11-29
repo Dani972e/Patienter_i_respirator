@@ -22,6 +22,8 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        onWindowFocusChanged(true);
+
         setContentView(R.layout.comm_activity);
 
 

@@ -11,6 +11,8 @@ public class CallActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        onWindowFocusChanged(true);
+
         setContentView(R.layout.call_activity);
 
     }
