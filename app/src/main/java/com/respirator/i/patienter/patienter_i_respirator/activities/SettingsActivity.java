@@ -58,6 +58,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new languagefragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                break;
 
         }
 
