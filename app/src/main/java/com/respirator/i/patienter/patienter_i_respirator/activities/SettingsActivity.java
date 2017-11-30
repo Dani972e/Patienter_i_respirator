@@ -9,9 +9,7 @@ import android.widget.TextView;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.FontsizeFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.InputMethodFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.ResetFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.LanguageFragment;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,8 +20,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        onWindowFocusChanged(true);
-
         setContentView(R.layout.settings_activity);
 
 
@@ -58,16 +54,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
                 break;
-            case R.id.language_btn:
-                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                break;
 
-            case R.id.reset_btn:
-                getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
-                settings_view.setVisibility(view.INVISIBLE);
-                break;
         }
+
     }
 
     public void onWindowFocusChanged(boolean hasFocus) {
