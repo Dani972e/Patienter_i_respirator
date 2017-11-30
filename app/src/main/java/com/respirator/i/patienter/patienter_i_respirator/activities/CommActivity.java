@@ -15,7 +15,7 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFr
 
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView answer_btn, i_btn, iWantTo_btn, wsQuestion_btn, pain_btn, call_btn;
+    private ImageView answer_btn, i_btn, iWantTo_btn, wsQuestion_btn, pain_btn, call_btn, keyboard_btn;
     private TextView communication_view;
 
 
@@ -34,6 +34,7 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
         wsQuestion_btn = findViewById(R.id.wsQuestions_btn);
         pain_btn = findViewById(R.id.pain_btn);
         communication_view = findViewById(R.id.communication_view);
+        keyboard_btn = findViewById(R.id.keyboard_btn);
 
         answer_btn.setOnClickListener(this);
         i_btn.setOnClickListener(this);
@@ -41,6 +42,7 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
         wsQuestion_btn.setOnClickListener(this);
         pain_btn.setOnClickListener(this);
         call_btn.setOnClickListener(this);
+        keyboard_btn.setOnClickListener(this);
 
 
     }
@@ -54,7 +56,6 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-
 
 
     @Override
@@ -73,7 +74,6 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IAmFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
                 resetButtonColor(view);
-
                 break;
             case R.id.iWantTo_btn:
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IWantToFragment()).commit();
@@ -84,6 +84,10 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new WsQuestionsFragment()).commit();
                 communication_view.setVisibility(View.INVISIBLE);
                 resetButtonColor(view);
+                break;
+            case R.id.keyboard_btn:
+                Intent keyboard_activity = new Intent(this, KeyboardActivity.class);
+                startActivity(keyboard_activity);
                 break;
 
         }

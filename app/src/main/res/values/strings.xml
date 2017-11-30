@@ -3,7 +3,8 @@
     <string name="title_activity_communication">CommunicationActivity</string>
 
     //Dansk
-    <string name="svar">Svar</string> // Hvor bliver den her brugt henne?
+    <string name="svar">Svar</string>
+    // Hvor bliver den her brugt henne?
 
     // Diverse
     <string name="kald">Kald</string>
