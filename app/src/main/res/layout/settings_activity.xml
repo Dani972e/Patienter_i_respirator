@@ -81,6 +81,7 @@
         android:id="@+id/reset_btn"
         android:layout_width="250dp"
         android:layout_height="138dp"
+        android:layout_marginBottom="1dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded_grey"

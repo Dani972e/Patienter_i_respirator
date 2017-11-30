@@ -4,13 +4,10 @@
 
         <item name="android:windowBackground">@color/backgroundColor</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:panelBackground">@color/backgroundColor</item>
 
 
     </style>
 
-
-    <style name="MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>
