@@ -18,6 +18,9 @@
         android:scaleType="center"
         android:tint="@color/white"
         app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".35"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -28,8 +31,8 @@
 
     <ImageView
         android:id="@+id/communication_btn"
-        android:layout_width="440dp"
-        android:layout_height="280dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -37,6 +40,10 @@
         android:background="@drawable/button_rounded_blue"
         android:paddingBottom="40dp"
         android:scaleType="center"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".35"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -47,14 +54,18 @@
 
     <ImageView
         android:id="@+id/settings_btn"
-        android:layout_width="45dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/backgroundColor"
         android:tint="@color/grey"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".06"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".06"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -66,9 +77,13 @@
     <ImageView
         android:id="@+id/call_btn"
         android:layout_width="0dp"
-        android:layout_height="112dp"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:background="@color/red"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".15"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -92,7 +107,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/call_btn" />
 
@@ -100,7 +115,7 @@
         android:id="@+id/game_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="6dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -113,13 +128,13 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/game_btn"
         app:layout_constraintTop_toTopOf="@+id/game_btn"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/communication_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -132,7 +147,7 @@
         app:layout_constraintEnd_toEndOf="@+id/communication_btn"
         app:layout_constraintStart_toStartOf="@+id/communication_btn"
         app:layout_constraintTop_toTopOf="@+id/communication_btn"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </android.support.constraint.ConstraintLayout>
