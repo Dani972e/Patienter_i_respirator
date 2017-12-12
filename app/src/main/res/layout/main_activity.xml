@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/game_btn"
-        android:layout_width="440dp"
-        android:layout_height="280dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -19,16 +19,20 @@
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".35"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35"
         app:srcCompat="@drawable/ic_gamepad" />
 
 
     <ImageView
         android:id="@+id/communication_btn"
-        android:layout_width="440dp"
-        android:layout_height="280dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -38,16 +42,20 @@
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".35"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".35"
         app:srcCompat="@drawable/ic_communication" />
 
 
     <ImageView
         android:id="@+id/settings_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -56,47 +64,59 @@
         android:tint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".065"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".065"
         app:srcCompat="@drawable/ic_settings" />
 
     <ImageView
         android:id="@+id/call_btn"
         android:layout_width="0dp"
-        android:layout_height="112dp"
+        android:layout_height="0dp"
         android:background="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".145"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".9999"
         app:srcCompat="@drawable/call" />
 
     <TextView
         android:id="@+id/call_view"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Kald"
+        android:text="@string/kald"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="43sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".05"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/call_btn" />
+        app:layout_constraintTop_toTopOf="@+id/call_btn"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".2" />
 
     <TextView
         android:id="@+id/game_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="6dp"
+        android:layout_width="94dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -106,16 +126,20 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/game_btn"
         app:layout_constraintEnd_toEndOf="@+id/game_btn"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="@+id/game_btn"
         app:layout_constraintTop_toTopOf="@+id/game_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".10" />
 
     <TextView
         android:id="@+id/communication_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -126,9 +150,13 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/communication_btn"
         app:layout_constraintEnd_toEndOf="@+id/communication_btn"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.09"
         app:layout_constraintStart_toStartOf="@+id/communication_btn"
         app:layout_constraintTop_toTopOf="@+id/communication_btn"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.3" />
 
 
 </android.support.constraint.ConstraintLayout>
