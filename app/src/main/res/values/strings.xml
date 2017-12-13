@@ -18,7 +18,7 @@
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
 
     // Game
-    <string name="vælgEtSpil">Vælg et spil</string>
+    <string name="vælgEtSpil">Vælg et spil i venstre side</string>
     <string name="huskespil">Huskespil</string>
     <string name="krydsOgBolle">Kryds og bolle</string>
     <string name="puslespil">Puslespil</string>

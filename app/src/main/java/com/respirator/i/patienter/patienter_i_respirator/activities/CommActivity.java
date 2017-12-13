@@ -47,13 +47,12 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    public void resetButtonColor(View b) {
+    public void resetButtonColor(View reset) {
         answer_btn.setBackgroundResource(R.drawable.button_rounded_blue);
         i_btn.setBackgroundResource(R.drawable.button_rounded_blue);
         iWantTo_btn.setBackgroundResource(R.drawable.button_rounded_blue);
         wsQuestion_btn.setBackgroundResource(R.drawable.button_rounded_blue);
-        b.setBackgroundResource(R.drawable.button_rounded_darkblue);
-
+        reset.setBackgroundResource(R.drawable.button_rounded_darkblue);
 
     }
 

@@ -40,6 +40,17 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
+    public void resetButtonColor(View reset) {
+        indput_btn.setBackgroundResource(R.drawable.button_rounded_grey);
+        sound_btn.setBackgroundResource(R.drawable.button_rounded_grey);
+        fontsize_btn.setBackgroundResource(R.drawable.button_rounded_grey);
+        language_btn.setBackgroundResource(R.drawable.button_rounded_grey);
+        reset_btn.setBackgroundResource(R.drawable.button_rounded_grey);
+        reset.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+
+
+    }
+
     @Override
     public void onClick(View view) {
 
@@ -47,22 +58,27 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                resetButtonColor(view);
                 break;
             case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                resetButtonColor(view);
                 break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                resetButtonColor(view);
                 break;
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                resetButtonColor(view);
                 break;
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
                 settings_view.setVisibility(View.INVISIBLE);
+                resetButtonColor(view);
                 break;
 
 
