@@ -9,5 +9,6 @@
     <color name="orange">#FF8C00</color>
     <color name="red">#E74856</color>
     <color name="darkRed">#B7313D</color>
-    <color name="green">#08AE9E</color>
+    <color name="turquoise">#08AE9E</color>
+    <color name="darkTurquoise">#04685f</color>
 </resources>

@@ -15,9 +15,12 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFr
 
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView answer_btn, i_btn, iWantTo_btn, wsQuestion_btn, pain_btn, call_btn, keyboard_btn;
-    private TextView communication_view;
+    private final int btn_amount = 5;
+    private final ImageView[] btnArray = new ImageView[btn_amount];
+    private final int[] btnId = {R.id.answer_btn, R.id.i_btn, R.id.iWantTo_btn, R.id.wsQuestions_btn, R.id.pain_btn};
 
+    private ImageView call_btn, keyboard_btn;
+    private TextView comm_view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,69 +29,55 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.comm_activity);
 
-
-        call_btn = findViewById(R.id.call_btn);
-        answer_btn = findViewById(R.id.answer_btn);
-        i_btn = findViewById(R.id.i_btn);
-        iWantTo_btn = findViewById(R.id.iWantTo_btn);
-        wsQuestion_btn = findViewById(R.id.wsQuestions_btn);
-        pain_btn = findViewById(R.id.pain_btn);
-        communication_view = findViewById(R.id.communication_view);
+        comm_view = findViewById(R.id.comm_view);
         keyboard_btn = findViewById(R.id.keyboard_btn);
-
-        answer_btn.setOnClickListener(this);
-        i_btn.setOnClickListener(this);
-        iWantTo_btn.setOnClickListener(this);
-        wsQuestion_btn.setOnClickListener(this);
-        pain_btn.setOnClickListener(this);
+        call_btn = findViewById(R.id.call_btn);
         call_btn.setOnClickListener(this);
         keyboard_btn.setOnClickListener(this);
 
 
-    }
+        for (int i = 0; i < btnId.length; i++) {
+            btnArray[i] = findViewById(btnId[i]);
+            btnArray[i].setOnClickListener(this);
 
-    public void resetButtonColor(View reset) {
-        answer_btn.setBackgroundResource(R.drawable.button_rounded_blue);
-        i_btn.setBackgroundResource(R.drawable.button_rounded_blue);
-        iWantTo_btn.setBackgroundResource(R.drawable.button_rounded_blue);
-        wsQuestion_btn.setBackgroundResource(R.drawable.button_rounded_blue);
-        reset.setBackgroundResource(R.drawable.button_rounded_darkblue);
+        }
 
     }
-
 
     @Override
     public void onClick(View view) {
+        for (ImageView btn : btnArray) {
+            if (btn.equals(view)) {
+                btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                comm_view.setVisibility(View.INVISIBLE);
+            } else {
+                btn.setBackgroundResource(R.drawable.button_rounded_blue);
+            }
+
+        }
+
         switch (view.getId()) {
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
                 startActivity(call_act);
                 break;
             case R.id.answer_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new MyAnswerFragment()).commit();
-                communication_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
+                getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new MyAnswerFragment()).commit();
                 break;
             case R.id.i_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IAmFragment()).commit();
-                communication_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
+                getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new IAmFragment()).commit();
                 break;
             case R.id.iWantTo_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new IWantToFragment()).commit();
-                communication_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
+                getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new IWantToFragment()).commit();
                 break;
             case R.id.wsQuestions_btn:
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainer, new WsQuestionsFragment()).commit();
-                communication_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
+                getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new WsQuestionsFragment()).commit();
                 break;
             case R.id.keyboard_btn:
                 Intent keyboard_activity = new Intent(this, KeyboardActivity.class);
                 startActivity(keyboard_activity);
                 break;
-
+            default:
         }
 
 

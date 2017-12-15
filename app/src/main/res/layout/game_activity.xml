@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded_green"
+        android:background="@drawable/button_rounded_turquoise"
         android:paddingBottom="30dp"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded_green"
+        android:background="@drawable/button_rounded_turquoise"
         android:paddingBottom="30dp"
         android:paddingLeft="20dp"
         android:scaleType="center"
@@ -54,7 +54,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded_green"
+        android:background="@drawable/button_rounded_turquoise"
         android:paddingBottom="30dp"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +75,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_rounded_green"
+        android:background="@drawable/button_rounded_turquoise"
         android:paddingBottom="30dp"
         android:scaleType="center"
         android:tint="@color/white"
@@ -107,8 +107,8 @@
         android:id="@+id/home_btn"
         android:layout_width="110dp"
         android:layout_height="116dp"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded_blue"
         android:backgroundTint="@color/grey"
         android:paddingBottom="15dp"
@@ -250,7 +250,7 @@
         app:layout_constraintTop_toTopOf="@+id/call_btn" />
 
     <TextView
-        android:id="@+id/communication_view"
+        android:id="@+id/game_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -258,12 +258,30 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/vælgEtSpil"
-        android:textColor="@color/green"
+        android:textColor="@color/turquoise"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/call_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/memoryGame_btn"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/gameFragmentContainer"
+        android:layout_width="820dp"
+        android:layout_height="620dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/call_btn"
+        app:layout_constraintEnd_toStartOf="@+id/home_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/puzzle_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
+
 
 </android.support.constraint.ConstraintLayout>

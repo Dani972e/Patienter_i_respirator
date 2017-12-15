@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent game_act = new Intent(this, GameActivity.class);
                 startActivity(game_act);
                 break;
+            default:
 
         }
 

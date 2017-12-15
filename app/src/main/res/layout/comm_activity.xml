@@ -311,7 +311,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/communication_view"
+        android:id="@+id/comm_view"
         android:layout_width="711dp"
         android:layout_height="73dp"
         android:layout_marginBottom="8dp"
@@ -329,7 +329,7 @@
 
 
     <FrameLayout
-        android:id="@+id/fragmentContainer"
+        android:id="@+id/commFragmentContainer"
         android:layout_width="860dp"
         android:layout_height="620dp"
         android:layout_marginBottom="10dp"

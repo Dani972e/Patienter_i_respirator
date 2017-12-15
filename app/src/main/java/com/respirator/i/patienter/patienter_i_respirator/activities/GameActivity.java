@@ -5,12 +5,22 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView balloon_btn, memoryGame_btn, ticTacToe_btn, puzzle_btn, call_btn;
+    private final int btn_amount = 4;
+    private final ImageView[] btnArray = new ImageView[btn_amount];
+    private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.puzzle_btn};
+    private ImageView call_btn;
+
+    private TextView game_view;
 
 
     @Override
@@ -21,35 +31,49 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.game_activity);
 
         call_btn = findViewById(R.id.call_btn);
-        balloon_btn = findViewById(R.id.balloon_btn);
-        memoryGame_btn = findViewById(R.id.memoryGame_btn);
-        ticTacToe_btn = findViewById(R.id.ticTacToe_btn);
-        puzzle_btn = findViewById(R.id.puzzle_btn);
-
-        balloon_btn.setOnClickListener(this);
-        memoryGame_btn.setOnClickListener(this);
-        ticTacToe_btn.setOnClickListener(this);
-        puzzle_btn.setOnClickListener(this);
+        game_view = findViewById(R.id.game_view);
         call_btn.setOnClickListener(this);
+
+        for (int i = 0; i < btnId.length; i++) {
+            btnArray[i] = findViewById(btnId[i]);
+            btnArray[i].setOnClickListener(this);
+        }
+
+
     }
 
     @Override
     public void onClick(View view) {
+        for (ImageView btn : btnArray) {
+            if (btn.equals(view)) {
+                btn.setBackgroundResource(R.drawable.button_rounded_darkturquoise);
+                game_view.setVisibility(View.INVISIBLE);
+            } else {
+                btn.setBackgroundResource(R.drawable.button_rounded_turquoise);
+            }
+
+        }
+
+
         switch (view.getId()) {
             case R.id.puzzle_btn:
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PuzzleGameFragment()).commit();
                 break;
             case R.id.ticTacToe_btn:
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new TicTacToeGameFragment()).commit();
                 break;
             case R.id.memoryGame_btn:
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();
                 break;
             case R.id.balloon_btn:
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PopBalloonGameFragment()).commit();
                 break;
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
                 startActivity(call_act);
                 break;
+            default:
         }
     }
-
 
 }

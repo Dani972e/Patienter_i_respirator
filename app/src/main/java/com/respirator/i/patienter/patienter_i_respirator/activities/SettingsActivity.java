@@ -15,7 +15,9 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView indput_btn, sound_btn, fontsize_btn, language_btn, reset_btn;
+    private final int btn_amount = 5;
+    private final ImageView[] btnArray = new ImageView[btn_amount];
+    private final int[] btnId = {R.id.input_btn, R.id.sound_btn, R.id.fontsize_btn, R.id.language_btn, R.id.reset_btn};
     private TextView settings_view;
 
 
@@ -24,63 +26,46 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 
-
-        indput_btn = findViewById(R.id.input_btn);
-        sound_btn = findViewById(R.id.sound_btn);
-        fontsize_btn = findViewById(R.id.fontsize_btn);
-        language_btn = findViewById(R.id.language_btn);
-        reset_btn = findViewById(R.id.reset_btn);
         settings_view = findViewById(R.id.settings_view);
 
-        indput_btn.setOnClickListener(this);
-        sound_btn.setOnClickListener(this);
-        fontsize_btn.setOnClickListener(this);
-        language_btn.setOnClickListener(this);
-        reset_btn.setOnClickListener(this);
 
-    }
+        for (int i = 0; i < btnId.length; i++) {
+            btnArray[i] = findViewById(btnId[i]);
+            btnArray[i].setOnClickListener(this);
 
-    public void resetButtonColor(View reset) {
-        indput_btn.setBackgroundResource(R.drawable.button_rounded_grey);
-        sound_btn.setBackgroundResource(R.drawable.button_rounded_grey);
-        fontsize_btn.setBackgroundResource(R.drawable.button_rounded_grey);
-        language_btn.setBackgroundResource(R.drawable.button_rounded_grey);
-        reset_btn.setBackgroundResource(R.drawable.button_rounded_grey);
-        reset.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-
+        }
 
     }
 
     @Override
     public void onClick(View view) {
+        for (ImageView btn : btnArray) {
+            if (btn.equals(view)) {
+                btn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                settings_view.setVisibility(View.INVISIBLE);
+            } else {
+                btn.setBackgroundResource(R.drawable.button_rounded_grey);
+            }
+
+        }
 
         switch (view.getId()) {
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
                 break;
             case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
                 break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
                 break;
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
                 break;
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
-                settings_view.setVisibility(View.INVISIBLE);
-                resetButtonColor(view);
                 break;
-
+             default:
 
         }
 
