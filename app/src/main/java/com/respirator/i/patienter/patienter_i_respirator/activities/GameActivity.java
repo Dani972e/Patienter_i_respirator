@@ -19,6 +19,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.puzzle_btn};
     private ImageView call_btn;
+    private TextView gameText_view;
 
     private TextView game_view;
 
@@ -30,6 +31,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.game_activity);
 
+
+        gameText_view = findViewById(R.id.gameText_view);
         call_btn = findViewById(R.id.call_btn);
         game_view = findViewById(R.id.game_view);
         call_btn.setOnClickListener(this);
@@ -58,21 +61,26 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.puzzle_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PuzzleGameFragment()).commit();
+                gameText_view.setText(R.string.puslespil);
                 break;
             case R.id.ticTacToe_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new TicTacToeGameFragment()).commit();
+                gameText_view.setText(R.string.krydsOgBolle);
                 break;
             case R.id.memoryGame_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();
+                gameText_view.setText(R.string.huskespil);
                 break;
             case R.id.balloon_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PopBalloonGameFragment()).commit();
+                gameText_view.setText(R.string.popBalloner);
                 break;
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
                 startActivity(call_act);
                 break;
             default:
+                break;
         }
     }
 

@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(game_act);
                 break;
             default:
+                break;
 
         }
 

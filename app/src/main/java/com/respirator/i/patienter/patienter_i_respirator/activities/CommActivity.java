@@ -78,6 +78,7 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(keyboard_activity);
                 break;
             default:
+                break;
         }
 
 

@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".23"
+        app:layout_constraintWidth_percent=".21"
         app:srcCompat="@drawable/ic_tic_tac_toe" />
 
     <ImageView
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ticTacToe_btn"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".23"
+        app:layout_constraintWidth_percent=".21"
         app:srcCompat="@drawable/ic_puzzle" />
 
     <ImageView
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/puzzle_btn"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".23"
+        app:layout_constraintWidth_percent=".21"
         app:srcCompat="@drawable/ic_memory_game" />
 
     <ImageView
@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/memoryGame_btn"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".23"
+        app:layout_constraintWidth_percent=".21"
         app:srcCompat="@drawable/ic_ballons" />
 
 
@@ -266,20 +266,37 @@
         app:layout_constraintStart_toEndOf="@+id/memoryGame_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:id="@+id/gameFragmentContainer"
-        android:layout_width="820dp"
-        android:layout_height="620dp"
-        android:layout_marginBottom="10dp"
+    <TextView
+        android:id="@+id/gameText_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/call_btn"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/turquoise"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gameFragmentContainer"
         app:layout_constraintEnd_toStartOf="@+id/home_btn"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/ticTacToe_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/gameFragmentContainer"
+        android:layout_width="985dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/call_btn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toEndOf="@+id/puzzle_btn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/home_view">
 
     </FrameLayout>
 

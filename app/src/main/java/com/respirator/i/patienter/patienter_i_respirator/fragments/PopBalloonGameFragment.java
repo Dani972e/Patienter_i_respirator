@@ -1,18 +1,22 @@
 package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
-
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class PopBalloonGameFragment extends Fragment {
+import java.util.Random;
+
+
+public class PopBalloonGameFragment extends Fragment implements View.OnClickListener {
+
+    private final int btn_amount = 5;
+    private final ImageView[] btnArray = new ImageView[btn_amount];
+    private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
 
 
     public PopBalloonGameFragment() {
@@ -21,10 +25,34 @@ public class PopBalloonGameFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.pop_balloon_game_fragment, container, false);
+        View balloon = inflater.inflate(R.layout.pop_balloon_game_fragment, container, false);
+
+        for (int i = 0; i < btnId.length; i++) {
+            btnArray[i] = balloon.findViewById(btnId[i]);
+            btnArray[i].setOnClickListener(this);
+
+        }
+
+
+
+
+
+        return balloon;
     }
 
+    @Override
+    public void onClick(View view) {
+        for (ImageView btn : btnArray) {
+            if (btn.equals(view)) {
+                btn.setImageResource(R.drawable.ic_explosion);
+            } else {
+
+            }
+
+
+        }
+
+    }
 }

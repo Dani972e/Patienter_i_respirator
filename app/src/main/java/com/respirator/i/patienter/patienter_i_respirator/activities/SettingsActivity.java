@@ -66,6 +66,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
                 break;
              default:
+                 break;
 
         }
 
