@@ -6,10 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-
-import java.util.Random;
 
 
 public class PopBalloonGameFragment extends Fragment implements View.OnClickListener {
@@ -17,6 +16,8 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
     private final int btn_amount = 5;
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
+    private int counter = 0;
+    private TextView gameTextView;
 
 
     public PopBalloonGameFragment() {
@@ -29,6 +30,9 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
         // Inflate the layout for this fragment
         View balloon = inflater.inflate(R.layout.pop_balloon_game_fragment, container, false);
 
+        gameTextView = balloon.findViewById(R.id.gameText_view);
+        gameTextView.setOnClickListener(this);
+
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = balloon.findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
@@ -36,18 +40,21 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
         }
 
 
-
-
-
         return balloon;
     }
+
 
     @Override
     public void onClick(View view) {
         for (ImageView btn : btnArray) {
             if (btn.equals(view)) {
                 btn.setImageResource(R.drawable.ic_explosion);
-            } else {
+                counter++;
+                if (counter == 5) {
+                    gameTextView.setText(R.string.poppetBalloner);
+
+                }
+
 
             }
 

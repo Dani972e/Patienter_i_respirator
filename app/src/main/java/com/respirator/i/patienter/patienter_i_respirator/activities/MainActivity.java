@@ -37,20 +37,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.call_btn:
-                Intent call_act = new Intent(this, CallActivity.class);
-                startActivity(call_act);
+                Intent call_activity = new Intent(this, CallActivity.class);
+                startActivity(call_activity);
                 break;
             case R.id.communication_btn:
-                Intent comm_act = new Intent(this, CommActivity.class);
-                startActivity(comm_act);
+                Intent comm_activity = new Intent(this, CommActivity.class);
+                startActivity(comm_activity);
                 break;
             case R.id.settings_btn:
-                Intent settings_act = new Intent(this, SettingsActivity.class);
-                startActivity(settings_act);
+                Intent settings_activity = new Intent(this, SettingsActivity.class);
+                startActivity(settings_activity);
                 break;
             case R.id.game_btn:
-                Intent game_act = new Intent(this, GameActivity.class);
-                startActivity(game_act);
+                Intent game_activity = new Intent(this, GameActivity.class);
+                startActivity(game_activity);
                 break;
             default:
                 break;

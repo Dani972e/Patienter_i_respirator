@@ -19,7 +19,7 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.answer_btn, R.id.i_btn, R.id.iWantTo_btn, R.id.wsQuestions_btn, R.id.pain_btn};
 
-    private ImageView call_btn, keyboard_btn;
+    private ImageView call_btn, keyboard_btn, home_btn;
     private TextView comm_view;
 
     @Override
@@ -32,8 +32,10 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
         comm_view = findViewById(R.id.comm_view);
         keyboard_btn = findViewById(R.id.keyboard_btn);
         call_btn = findViewById(R.id.call_btn);
+        home_btn = findViewById(R.id.home_btn);
         call_btn.setOnClickListener(this);
         keyboard_btn.setOnClickListener(this);
+        home_btn.setOnClickListener(this);
 
 
         for (int i = 0; i < btnId.length; i++) {
@@ -76,6 +78,10 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.keyboard_btn:
                 Intent keyboard_activity = new Intent(this, KeyboardActivity.class);
                 startActivity(keyboard_activity);
+                break;
+            case R.id.home_btn:
+                Intent main_activity = new Intent(this, MainActivity.class);
+                startActivity(main_activity);
                 break;
             default:
                 break;

@@ -20,8 +20,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.puzzle_btn};
     private ImageView call_btn;
     private TextView gameText_view;
-
     private TextView game_view;
+    private ImageView home_btn;
 
 
     @Override
@@ -34,8 +34,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         gameText_view = findViewById(R.id.gameText_view);
         call_btn = findViewById(R.id.call_btn);
+        home_btn = findViewById(R.id.home_btn);
         game_view = findViewById(R.id.game_view);
         call_btn.setOnClickListener(this);
+        home_btn.setOnClickListener(this);
 
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = findViewById(btnId[i]);
@@ -73,11 +75,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.balloon_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PopBalloonGameFragment()).commit();
-                gameText_view.setText(R.string.popBalloner);
+                gameText_view.setText(R.string.popBallonerView);
                 break;
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
                 startActivity(call_act);
+                break;
+            case R.id.home_btn:
+                Intent homeActivity = new Intent(this, MainActivity.class);
+                startActivity(homeActivity);
                 break;
             default:
                 break;

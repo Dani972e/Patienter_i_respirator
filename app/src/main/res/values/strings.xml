@@ -23,6 +23,8 @@
     <string name="krydsOgBolle">Kryds og bolle</string>
     <string name="puslespil">Puslespil</string>
     <string name="popBalloner">Pop Balloner</string>
+    <string name="popBallonerView">Pop ballonerne ved at vælge dem</string>
+    <string name="poppetBalloner">Tillykke, du fik poppet alle ballonerne!</string>
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>

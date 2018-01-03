@@ -1,5 +1,6 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,6 +20,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.input_btn, R.id.sound_btn, R.id.fontsize_btn, R.id.language_btn, R.id.reset_btn};
     private TextView settings_view;
+    private ImageView home_btn;
 
 
     @Override
@@ -27,6 +29,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.settings_activity);
 
         settings_view = findViewById(R.id.settings_view);
+        home_btn = findViewById(R.id.home_btn);
+        home_btn.setOnClickListener(this);
 
 
         for (int i = 0; i < btnId.length; i++) {
@@ -65,8 +69,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
                 break;
-             default:
-                 break;
+            case R.id.home_btn:
+                Intent homeActivity = new Intent(this, MainActivity.class);
+                startActivity(homeActivity);
+                break;
+            default:
+                break;
 
         }
 
