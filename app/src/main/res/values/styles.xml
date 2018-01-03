@@ -4,6 +4,7 @@
 
         <item name="android:windowBackground">@color/backgroundColor</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationMode">normal</item>
 
 
     </style>
