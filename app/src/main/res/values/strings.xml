@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Patienter_i_respirator</string>
+    <string name="app_name">Patienter i respirator</string>
     <string name="title_activity_communication">CommunicationActivity</string>
 
     //Dansk
@@ -83,11 +83,8 @@
     <string name="gendan">Nulstil</string>
     <string name="lydstyrke">Lydstyrke</string>
     <string name="kaldelyd">Kaldelyd</string>
-    <string name="twenty">20%</string>
-    <string name="forty">40%</string>
-    <string name="sixty">60%</string>
-    <string name="eighty">80%</string>
-    <string name="hundred">100%</string>
+    <string name="up">+</string>
+    <string name="down">-</string>
     <string name="kaldelyd_1">Kaldelyd 1</string>
     <string name="kaldelyd_2">Kaldelyd 2</string>
     <string name="lille">lille</string>
