@@ -17,8 +17,7 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
     private int counter = 0;
-    private TextView gameTextView;
-
+    private TextView gameText_view;
 
     public PopBalloonGameFragment() {
         // Required empty public constructor
@@ -30,8 +29,7 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
         // Inflate the layout for this fragment
         View balloon = inflater.inflate(R.layout.pop_balloon_game_fragment, container, false);
 
-        gameTextView = balloon.findViewById(R.id.gameText_view);
-        gameTextView.setOnClickListener(this);
+         gameText_view = getActivity().findViewById(R.id.gameText_view);
 
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = balloon.findViewById(btnId[i]);
@@ -51,7 +49,7 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
                 btn.setImageResource(R.drawable.ic_explosion);
                 counter++;
                 if (counter == 5) {
-                    gameTextView.setText(R.string.poppetBalloner);
+                gameText_view.setText(R.string.poppetBalloner);
 
                 }
 

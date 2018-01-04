@@ -10,7 +10,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView back_btn, home_btn;
+    private ImageView back_btn, home_btn, call_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,11 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
 
         back_btn = findViewById(R.id.back_btn);
         home_btn = findViewById(R.id.home_btn);
+        call_btn = findViewById(R.id.call_btn);
 
         back_btn.setOnClickListener(this);
         home_btn.setOnClickListener(this);
+        call_btn.setOnClickListener(this);
     }
 
     @Override
@@ -34,6 +36,10 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
             case R.id.home_btn:
                 Intent homeActivity = new Intent(this, MainActivity.class);
                 startActivity(homeActivity);
+                break;
+            case R.id.call_btn:
+                Intent callActivity = new Intent (this, CallActivity.class);
+                startActivity(callActivity);
                 break;
         }
     }

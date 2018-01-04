@@ -74,6 +74,8 @@
     <string name="hvorErJeg">Hvor\n<b>er jeg?</b></string>
     <string name="hvorLængeHarJegLiggetHer">Hvor længe\n<b>har jeg ligget her?</b></string>
     <string name="hvorErMineTing">Hvor er\n<b>mine ting?</b></string>
+    <string name="smerteområde">Vælg et smerteområdet</string>
+
 
     // Settings
     <string name="hovedstyring">Hovedstyring og touch</string>
@@ -100,6 +102,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    // Keyboard
+    <string name="skrivpåtastaturet">Kære patient, vær venlig at skrive en besked til sygeplejersken</string>
+
+
 
 
     //Engelsk
