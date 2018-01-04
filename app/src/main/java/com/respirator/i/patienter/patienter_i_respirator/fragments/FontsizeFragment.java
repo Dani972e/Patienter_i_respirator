@@ -1,19 +1,19 @@
 package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class FontsizeFragment extends Fragment {
 
+public class FontsizeFragment extends Fragment implements View.OnClickListener {
+
+    private ImageView home_btn = getActivity().findViewById(R.id.home_btn);
 
     public FontsizeFragment() {
         // Required empty public constructor
@@ -21,10 +21,21 @@ public class FontsizeFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fontsize_fragment, container, false);
+
+
+        View fontsize = inflater.inflate(R.layout.fontsize_fragment, container, false);
+
+
+
+
+
+        return fontsize;
     }
 
+    @Override
+    public void onClick(View view) {
+
+    }
 }

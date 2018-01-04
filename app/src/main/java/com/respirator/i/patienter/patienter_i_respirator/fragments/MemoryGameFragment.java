@@ -1,12 +1,11 @@
 package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
@@ -19,7 +18,6 @@ public class MemoryGameFragment extends Fragment implements View.OnClickListener
     private final int btn_amount = 4;
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.imageMemory1, R.id.imageMemory2, R.id.imageMemory3, R.id.imageMemory4};
-
 
 
     public MemoryGameFragment() {
@@ -45,7 +43,7 @@ public class MemoryGameFragment extends Fragment implements View.OnClickListener
     }
 
 
-    public void onClick (View v) {
+    public void onClick(View v) {
 
         for (ImageView btn : btnArray) {
             if (btn.equals(v)) {

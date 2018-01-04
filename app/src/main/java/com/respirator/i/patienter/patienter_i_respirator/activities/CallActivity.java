@@ -32,7 +32,7 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
         home_btn.setOnClickListener(this);
         help_btn.setOnClickListener(this);
 
-        final MediaPlayer help_sound = MediaPlayer.create(this,R.raw.multimedia_event_tone_1);
+        final MediaPlayer help_sound = MediaPlayer.create(this, R.raw.multimedia_event_tone_1);
 
         help_btn.setOnClickListener(new View.OnClickListener() {
 
