@@ -19,12 +19,12 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 
-/*
+
 public class PuzzleGameFragment extends Fragment implements View.OnClickListener {
 
     private static final int antalknapper  = 9;
     private final ImageView[] btnArray = new ImageView[antalknapper];
-    private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
+    private final int[] btnId = {R.billede, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
     public PuzzleGameFragment() {
         // Required empty public constructor
     }
@@ -79,4 +79,4 @@ public class PuzzleGameFragment extends Fragment implements View.OnClickListener
     }
 }
 
-*/
+
