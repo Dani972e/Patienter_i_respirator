@@ -47,7 +47,7 @@ public class MemoryGameFragment extends Fragment implements View.OnClickListener
 
         for (ImageView btn : btnArray) {
             if (btn.equals(v)) {
-                btn.setImageResource(R.mipmap.memory_image_moon);
+               // btn.setImageResource(R.mipmap.memory_image_moon);
 
             }
         }
