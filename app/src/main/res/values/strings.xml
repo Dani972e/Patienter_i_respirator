@@ -75,6 +75,11 @@
     <string name="hvorLængeHarJegLiggetHer">Hvor længe\n<b>har jeg ligget her?</b></string>
     <string name="hvorErMineTing">Hvor er\n<b>mine ting?</b></string>
     <string name="smerteområde">Vælg et smerteområdet</string>
+    <string name="Jagende">Jagende</string>
+    <string name="Brændene">Brændene</string>
+    <string name="Stikkende">Stikkende</string>
+    <string name="Dunkende">Dunkende</string>
+    <string name="Trykkende">Trykkende</string>
 
 
     // Settings

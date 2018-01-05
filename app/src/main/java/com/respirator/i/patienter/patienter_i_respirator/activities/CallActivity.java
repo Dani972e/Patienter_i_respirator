@@ -1,7 +1,6 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -32,12 +31,12 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
         home_btn.setOnClickListener(this);
         help_btn.setOnClickListener(this);
 
-        final MediaPlayer help_sound = MediaPlayer.create(this, R.raw.multimedia_event_tone_1);
+        //   final MediaPlayer help_sound = MediaPlayer.create(this, R.raw.multimedia_event_tone_1);
 
         help_btn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                help_sound.start();
+                // help_sound.start();
             }
         });
     }
@@ -50,7 +49,7 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
                 onBackPressed();
                 break;
             case R.id.home_btn:
-                Intent mainAct = new Intent(this,MainActivity.class);
+                Intent mainAct = new Intent(this, MainActivity.class);
                 startActivity(mainAct);
                 break;
         }

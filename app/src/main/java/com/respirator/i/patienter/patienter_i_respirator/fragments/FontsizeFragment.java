@@ -6,14 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
 
 public class FontsizeFragment extends Fragment implements View.OnClickListener {
 
-    private ImageView home_btn = getActivity().findViewById(R.id.home_btn);
 
     public FontsizeFragment() {
         // Required empty public constructor
@@ -26,9 +24,6 @@ public class FontsizeFragment extends Fragment implements View.OnClickListener {
 
 
         View fontsize = inflater.inflate(R.layout.fontsize_fragment, container, false);
-
-
-
 
 
         return fontsize;
