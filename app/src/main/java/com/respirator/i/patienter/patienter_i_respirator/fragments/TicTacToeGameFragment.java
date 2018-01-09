@@ -115,7 +115,7 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
         }
 
         for (int i = 0; i < 3; i++) {
-            if (fields[0][i].equals(fields[0][i])
+            if (fields[0][i].equals(fields[1][i])
                     && fields[0][i].equals(fields[2][i])
                     && !fields[0][i].equals("")) {
                 return true;
