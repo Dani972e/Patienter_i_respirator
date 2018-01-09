@@ -25,6 +25,12 @@
     <string name="popBalloner">Pop Balloner</string>
     <string name="popBallonerView">Pop ballonerne ved at vælge dem</string>
     <string name="poppetBalloner">Tillykke, du fik poppet alle ballonerne!</string>
+    <string name="Sygeplejerske">Sygeplejersken: 0</string>
+    <string name="Patient">Patienten: 0</string>
+    <string name="nulstil">Nulstil spillet</string>
+    <string name="kryds">X</string>
+    <string name="bolle">O</string>
+
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>

@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
+import java.util.Random;
+
 
 public class PopBalloonGameFragment extends Fragment implements View.OnClickListener {
 
@@ -18,6 +20,9 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
     private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
     private int counter = 0;
     private TextView gameText_view;
+    private int witdh;
+    private int height;
+    Random random = new Random();
 
     public PopBalloonGameFragment() {
         // Required empty public constructor
@@ -29,7 +34,7 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
         // Inflate the layout for this fragment
         View balloon = inflater.inflate(R.layout.pop_balloon_game_fragment, container, false);
 
-         gameText_view = getActivity().findViewById(R.id.gameText_view);
+        gameText_view = getActivity().findViewById(R.id.gameText_view);
 
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = balloon.findViewById(btnId[i]);
@@ -49,7 +54,7 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
                 btn.setImageResource(R.drawable.ic_explosion);
                 counter++;
                 if (counter == 5) {
-                gameText_view.setText(R.string.poppetBalloner);
+                    gameText_view.setText(R.string.poppetBalloner);
 
                 }
 

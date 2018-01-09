@@ -11,4 +11,5 @@
     <color name="darkRed">#B7313D</color>
     <color name="turquoise">#08AE9E</color>
     <color name="darkTurquoise">#04685f</color>
+    <color name="black">#000000</color>
 </resources>
