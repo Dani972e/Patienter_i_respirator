@@ -7,39 +7,43 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
+    <ImageButton
         android:id="@+id/billede1"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="44dp"
         android:layout_marginStart="164dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/image_part_001"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.838" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/billede3"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="40dp"
         android:layout_marginEnd="224dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/image_part_003"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.838" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede2"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginEnd="72dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:src="@drawable/image_part_002"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede5"
         app:layout_constraintEnd_toStartOf="@+id/billede3"
@@ -48,68 +52,74 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede5"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="60dp"
         android:layout_marginEnd="96dp"
+        android:src="@drawable/image_part_005"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede8"
         app:layout_constraintEnd_toStartOf="@+id/billede6" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede4"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="56dp"
         android:layout_marginStart="8dp"
+        android:src="@drawable/image_part_004"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede7"
         app:layout_constraintEnd_toStartOf="@+id/billede5"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede7"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:src="@drawable/image_part_007"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/billede8"
         app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede6"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="60dp"
         android:layout_marginEnd="232dp"
+        android:src="@drawable/image_part_006"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/billede9"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede8"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="92dp"
         android:text="Button"
+        android:src="@drawable/image_part_008"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/billede9" />
 
-    <Button
+    <ImageButton
         android:id="@+id/billede9"
         android:layout_width="134dp"
         android:layout_height="104dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="232dp"
         android:text="Button"
+        android:src="@drawable/image_part_009"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
