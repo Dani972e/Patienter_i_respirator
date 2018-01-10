@@ -11,6 +11,7 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 //import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
 //import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
@@ -62,7 +63,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()) {
             case R.id.puzzle_btn:
-          //      getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PuzzleGameFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PuzzleGameFragment()).commit();
                 gameText_view.setText(R.string.puslespil);
                 break;
             case R.id.ticTacToe_btn:
