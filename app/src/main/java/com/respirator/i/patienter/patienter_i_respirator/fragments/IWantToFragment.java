@@ -31,8 +31,6 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
             btnArray[i] = iWantTo.findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
         }
-
-
         return iWantTo;
     }
 
