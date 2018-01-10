@@ -16,15 +16,11 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
     private Button[][] playButtons = new Button[3][3];
     private boolean patientTurn = true;
-
-    //counts the round of the game
     private int roundCount;
-
     private int patientPoint;
     private int nursePoint;
 
-    private TextView patient_view, nurse_view;
-
+    private TextView patient_view, nurse_view, gameText_view;
 
     public TicTacToeGameFragment() {
         // Required empty public constructor
@@ -37,15 +33,10 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
         View game = inflater.inflate(R.layout.tic_tac_toe_game_fragment, container, false);
 
+        gameText_view = getActivity().findViewById(R.id.gameText_view);
         patient_view = game.findViewById(R.id.patient_view);
         nurse_view = game.findViewById(R.id.nurse_view);
 
-
-        /*with this nested loop we will loop through our rows and columns
-        * This is the resID i use to pass to find viewById.
-        * in this case we create it dynamically with this nested loop instead of
-        * designing them one by one.
-        */
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 String buttonID = "btn_" + i + j;
@@ -65,7 +56,6 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
 
         return game;
-
 
     }
 
@@ -93,6 +83,7 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
             draw();
         } else {
             patientTurn = !patientTurn;
+            gameText_view.setText(R.string.krydsOgBolle);
         }
 
     }
@@ -140,17 +131,21 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
         patientPoint++;
         updatePointsText();
         resetGameboard();
+        gameText_view.setText(R.string.patientenVinder);
+
     }
 
     private void nurseWin() {
         nursePoint++;
         updatePointsText();
         resetGameboard();
+        gameText_view.setText(R.string.sygeplejerskenVinder);
 
     }
 
     private void draw() {
         resetGameboard();
+        gameText_view.setText(R.string.uafgjort);
 
     }
 
@@ -169,13 +164,16 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
         roundCount = 0;
         patientTurn = true;
 
+
     }
 
+    //method that resets the game when clicking on reset btn
     private void resetGame() {
         patientPoint = 0;
         nursePoint = 0;
         updatePointsText();
         resetGameboard();
+        gameText_view.setText(R.string.krydsOgBolle);
     }
 
     /*

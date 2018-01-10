@@ -30,7 +30,9 @@
     <string name="nulstil">Nulstil spillet</string>
     <string name="kryds">X</string>
     <string name="bolle">O</string>
-
+    <string name="patientenVinder">Tillykke! Patienten vandt runden</string>
+    <string name="sygeplejerskenVinder">Tillykke! sygeplejersken vandt runden</string>
+    <string name="uafgjort">Desværre, det blev uafgjort!</string>
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>
