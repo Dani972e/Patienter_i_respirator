@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
@@ -44,9 +45,11 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 if (sound) {
                     help_sound.start();
+                    Toast.makeText(CallActivity.this, "!", Toast.LENGTH_LONG).show();
                 }
                 else if (!sound){
                     help_sound2.start();
+                    Toast.makeText(CallActivity.this, "!", Toast.LENGTH_LONG).show();
                 }
 
             }
