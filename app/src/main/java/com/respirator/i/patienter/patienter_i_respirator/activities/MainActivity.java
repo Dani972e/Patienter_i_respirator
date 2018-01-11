@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         onWindowFocusChanged(true);
         setContentView(R.layout.main_activity);
 

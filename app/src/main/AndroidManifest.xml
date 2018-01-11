@@ -21,6 +21,10 @@
         <activity android:name=".activities.CommActivity" />
         <activity android:name=".activities.GameActivity" />
         <activity android:name=".activities.KeyboardActivity"></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="14e41d8927a3f101f817b4f16d501fda97cee543" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-//import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
 //import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
@@ -70,7 +70,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 gameText_view.setText(R.string.krydsOgBolle);
                 break;
             case R.id.memoryGame_btn:
-             //   getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();
                 gameText_view.setText(R.string.huskespil);
                 break;
             case R.id.balloon_btn:

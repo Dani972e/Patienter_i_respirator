@@ -112,6 +112,7 @@
     <string name="english">Engelsk</string>
     <string name="language">Sprog</string>
     <string name="reset_view">Gendan indstillinger</string>
+    <string name="moon_image">Memory Moon</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
