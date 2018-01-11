@@ -88,6 +88,7 @@
     <string name="Stikkende">Stikkende</string>
     <string name="Dunkende">Dunkende</string>
     <string name="Trykkende">Trykkende</string>
+    <string name="Gendan">Ændre indstillinger</string>
 
 
     // Settings
@@ -119,7 +120,7 @@
 
 
     // Keyboard
-    <string name="skrivpåtastaturet">Kære patient, vær venlig at skrive en besked til sygeplejersken</string>
+    <string name="skrivpåtastaturet">Kære patient, brug tastaturet for at skrive en besked til sygeplejersken</string>
 
 
 
