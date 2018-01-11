@@ -7,119 +7,55 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+
     <ImageButton
-        android:id="@+id/billede1"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="44dp"
-        android:layout_marginStart="164dp"
+        android:id="@+id/Danmark1"
+        android:layout_width="129dp"
+        android:layout_height="155dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/image_part_001"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede4"
+        android:src="@drawable/danmark1"
+        app:layout_constraintBottom_toTopOf="@+id/Danmark3"
+        app:layout_constraintEnd_toStartOf="@+id/Dannark2"
+        app:layout_constraintHorizontal_bias="0.908"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
-
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/billede3"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginEnd="224dp"
+        android:id="@+id/Dannark2"
+        android:layout_width="129dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="404dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/image_part_003"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede6"
+        android:src="@drawable/danmark2"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/billede2"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/image_part_002"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede5"
-        app:layout_constraintEnd_toStartOf="@+id/billede3"
-        app:layout_constraintHorizontal_bias="0.678"
-        app:layout_constraintStart_toEndOf="@+id/billede1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.626" />
-
-    <ImageButton
-        android:id="@+id/billede5"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
+        android:id="@+id/Danmark3"
+        android:layout_width="129dp"
+        android:layout_height="155dp"
         android:layout_marginBottom="60dp"
-        android:layout_marginEnd="96dp"
-        android:src="@drawable/image_part_005"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede8"
-        app:layout_constraintEnd_toStartOf="@+id/billede6" />
-
-    <ImageButton
-        android:id="@+id/billede4"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginEnd="52dp"
         android:layout_marginStart="8dp"
-        android:src="@drawable/image_part_004"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede7"
-        app:layout_constraintEnd_toStartOf="@+id/billede5"
-        app:layout_constraintHorizontal_bias="0.64"
+        android:src="@drawable/danmark3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/billede7"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:src="@drawable/image_part_007"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/billede8"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/billede6"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
+        android:id="@+id/imageButton6"
+        android:layout_width="129dp"
+        android:layout_height="155dp"
         android:layout_marginBottom="60dp"
-        android:layout_marginEnd="232dp"
-        android:src="@drawable/image_part_006"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/billede9"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageButton
-        android:id="@+id/billede8"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="92dp"
-        android:text="Button"
-        android:src="@drawable/image_part_008"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/billede9" />
-
-    <ImageButton
-        android:id="@+id/billede9"
-        android:layout_width="134dp"
-        android:layout_height="104dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="232dp"
-        android:text="Button"
-        android:src="@drawable/image_part_009"
+        android:layout_marginEnd="404dp"
+        android:src="@drawable/danmark4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

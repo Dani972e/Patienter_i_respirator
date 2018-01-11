@@ -20,14 +20,12 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
     private final int[] btnId = {R.id.balloon_1, R.id.balloon_2, R.id.balloon_3, R.id.balloon_4, R.id.balloon_5};
     private int counter = 0;
     private TextView gameText_view;
-    private int witdh;
-    private int height;
+
     Random random = new Random();
 
     public PopBalloonGameFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,10 +40,8 @@ public class PopBalloonGameFragment extends Fragment implements View.OnClickList
 
         }
 
-
         return balloon;
     }
-
 
     @Override
     public void onClick(View view) {

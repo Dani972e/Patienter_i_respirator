@@ -45,7 +45,6 @@
                     android:layout_width="280dp"
                     android:layout_height="146dp"
                     android:background="@drawable/button_rounded_blue"
-                    android:backgroundTint="@color/blue"
                     android:paddingBottom="35dp"
                     android:scaleType="center"
                     android:src="@drawable/ic_i_dont_know"

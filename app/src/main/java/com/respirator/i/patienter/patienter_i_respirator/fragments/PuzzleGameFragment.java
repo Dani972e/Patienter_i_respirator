@@ -40,8 +40,7 @@ import java.util.ArrayList;
 
 public class PuzzleGameFragment extends Fragment implements View.OnClickListener {
 
-    private final int[] billeder = {R.drawable.image_part_001, R.drawable.image_part_002, R.drawable.image_part_003, R.drawable.image_part_004,
-    R.drawable.image_part_005, R.drawable.image_part_006, R.drawable.image_part_007, R.drawable.image_part_008, R.drawable.image_part_009};
+    private final int[] billeder = {R.drawable.danmark1, R.drawable.danmark2, R.drawable.danmark3, R.drawable.danmark4};
 
 
 
