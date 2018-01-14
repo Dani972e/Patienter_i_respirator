@@ -45,13 +45,12 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 if (sound) {
                     help_sound.start();
-                    Toast.makeText(CallActivity.this, "!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CallActivity.this, getResources().getString(R.string.callMsg), Toast.LENGTH_LONG).show();
                 }
                 else if (!sound){
                     help_sound2.start();
-                    Toast.makeText(CallActivity.this, "!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CallActivity.this, getResources().getString(R.string.callMsg), Toast.LENGTH_LONG).show();
                 }
-
             }
         });
     }

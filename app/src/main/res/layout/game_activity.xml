@@ -238,7 +238,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Kald"
+        android:text="@string/kald"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="43sp"

@@ -17,28 +17,53 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final int btn_amount = 5;
-    private final ImageView[] btnArray = new ImageView[btn_amount];
-    private final int[] btnId = {R.id.input_btn, R.id.sound_btn, R.id.fontsize_btn, R.id.language_btn, R.id.reset_btn};
-    private TextView settings_view;
-    private ImageView home_btn;
 
+    private final ImageView[] btnArray = new ImageView[btn_amount];
+
+    private final int[] btnId = {R.id.input_btn, R.id.sound_btn, R.id.fontsize_btn, R.id.language_btn, R.id.reset_btn};
+
+    private TextView settings_view;
+
+    public ImageView home_btn, langBtn;
+
+    public static int reload;
+
+    public static int recreate;
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        recreate = 1;
+        recreate();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
 
+        langBtn = findViewById(R.id.language_btn);
         settings_view = findViewById(R.id.settings_view);
         home_btn = findViewById(R.id.home_btn);
         home_btn.setOnClickListener(this);
 
-
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
-
         }
 
+        if (recreate == 1) {
+            settings_view.setVisibility(View.INVISIBLE);
+            langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+            recreate = 0;
+        }
+        if (reload == 1) {
+            getFragmentManager().beginTransaction().add(R.id.settingsFragmentContainer, new LanguageFragment(),"R.id.language_btn").commit();
+            reload = 0;
+            settings_view.setVisibility(View.INVISIBLE);
+            langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+        }
     }
 
     @Override
@@ -50,7 +75,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_grey);
             }
-
         }
 
         switch (view.getId()) {

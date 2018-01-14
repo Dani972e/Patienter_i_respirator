@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Game
+    <string name="spil">Games</string>
+    <string name="vælgEtSpil">Choose a game on the left side</string>
+    <string name="huskespil">Memory Game</string>
+    <string name="krydsOgBolle">Tic Tac Toe</string>
+    <string name="puslespil">Puzzle Game</string>
+    <string name="popBalloner">Pop Balloons</string>
+    <string name="popBallonerView">Pop the balloons by clicking</string>
+    <string name="poppetBalloner">Congratulations, you popped all the balloons</string>
+    <string name="sygeplejerske">Nurse: 0</string>
+    <string name="patient">Patient: 0</string>
+    <string name="nulstil">Reset Game</string>
+    <string name="kryds">X</string>
+    <string name="bolle">O</string>
+    <string name="patientenVinder">The patient won the round!</string>
+    <string name="sygeplejerskenVinder">The nurse won the round!</string>
+    <string name="uafgjort">It is a tie!</string>
+    <string name="moon_image">Memory Moon</string>
+
+    // Call
+    <string name="kald">Call</string>
+    <string name="kaldSygeplejerske">Call a nurse</string>
+
+    // Communication
+    <string name="tastatur">Keyboard</string>
+    <string name="kommunikation">Communication</string>
+    <string name="CategoryView">Choose a category on the left side</string>
+    <string name="mineSvar">My Answer</string>
+    <string name="hvSpørgsmål">What, why, \n when, where...</string>
+    <string name="jegVilGerne">I want to ...</string>
+    <string name="jeg...">I ...</string>
+    <string name="jeg">I</string>
+    <string name="jegKan">I can</string>
+    <string name="smerte">Pain</string>
+    <string name="jegVedIkke">I do not know</string>
+    <string name="tak">Thanks</string>
+    <string name="senere">Later</string>
+    <string name="jegErGlad">I am <b>happy</b></string>
+    <string name="JegErTilpas">I am \n<b>okay</b></string>
+    <string name="JegErTræt">I am \n<b>tired</b></string>
+    <string name="JegErFrustreret">I am \n<b>frustrated</b></string>
+    <string name="JegErBange">I am <b>afraid</b></string>
+    <string name="JegErBekymret">I am \n<b>worried</b></string>
+    <string name="JegErTørstig">I am \n<b>thirsty</b></string>
+    <string name="JegErVarm">I am \n<b>hot</b></string>
+    <string name="JegErKold">I am \n<b>cold</b></string>
+    <string name="JegKederMig">I am \n<b>bored</b></string>
+    <string name="JegErØm">I am \n<b>sore</b></string>
+    <string name="FåLuft">"I \n<b>cannot breath</b>"</string>
+    <string name="jegVilGerneHaveSmertestillende">I want to \n <b>have painkillers</b></string>
+    <string name="jegVilGerneSuges">I want to \n <b>be suctioned</b></string>
+    <string name="jegVilGerneHaveLuft">I want \n <b>oxygen</b></string>
+    <string name="jegVilGerneHaveRo">I want \n <b>privacy</b></string>
+    <string name="jegVilGerneSiddeIStolen">I want to \n <b>sit in the chair</b></string>
+    <string name="jegVilGerneLiggeISengen">I want to \n <b>lie in the bed</b></string>
+    <string name="jegVilGerneVendes">I want to \n <b>be turned</b></string>
+    <string name="jegVilGernePåTur">I want to \n <b>go for a walk</b></string>
+    <string name="jegVilGerneHaveBesøg">I want to \n <b>have a visit</b></string>
+    <string name="jegVilGernePåToilettet">I want to \n <b>go to the toilet</b></string>
+    <string name="jegVilGerneHaveTændtSlukketLys">I want the \n <b>ligths on/off</b></string>
+    <string name="hvadErKlokken">What \n <b>time is it?</b></string>
+    <string name="hvadGørI">What \n <b>are you doing?</b></string>
+    <string name="jegVilGerneIkkeSeFjernsyn">I want to \n <b>watch/not watch TV</b></string>
+    <string name="hvadSagdeDu">What \n <b>did you say?</b></string>
+    <string name="hvadFejlerJeg">What \n <b>is my diagnosis?</b></string>
+    <string name="hvadSkalDerSkeIDag">What \n <b>is going to happen today?</b></string>
+    <string name="hvorforErJegHer">Why \n <b>am I here?</b></string>
+    <string name="hvornårKanJegDrikke">When \n <b>can i drink?</b></string>
+    <string name="hvornårErDerStuegang">When \n <b>are the patientrounds?</b></string>
+    <string name="hvornårSkalJegTilUndersøgelse">When \n <b>will I be examined?</b></string>
+    <string name="hvorErJeg">Where \n <b>am I?</b></string>
+    <string name="hvorLængeHarJegLiggetHer">How \n <b>long have I been here?</b></string>
+    <string name="hvorErMineTing">Where \n <b>are my belongings?</b></string>
+    <string name="smerteområde">Choose a pain area</string>
+    <string name="Brændene">Burning</string>
+    <string name="Trykkende">Pressuring</string>
+    <string name="Gendan">Change settings</string>
+    <string name="hovedstyring">Head Tracking and Touch</string>
+    <string name="Dunkende">Pounding</string>
+    <string name="skrivpåtastaturet">Dear patient, use the keyboard to write a message for the nurse</string>
+    <string name="Jagende">Stabbing</string>
+    <string name="Stikkende">Stinging</string>
+
+    // Settings
+    <string name="reset_view">Reset settings</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="danish">Danish</string>
+    <string name="skriftstørrelse">Fontsize</string>
+    <string name="lyd">Sound</string>
+    <string name="sprog">Language</string>
+    <string name="stor">Large</string>
+    <string name="mellem">Medium</string>
+    <string name="lille">Small</string>
+    <string name="kaldelyd_2">Call sound 2</string>
+    <string name="kaldelyd_1">Call sound 1</string>
+    <string name="down">-</string>
+    <string name="up">+</string>
+    <string name="kaldelyd">Call sound</string>
+    <string name="lydstyrke">Volume</string>
+    <string name="gendan">Reset</string>
+    <string name="inputmetode">Inputmethod</string>
+    <string name="reset">Reset</string>
+    <string name="touch">Touch</string>
+
+    // Diverse
+    <string name="tilbage">Back</string>
+    <string name="app_name">Patienter i respirator</string>
+    <string name="title_activity_communication">CommunicationActivity</string>
+    <string name="svar">Answer</string>
+    <string name="startside">Home</string>
+    <string name="callMsg">Calling the Nurse</string>
+
+
+</resources>

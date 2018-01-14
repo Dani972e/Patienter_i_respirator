@@ -13,8 +13,8 @@
 
         <TextView
             android:id="@+id/inputMethod_view"
-            android:layout_width="369dp"
-            android:layout_height="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/inputmetode"
             android:textAlignment="center"

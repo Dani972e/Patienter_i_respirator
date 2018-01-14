@@ -13,6 +13,7 @@
     <string name="spil">Spil</string>
     <string name="tilbage">Tilbage</string>
     <string name="startside">Startside</string>
+    <string name="callMsg">Kalder på sygeplejesken</string>
 
     // Call
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
@@ -25,8 +26,8 @@
     <string name="popBalloner">Pop Balloner</string>
     <string name="popBallonerView">Pop ballonerne ved at vælge dem</string>
     <string name="poppetBalloner">Tillykke, du fik poppet alle ballonerne!</string>
-    <string name="Sygeplejerske">Sygeplejersken: 0</string>
-    <string name="Patient">Patienten: 0</string>
+    <string name="sygeplejerske">Sygeplejersken: 0</string>
+    <string name="patient">Patienten: 0</string>
     <string name="nulstil">Nulstil spillet</string>
     <string name="kryds">X</string>
     <string name="bolle">O</string>
@@ -94,7 +95,7 @@
     // Settings
     <string name="hovedstyring">Hovedstyring og touch</string>
     <string name="touch">Touch</string>
-    <string name="reset">Gendan</string>
+    <string name="reset">Nulstil</string>
     <string name="inputmetode">Inputmetode</string>
     <string name="gendan">Nulstil</string>
     <string name="lydstyrke">Lydstyrke</string>
@@ -112,20 +113,10 @@
     <string name="danish">Dansk</string>
     <string name="english">Engelsk</string>
     <string name="language">Sprog</string>
-    <string name="reset_view">Gendan indstillinger</string>
+    <string name="reset_view">Nulstil indstillinger</string>
     <string name="moon_image">Memory Moon</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
     // Keyboard
     <string name="skrivpåtastaturet">Kære patient, brug tastaturet for at skrive en besked til sygeplejersken</string>
-
-
-
-
-    //Engelsk
-
 
 </resources>

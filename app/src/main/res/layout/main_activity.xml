@@ -114,8 +114,8 @@
 
     <TextView
         android:id="@+id/game_view"
-        android:layout_width="94dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -128,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="@+id/game_btn"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent=".1"
-        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/game_btn"
         app:layout_constraintTop_toTopOf="@+id/game_btn"
         app:layout_constraintVertical_bias="1.0"
@@ -137,8 +137,8 @@
 
     <TextView
         android:id="@+id/communication_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -152,6 +152,7 @@
         app:layout_constraintEnd_toEndOf="@+id/communication_btn"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="@+id/communication_btn"
         app:layout_constraintTop_toTopOf="@+id/communication_btn"
         app:layout_constraintVertical_bias="1.0"
