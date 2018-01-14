@@ -6,32 +6,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.support.v7.app.AppCompatActivity;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PointF;
-import android.graphics.RectF;
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.util.AttributeSet;
+import android.widget.ImageButton;
 import android.util.Log;
-import android.view.MotionEvent;
-import android.view.SoundEffectConstants;
-import android.view.View;
-
-import com.respirator.i.patienter.patienter_i_respirator.R;
-
-import java.util.ArrayList;
 
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-
-import java.util.ArrayList;
 
 /*
  * A simple {@link Fragment} subclass.
@@ -39,78 +23,66 @@ import java.util.ArrayList;
 
 
 public class PuzzleGameFragment extends Fragment implements View.OnClickListener {
+    ImageButton b1, b2, b3, b4;
+    Button switch1, switch2;
+    View v;
+    boolean buttons1AreVisible = true;
 
-    private final int[] billeder = {R.drawable.danmark1, R.drawable.danmark2, R.drawable.danmark3, R.drawable.danmark4};
+    public PuzzleGameFragment() {
+        // Required empty public constructor
+    }
 
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View game = inflater.inflate(R.layout.puzzle_game_fragment, container, false);
+        b1 = game.findViewById(R.id.Danmark1);
+        b1.setOnClickListener(this);
+
+        b2 = game.findViewById(R.id.Dannark2);
+        b2.setOnClickListener(this);
+
+        b3 = game.findViewById(R.id.Danmark3);
+        b3.setOnClickListener(this);
+
+        b4 =  game.findViewById(R.id.imageButton6);
+        b4.setOnClickListener(this);
+
+        switch1 = game.findViewById(R.id.exchange1);
+        switch1.setOnClickListener(this);
+
+        switch2 = game.findViewById(R.id.exchange2);
+        switch2.setOnClickListener(this);
+
+
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.puzzle_game_fragment, container, false);
-       // b1 = (Button) f
-
 
     }
+
+    private void skiftpositioner(ImageButton b1, ImageButton b2){
+        if (buttons1AreVisible) {
+            this.b1.setVisibility(View.GONE);
+            this.b2.setVisibility(View.GONE);
+
+        } else {
+            this.b1.setVisibility(View.VISIBLE);
+            this.b2.setVisibility(View.VISIBLE);
+        }
+
+        buttons1AreVisible = !buttons1AreVisible;
+    }
+
 
     @Override
     public void onClick(View view) {
-
-    }
-
-    class Billede {
-        RectF rectF = new RectF();
-        String tekst;
-
-        Billede(String string, int x, int y) {
-            tekst = string;
-            rectF = new RectF(x + 2, y + 2, x + 38, y + 38);
-        }
-    }
-
-    class BraetspilView extends View {
-        PointF finger = new PointF();
-        ArrayList<Billede> billeder = new ArrayList<>();
-        Billede valgtBrik = null;
-        Paint tekstStregtype = new Paint();
-        Paint brikStregtype = new Paint();
-        Paint brikStregtypeValgt;
-        Billede b1, b2, b3, b4, b5, b6, b7, b8, b9;
-
-        public BraetspilView(Context context) {
-            super(context);
-        }
-
-        public void Puzzlespilbræt(Context context) {
-            tekstStregtype.setColor(Color.WHITE);
-            tekstStregtype.setTextSize(24);
-            tekstStregtype.setAntiAlias(true);
-            brikStregtype.setColor(Color.BLACK);
-            brikStregtype.setStyle(Paint.Style.FILL);
-            brikStregtype.setAntiAlias(true);
-            brikStregtype.setStrokeWidth(2);
-            brikStregtypeValgt = new Paint(brikStregtype);
-            brikStregtypeValgt.setStyle(Paint.Style.STROKE);
-            brikStregtypeValgt.setColor(Color.BLUE);
-        }}}
-
-/*
-            billeder.add(new Billede(R.drawable.image_part_001, 30, 30));
-            billeder.add(new Billede(R.drawable.image_part_002, 80, 80));
-            billeder.add(new Billede(R.drawable.image_part_003, 140, 40));
-            billeder.add(new Billede(R.drawable.image_part_004, 130, 90));
-            billeder.add(new Billede(R.drawable.image_part_005, 160, 130));
-            billeder.add(new Billede(R.drawable.image_part_006, 17, 120));
-            billeder.add(new Billede(R.drawable.image_part_007, 170, 190));
-            billeder.add(new Billede(R.drawable.image_part_008, 170, 130));
-            billeder.add(new Billede(R.drawable., 170, 130));
-
-            Billede forklaring = new Billede("Få billederne til at passe sammen :)", 40, 280);
-            forklaring.rectF.right += 280;
-            billeder.add(forklaring);
-
+        if (v == switch1) {
+            skiftpositioner(b1, b2);
 
         }
+
     }}
-    */
+

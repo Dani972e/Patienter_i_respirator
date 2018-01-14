@@ -14,6 +14,7 @@
     <string name="tilbage">Tilbage</string>
     <string name="startside">Startside</string>
     <string name="callMsg">Kalder på sygeplejesken</string>
+    <string name="forfatter">Daniel Anusic Christopher Chytræus Thomas Lorentzen Johnny Chen</string>
 
     // Call
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>

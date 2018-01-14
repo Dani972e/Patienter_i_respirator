@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.crashlytics.android.Crashlytics;
 import com.respirator.i.patienter.patienter_i_respirator.R;
@@ -19,6 +20,7 @@ import io.fabric.sdk.android.Fabric;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView call_btn, game_btn, communication_btn, settings_btn;
+    private TextView authors;
 
     public static String lang = "";
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void CreateBtn() {
         call_btn = findViewById(R.id.call_btn);
+        authors = findViewById(R.id.authors);
         game_btn = findViewById(R.id.game_btn);
         communication_btn = findViewById(R.id.communication_btn);
         settings_btn = findViewById(R.id.settings_btn);

@@ -4,7 +4,6 @@ package com.respirator.i.patienter.patienter_i_respirator.fragments;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -13,12 +12,24 @@ import android.widget.ImageView;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
 
-public class PainFragment extends Fragment implements View.OnClickListener, View.OnTouchListener {
+public class PainFragment extends Fragment implements View.OnClickListener {
 
 
-    private final int btn_amount = 5;
-    private final Button[] btnArray = new Button[btn_amount];
-    private final int[] btnId = {R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5};
+    private final int front_btn_amount = 17;
+    private final Button[] frontBtnArray = new Button[front_btn_amount];
+    private final int[] frontBtnId = {R.id.rightUpperArmShoulder, R.id.rightLowerArm, R.id.rightHand, R.id.leftHand, R.id.leftLowerArm, R.id.leftUpperArmShoulder, R.id.stomach, R.id.chest,
+            R.id.throat, R.id.head, R.id.abdomen, R.id.rightUpperLeg, R.id.rightLowerLeg, R.id.rightLeg, R.id.leftLeg, R.id.leftLowerLeg, R.id.leftUpperLeg};
+
+
+    private final int back_Btn_Amount = 17;
+    private final Button[] backBtnArray = new Button[back_Btn_Amount];
+    private final int[] backBtnId = {R.id.backhead, R.id.neck, R.id.backUpperBack, R.id.lowerBack, R.id.buttocks, R.id.backLeftUpperLeg, R.id.backRightUpperLeg, R.id.backRightLowerLeg, R.id.backLeftLowerLeg, R.id.backLeftFoot, R.id.backRightFoot, R.id.backLeftUpperArmShoulder, R.id.backLeftLowerArm,
+            R.id.backLeftHand, R.id.backRigtUpperArmShoulder, R.id.backRightLowerArm, R.id.backRightHand};
+
+
+    private final int button_amount = 5;
+    private final Button[] buttonArray = new Button[button_amount];
+    private final int[] buttonId = {R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5};
 
     private ImageView front_btn, behind_btn;
 
@@ -37,14 +48,22 @@ public class PainFragment extends Fragment implements View.OnClickListener, View
         front_btn = pain.findViewById(R.id.front_btn);
         behind_btn = pain.findViewById(R.id.behind_btn);
 
-        front_btn.setOnTouchListener(this);
-        behind_btn.setOnTouchListener(this);
+
+        for (int i = 0; i < frontBtnId.length; i++) {
+            frontBtnArray[i] = pain.findViewById(frontBtnId[i]);
+            frontBtnArray[i].setOnClickListener(this);
+        }
+
+        for (int i = 0; i < backBtnId.length; i++) {
+            backBtnArray[i] = pain.findViewById(backBtnId[i]);
+            backBtnArray[i].setOnClickListener(this);
+        }
 
 
-        for (int i = 0; i < btnId.length; i++) {
-            btnArray[i] = pain.findViewById(btnId[i]);
-            btnArray[i].setOnClickListener(this);
-
+        for (int i = 0; i < buttonId.length; i++) {
+            buttonArray[i] = pain.findViewById(buttonId[i]);
+            buttonArray[i].setOnClickListener(this);
+            buttonArray[i].setVisibility(View.INVISIBLE);
         }
 
 
@@ -53,21 +72,136 @@ public class PainFragment extends Fragment implements View.OnClickListener, View
 
 
     @Override
-    public boolean onTouch(View view, MotionEvent event) {
-        int x = (int) event.getX();
-        int y = (int) event.getY();
-
-        System.out.println("on touch" + x + " " + y);
-
-
-        return false;
-    }
-
-
-    @Override
     public void onClick(View view) {
+        showButtons();
+
+        switch (view.getId()) {
+            case R.id.rightUpperArmShoulder:
+                front_btn.setImageResource(R.drawable.right_upper_arm_shoulder);
+                break;
+            case R.id.rightLowerArm:
+                front_btn.setImageResource(R.drawable.right_lower_arm);
+                break;
+            case R.id.rightHand:
+                front_btn.setImageResource(R.drawable.righthand);
+                break;
+            case R.id.leftHand:
+                front_btn.setImageResource(R.drawable.lefthand);
+                break;
+            case R.id.leftLowerArm:
+                front_btn.setImageResource(R.drawable.left_lower_arm);
+                break;
+            case R.id.leftUpperArmShoulder:
+                front_btn.setImageResource(R.drawable.left_upper_arm_shoulder);
+                break;
+            case R.id.stomach:
+                front_btn.setImageResource(R.drawable.stomach);
+                break;
+            case R.id.chest:
+                front_btn.setImageResource(R.drawable.chest);
+                break;
+            case R.id.throat:
+                front_btn.setImageResource(R.drawable.throat);
+                break;
+            case R.id.head:
+                front_btn.setImageResource(R.drawable.head);
+                break;
+            case R.id.abdomen:
+                front_btn.setImageResource(R.drawable.abdomen);
+                break;
+            case R.id.rightUpperLeg:
+                front_btn.setImageResource(R.drawable.right_upper_leg);
+                break;
+            case R.id.rightLowerLeg:
+                front_btn.setImageResource(R.drawable.right_lower_leg);
+                break;
+            case R.id.rightLeg:
+                front_btn.setImageResource(R.drawable.rightleg);
+                break;
+            case R.id.leftLeg:
+                front_btn.setImageResource(R.drawable.leftleg);
+                break;
+            case R.id.leftLowerLeg:
+                front_btn.setImageResource(R.drawable.left_lower_leg);
+                break;
+            case R.id.leftUpperLeg:
+                front_btn.setImageResource(R.drawable.left_upper_leg);
+                break;
+        }
 
 
+        switch (view.getId()) {
+
+            case R.id.backhead:
+                behind_btn.setImageResource(R.drawable.backhead);
+                break;
+            case R.id.neck:
+                behind_btn.setImageResource(R.drawable.neck);
+                break;
+            case R.id.backUpperBack:
+                behind_btn.setImageResource(R.drawable.back_upper_back);
+                break;
+            case R.id.lowerBack:
+                behind_btn.setImageResource(R.drawable.lower_back);
+                break;
+            case R.id.buttocks:
+                behind_btn.setImageResource(R.drawable.buttocks);
+                break;
+            case R.id.backLeftUpperLeg:
+                behind_btn.setImageResource(R.drawable.back_left_upper_leg);
+                break;
+            case R.id.backRightUpperLeg:
+                behind_btn.setImageResource(R.drawable.back_right_upper_leg);
+                break;
+            case R.id.backRightLowerLeg:
+                behind_btn.setImageResource(R.drawable.back_right_lower_leg);
+                break;
+            case R.id.backLeftLowerLeg:
+                behind_btn.setImageResource(R.drawable.back_left_lower_leg);
+                break;
+            case R.id.backRightFoot:
+                behind_btn.setImageResource(R.drawable.back_right_foot);
+                break;
+            case R.id.backLeftFoot:
+                behind_btn.setImageResource(R.drawable.back_left_foot);
+                break;
+            case R.id.backLeftUpperArmShoulder:
+                behind_btn.setImageResource(R.drawable.back_left_upper_arm_shoulder);
+                break;
+            case R.id.backLeftLowerArm:
+                behind_btn.setImageResource(R.drawable.back_left_lower_arm);
+                break;
+            case R.id.backLeftHand:
+                behind_btn.setImageResource(R.drawable.back_left_hand);
+                break;
+            case R.id.backRigtUpperArmShoulder:
+                behind_btn.setImageResource(R.drawable.back_right_upper_arm_shoulder);
+                break;
+            case R.id.backRightLowerArm:
+                behind_btn.setImageResource(R.drawable.back_right_lower_arm);
+                break;
+            case R.id.backRightHand:
+                behind_btn.setImageResource(R.drawable.back_right_hand);
+                break;
+        }
+
+        for (Button btn : buttonArray) {
+            if (btn.equals(view)) {
+                btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+            } else {
+                btn.setBackgroundResource(R.drawable.button_rounded_blue);
+            }
+
+        }
     }
 
+    public void showButtons() {
+        for (int i = 0; i < buttonId.length; i++) {
+            buttonArray[i].setVisibility(View.VISIBLE);
+        }
+    }
 }
+
+
+
+
