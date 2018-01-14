@@ -13,6 +13,7 @@
     <string name="spil">Spil</string>
     <string name="tilbage">Tilbage</string>
     <string name="startside">Startside</string>
+    <string name="forfatter">Daniel Anusic Christopher Chytræus Thomas Lorentzen Johnny Chen</string>
 
     // Call
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>

@@ -26,7 +26,7 @@ public class PainFragment extends Fragment implements View.OnClickListener {
     private final int[] backBtnId = {R.id.backhead, R.id.neck, R.id.backUpperBack, R.id.lowerBack, R.id.buttocks, R.id.backLeftUpperLeg, R.id.backRightUpperLeg, R.id.backRightLowerLeg, R.id.backLeftLowerLeg, R.id.backLeftFoot, R.id.backRightFoot, R.id.backLeftUpperArmShoulder, R.id.backLeftLowerArm,
             R.id.backLeftHand, R.id.backRigtUpperArmShoulder, R.id.backRightLowerArm, R.id.backRightHand};
 
-    //these buttons are for the five buttons that shows up, when clicking on the imageview
+
     private final int button_amount = 5;
     private final Button[] buttonArray = new Button[button_amount];
     private final int[] buttonId = {R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5};
