@@ -13,9 +13,9 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
 
 public class MyAnswerFragment extends Fragment implements View.OnClickListener {
 
-    private final int btn_amount = 3;
+    private final int btn_amount = 4;
     private final ImageView[] btnArray = new ImageView[btn_amount];
-    private final int[] btnId  = {R.id.thanks_btn, R.id.iDontKnow_btn, R.id.later_btn};
+    private final int[] btnId  = {R.id.thanks_btn, R.id.iDontKnow_btn, R.id.later_btn, R.id.reset_btn};
 
     public MyAnswerFragment() {
         // Required empty public constructor

@@ -47,6 +47,8 @@ public class PainFragment extends Fragment implements View.OnClickListener {
 
         front_btn = pain.findViewById(R.id.front_btn);
         behind_btn = pain.findViewById(R.id.behind_btn);
+        front_btn.setOnClickListener(this);
+        behind_btn.setOnClickListener(this);
 
 
         for (int i = 0; i < frontBtnId.length; i++) {

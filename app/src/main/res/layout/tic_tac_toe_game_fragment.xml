@@ -33,6 +33,33 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/patient_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:freezesText="true"
+            android:text="@string/patientErKryds"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nurse_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/nurse_view"
+            android:layout_alignBottom="@+id/nurse_view"
+            android:layout_centerHorizontal="true"
+            android:freezesText="true"
+            android:text="@string/sygeplejerskenErBolle"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
         <Button
             android:id="@+id/reset_btn"
             android:layout_width="wrap_content"

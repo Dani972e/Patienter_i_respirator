@@ -35,6 +35,8 @@
     <string name="patientenVinder">Tillykke! Patienten vandt runden</string>
     <string name="sygeplejerskenVinder">Tillykke! sygeplejersken vandt runden</string>
     <string name="uafgjort">Desværre, det blev uafgjort!</string>
+    <string name="patientErKryds">Patienten er kryds</string>
+    <string name="sygeplejerskenErBolle">Sygeplejersken er bolle</string>
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>
