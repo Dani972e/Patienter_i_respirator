@@ -51,7 +51,7 @@
             android:layout_height="72dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="Button"
+            android:text="Button3"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_rounded_turquoise"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -67,7 +67,7 @@
             android:layout_height="72dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="Button"
+            android:text="Button4"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_rounded_turquoise"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -85,6 +85,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@color/darkGrey"
+            android:text="Det er ragende forkert!!!!!!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -98,6 +99,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textColor="@color/darkGrey"
+            android:text="Hvormange forskellige frber er der i et lyssignal?"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
