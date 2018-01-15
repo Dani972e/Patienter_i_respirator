@@ -48,15 +48,6 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
             }
         }
 
-        Button reset_btn = game.findViewById(R.id.reset_btn);
-        reset_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                resetGame();
-            }
-        });
-
-
         return game;
 
     }
@@ -69,6 +60,7 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
         if (patientTurn) {
             ((Button) view).setText(R.string.kryds);
+
         } else {
             ((Button) view).setText(R.string.bolle);
         }
@@ -169,14 +161,6 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
     }
 
-    //method that resets the game when clicking on reset btn
-    private void resetGame() {
-        patientPoint = 0;
-        nursePoint = 0;
-        updatePointsText();
-        resetGameboard();
-        gameText_view.setText(R.string.krydsOgBolle);
-    }
 
     /*
     this method will be called if we rotate the device.

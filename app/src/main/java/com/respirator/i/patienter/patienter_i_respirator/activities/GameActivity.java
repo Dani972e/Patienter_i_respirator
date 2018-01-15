@@ -10,10 +10,10 @@ import android.widget.TextView;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
-//import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.QuizFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
+
+//import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -69,7 +69,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.ticTacToe_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new TicTacToeGameFragment()).commit();
-                gameText_view.setText(R.string.krydsOgBolle);
+                gameText_view.setText(R.string.førsteTur);
                 break;
             case R.id.memoryGame_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();

@@ -25,52 +25,15 @@
             android:id="@+id/nurse_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/reset_btn"
             android:layout_alignStart="@+id/patient_view"
+            android:layout_below="@+id/patient_view"
             android:freezesText="true"
             android:text="@string/sygeplejerske"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/patient_msg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:freezesText="true"
-            android:text="@string/patientErKryds"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/nurse_msg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/nurse_view"
-            android:layout_alignBottom="@+id/nurse_view"
-            android:layout_centerHorizontal="true"
-            android:freezesText="true"
-            android:text="@string/sygeplejerskenErBolle"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-
-        <Button
-            android:id="@+id/reset_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/button_rounded_grey"
-            android:text="@string/nulstil"
-            android:textAllCaps="false"
-            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
