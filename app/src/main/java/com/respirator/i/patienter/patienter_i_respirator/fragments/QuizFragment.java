@@ -112,6 +112,11 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar4.setText(sp.getsvar4(spørgsmålnr));
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
+        if (spørgsmålnr > 7){
+            info.setText("Du gættede rigtigt på dem alle :)");
+            spørgsmålnr = 1;
+            score = 0;
+        }
 
     }
 
