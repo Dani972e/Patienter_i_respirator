@@ -25,7 +25,6 @@ public class FontsizeFragment extends Fragment implements View.OnClickListener {
 
         View fontsize = inflater.inflate(R.layout.fontsize_fragment, container, false);
 
-
         return fontsize;
     }
 

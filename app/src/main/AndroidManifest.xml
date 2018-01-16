@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CallActivity" />
-        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.CallActivity"/>
+            <!--android:configChanges="orientation|screenSize"-->
+
+        <activity android:name=".activities.SettingsAct" />
         <activity android:name=".activities.CommActivity" />
         <activity android:name=".activities.GameActivity" />
         <activity android:name=".activities.KeyboardActivity"></activity>
