@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
 
-public class SettingsAct extends AppCompatActivity implements View.OnClickListener {
+public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final int btn_amount = 5;
 
