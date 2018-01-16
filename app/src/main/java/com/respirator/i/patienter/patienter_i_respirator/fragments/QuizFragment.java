@@ -3,7 +3,6 @@ package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-
-import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +22,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     Button svar1, svar2, svar3, svar4;
     TextView spørgsmål, info;
 
-    private quizSpørgsmål sp = new quizSpørgsmål();
+    private QuizQuestions sp = new QuizQuestions();
     private String rigtigesvar;
     private int spørgsmålnr = 0;
 
@@ -39,7 +36,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
 
-        View quiz = inflater.inflate(R.layout.quizgamefragment, container, false);
+        View quiz = inflater.inflate(R.layout.quiz_fragment, container, false);
         svar1 = quiz.findViewById(R.id.svar1);
 
         svar2 = quiz.findViewById(R.id.svar2);

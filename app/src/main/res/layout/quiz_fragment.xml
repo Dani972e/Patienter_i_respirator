@@ -10,14 +10,14 @@
         <Button
             android:id="@+id/svar1"
             android:layout_width="match_parent"
-            android:gravity="center"
             android:layout_height="72dp"
             android:layout_marginBottom="272dp"
-            android:text="Button"
             android:background="@drawable/button_rounded_turquoise"
+            android:gravity="center"
+            android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="0dp"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
         <Button
             android:id="@+id/svar2"

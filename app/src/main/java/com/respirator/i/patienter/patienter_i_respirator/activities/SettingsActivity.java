@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
 
-public class SettingsAct extends AppCompatActivity implements View.OnClickListener {
+public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final int btn_amount = 5;
 
@@ -35,31 +35,29 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
     public static boolean reload, langClick;
 
     @Override
-    protected void onRestart()
-    {
+    protected void onRestart() {
         super.onRestart();
         reload = true;
         recreate();
     }
 
     @Override
-    public void onSaveInstanceState(Bundle savedInstanceState)
-    {
+    public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putBoolean("langBtn", langClick);
     }
 
     public void LoadLocale() {
-        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref", 0);
 
-        lang = langPref.getString("langPref",lang);
+        lang = langPref.getString("langPref", lang);
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
 
         Configuration config = new Configuration();
         config.setLocale(locale);
 
-        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     @Override
@@ -107,8 +105,7 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
                 settings_view.setVisibility(View.INVISIBLE);
-            }
-            else {
+            } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_grey);
             }
         }
@@ -117,9 +114,9 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
                 break;
-            case R.id.sore_btn:
+            case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
-            break;
+                break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
                 break;
@@ -130,7 +127,7 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
                 break;
             case R.id.home_btn:
-                Intent homeAct = new Intent(this,MainActivity.class);
+                Intent homeAct = new Intent(this, MainActivity.class);
                 startActivity(homeAct);
             default:
                 break;

@@ -4,7 +4,7 @@ package com.respirator.i.patienter.patienter_i_respirator.fragments;
  * Created by Thomas on 13-01-2018.
  */
 
-public class quizSpørgsmål {
+public class QuizQuestions {
 
     public String[] minespørgsmål = {"Hvor mange mennesker bor i Danmark?", "Hvad er Danmarks hovedstad?", "Hvilket land grænser op til det sydlige Danmark?",
             "Hvad hedder det danske flag?", "Hvad er 10 gange 5?", "Hvilket sprog taler de i Australien?",
