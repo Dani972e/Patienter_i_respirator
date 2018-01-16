@@ -16,6 +16,9 @@ import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
+ *
+ * Made with great inspiration from the following source:
+ * https://www.youtube.com/watch?v=4g1_UH_6VQc&t=1s
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
@@ -25,7 +28,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private quizSpørgsmål sp = new quizSpørgsmål();
     private String rigtigesvar;
     private int spørgsmålnr = 0;
-    private int score = 0;
 
     public QuizFragment() {
         // Required empty public constructor
@@ -113,7 +115,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar4.setText(sp.getsvar4(spørgsmålnr));
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
-        if (spørgsmålnr > 7){
+        if (spørgsmålnr > 8){
             svar1.setVisibility(View.GONE);
             svar2.setVisibility(View.GONE);
             svar3.setVisibility(View.GONE);
