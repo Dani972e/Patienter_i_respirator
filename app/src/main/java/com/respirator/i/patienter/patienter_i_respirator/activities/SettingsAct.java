@@ -40,6 +40,7 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
         super.onRestart();
         reload = true;
         recreate();
+        finish();
     }
 
     @Override
@@ -89,7 +90,6 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
                 settings_view.setVisibility(View.INVISIBLE);
             }
 
-            langClick = savedInstanceState.getBoolean("langBtn");
             if (langClick) {
                 langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
                 langClick = false;
@@ -141,21 +141,40 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
                 inputClick = true;
+                soundClick = false;
+                fontClick = false;
+                langClick = false;
+                resetClick = false;
                 break;
             case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
+                inputClick = false;
                 soundClick = true;
-            break;
+                fontClick = false;
+                langClick = false;
+                resetClick = false;            break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
+                inputClick = false;
+                soundClick = false;
                 fontClick = true;
+                langClick = false;
+                resetClick = false;
                 break;
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
+                inputClick = false;
+                soundClick = false;
+                fontClick = false;
                 langClick = true;
+                resetClick = false;
                 break;
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
+                inputClick = false;
+                soundClick = false;
+                fontClick = false;
+                langClick = false;
                 resetClick = true;
                 break;
             case R.id.home_btn:

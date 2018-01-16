@@ -12,7 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.activities.SettingsActivity;
+import com.respirator.i.patienter.patienter_i_respirator.activities.SettingsAct;
 
 import java.util.Locale;
 
@@ -36,9 +36,9 @@ public class LanguageFragment extends Fragment {
     }
 
     public void Refresh() {
-        Intent refresh = new Intent(getContext(), SettingsActivity.class);
-        SettingsActivity.reload = true;
-        SettingsActivity.langClick = true;
+        Intent refresh = new Intent(getContext(), SettingsAct.class);
+        SettingsAct.reload = true;
+        SettingsAct.langClick = true;
         startActivity(refresh);
     }
 

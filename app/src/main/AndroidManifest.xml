@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.respirator.i.patienter.patienter_i_respirator">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,16 +18,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.CallActivity"/>
-            <!--android:configChanges="orientation|screenSize"-->
-
-        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.SettingsAct" />
         <activity android:name=".activities.CommActivity" />
         <activity android:name=".activities.GameActivity" />
-        <activity android:name=".activities.KeyboardActivity"></activity>
+        <activity android:name=".activities.KeyboardActivity"/>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="14e41d8927a3f101f817b4f16d501fda97cee543" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
