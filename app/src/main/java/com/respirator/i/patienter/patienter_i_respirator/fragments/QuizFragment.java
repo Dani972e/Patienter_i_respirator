@@ -16,7 +16,6 @@ import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
- *
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
@@ -26,6 +25,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private quizSpørgsmål sp = new quizSpørgsmål();
     private String rigtigesvar;
     private int spørgsmålnr = 0;
+    private int score = 0;
 
     public QuizFragment() {
         // Required empty public constructor
@@ -64,8 +64,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (svar2.getText() == rigtigesvar)
+                if (svar2.getText() == rigtigesvar) {
                     opdaterSpørgsmål();
+                }
                 else
                     spilSlut();
             }
@@ -104,10 +105,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     public void opdaterSpørgsmål() {
-        Log.d("xxx", "opdaterSpørgsmål "+spørgsmålnr);
-//        new Exception("hej ehej").printStackTrace();
-
-        Log.d("xxx", "opdaterSpørgsmål "+sp.getminespørgsmål(spørgsmålnr));
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
         svar2.setText(sp.getsvar2(spørgsmålnr));
@@ -115,9 +112,10 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar4.setText(sp.getsvar4(spørgsmålnr));
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
+
     }
 
     private void spilSlut() {
-        info.setText("Forkert svar! Prøv igen");
+        info.setText("Forkert svar! Prøv igen :)");
     }
 }
