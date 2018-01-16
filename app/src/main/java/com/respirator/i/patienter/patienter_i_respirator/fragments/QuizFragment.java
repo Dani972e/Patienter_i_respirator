@@ -105,6 +105,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     public void opdaterSpørgsmål() {
+        info.setText("Gæt på det rigtige svar!");
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
         svar2.setText(sp.getsvar2(spørgsmålnr));
@@ -113,14 +114,20 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
         if (spørgsmålnr > 7){
-            info.setText("Du gættede rigtigt på dem alle :)");
-            spørgsmålnr = 1;
-            score = 0;
+            svar1.setVisibility(View.GONE);
+            svar2.setVisibility(View.GONE);
+            svar3.setVisibility(View.GONE);
+            svar4.setVisibility(View.GONE);
+            spørgsmål.setText("Du gættede rigtigt på dem alle :)");
         }
 
     }
 
     private void spilSlut() {
-        info.setText("Forkert svar! Prøv igen :)");
+        spørgsmål.setText("Forkert svar! Prøv igen :)");
+        svar1.setVisibility(View.GONE);
+        svar2.setVisibility(View.GONE);
+        svar3.setVisibility(View.GONE);
+        svar4.setVisibility(View.GONE);
     }
 }
