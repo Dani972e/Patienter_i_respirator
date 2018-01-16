@@ -23,7 +23,7 @@
     <string name="vælgEtSpil">Vælg et spil i venstre side</string>
     <string name="huskespil">Huskespil</string>
     <string name="krydsOgBolle">Kryds og bolle</string>
-    <string name="puslespil">Puslespil</string>
+    <string name="Quiz">Quiz</string>
     <string name="popBalloner">Pop Balloner</string>
     <string name="popBallonerView">Pop ballonerne ved at vælge dem</string>
     <string name="poppetBalloner">Tillykke, du fik poppet alle ballonerne!</string>

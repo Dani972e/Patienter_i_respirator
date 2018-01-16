@@ -19,7 +19,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     private final int btn_amount = 4;
     private final ImageView[] btnArray = new ImageView[btn_amount];
-    private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.puzzle_btn};
+    private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.quiz_btn};
     private ImageView call_btn;
     private TextView gameText_view;
     private TextView game_view;
@@ -63,9 +63,9 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
 
         switch (view.getId()) {
-            case R.id.puzzle_btn:
+            case R.id.quiz_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new QuizFragment()).commit();
-                gameText_view.setText("Quiz");
+                gameText_view.setText(R.string.Quiz);
                 break;
             case R.id.ticTacToe_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new TicTacToeGameFragment()).commit();
