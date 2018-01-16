@@ -22,17 +22,17 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
 {
 
 
-    ImageView ImageView1, ImageView2, ImageView3, ImageView4, ImageView5, ImageView6;
+    private ImageView ImageView1, ImageView2, ImageView3, ImageView4, ImageView5, ImageView6;
 
     //array til billeder
-    Integer[] billedeArray = {101, 102, 103, 201, 202, 203};
+    private Integer[] billedeArray = {101, 102, 103, 201, 202, 203};
 
     //billeder
-    int billede11, billede12, billede13, billede21, billede22, billede23;
+    private int billede11, billede12, billede13, billede21, billede22, billede23;
 
-    int førsteBillede, andetBillede;
-    int førsteKlik, andetKlik;
-    int billedeNummer = 1;
+    private int førsteBillede, andetBillede;
+    private int førsteKlik, andetKlik;
+    private int billedeNummer = 1;
 
 
     public MemoryGameFragment() {
@@ -117,65 +117,64 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
     }
 
     private void huskeLogik(ImageView ImageView, int billede) {
-            // vedhæfter billederne til imageviews
-            if(billedeArray[billede] == 101) {
-                ImageView.setImageResource(R.mipmap.star_memory);
+        // vedhæfter billederne til imageviews
+        if (billedeArray[billede] == 101) {
+            ImageView.setImageResource(R.mipmap.star_memory);
 
-            } else if (billedeArray[billede] == 102) {
-                ImageView.setImageResource(R.mipmap.sun_memory);
+        } else if (billedeArray[billede] == 102) {
+            ImageView.setImageResource(R.mipmap.sun_memory);
 
-            } else if (billedeArray[billede] == 103) {
-                ImageView.setImageResource(R.mipmap.moon_memory);
+        } else if (billedeArray[billede] == 103) {
+            ImageView.setImageResource(R.mipmap.moon_memory);
 
-            } else if (billedeArray[billede] == 201) {
-                ImageView.setImageResource(R.mipmap.star_memory);
+        } else if (billedeArray[billede] == 201) {
+            ImageView.setImageResource(R.mipmap.star_memory);
 
-            } else if (billedeArray[billede] == 202) {
-                ImageView.setImageResource(R.mipmap.sun_memory);
+        } else if (billedeArray[billede] == 202) {
+            ImageView.setImageResource(R.mipmap.sun_memory);
 
-            } else if (billedeArray[billede] == 203) {
-                ImageView.setImageResource(R.mipmap.moon_memory);
+        } else if (billedeArray[billede] == 203) {
+            ImageView.setImageResource(R.mipmap.moon_memory);
+        }
+
+
+        //tjekker hvilket billede, der er trykket på og gemmer det som en temporær variabel.
+        if (billedeNummer == 1) {
+            førsteBillede = billedeArray[billede];
+            if (førsteBillede > 200) {
+                førsteBillede = førsteBillede - 100;
             }
+            billedeNummer = 2;
+            førsteKlik = billede;
 
+            ImageView.setEnabled(false);
 
-            //tjekker hvilket billede, der er trykket på og gemmer det som en temporær variabel.
-            if (billedeNummer == 1) {
-                førsteBillede = billedeArray[billede];
-                if (førsteBillede > 200) {
-                    førsteBillede = førsteBillede - 100;
-                }
-                billedeNummer = 2;
-                førsteKlik = billede;
-
-                ImageView.setEnabled(false);
-
-            } else if (billedeNummer == 2) {
-                andetBillede = billedeArray [billede];
-                if (andetBillede > 200) {
-                    andetBillede = andetBillede - 100;
-                }
-                billedeNummer = 1;
-                andetKlik = billede;
-
-                ImageView1.setEnabled(false);
-                ImageView2.setEnabled(false);
-                ImageView3.setEnabled(false);
-                ImageView4.setEnabled(false);
-                ImageView5.setEnabled(false);
-                ImageView6.setEnabled(false);
-
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        //Tjekker om de valgte billeder er éns
-                        calculate();
-                    }
-                }, 1000);
-
+        } else if (billedeNummer == 2) {
+            andetBillede = billedeArray[billede];
+            if (andetBillede > 200) {
+                andetBillede = andetBillede - 100;
             }
+            billedeNummer = 1;
+            andetKlik = billede;
 
+            ImageView1.setEnabled(false);
+            ImageView2.setEnabled(false);
+            ImageView3.setEnabled(false);
+            ImageView4.setEnabled(false);
+            ImageView5.setEnabled(false);
+            ImageView6.setEnabled(false);
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    //Tjekker om de valgte billeder er éns
+                    calculate();
+                }
+            }, 1000);
+
+        }
 
 
     }

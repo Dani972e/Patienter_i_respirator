@@ -3,7 +3,6 @@ package com.respirator.i.patienter.patienter_i_respirator.fragments;
 
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +11,18 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-import java.util.Random;
-
 /**
  * A simple {@link Fragment} subclass.
  *
+ * Made with great inspiration from the following source:
+ * https://www.youtube.com/watch?v=4g1_UH_6VQc&t=1s
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
     Button svar1, svar2, svar3, svar4;
     TextView spørgsmål, info;
 
-    private quizSpørgsmål sp = new quizSpørgsmål();
+    private QuizQuestions sp = new QuizQuestions();
     private String rigtigesvar;
     private int spørgsmålnr = 0;
 
@@ -37,7 +36,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
 
 
-        View quiz = inflater.inflate(R.layout.quizgamefragment, container, false);
+        View quiz = inflater.inflate(R.layout.quiz_fragment, container, false);
         svar1 = quiz.findViewById(R.id.svar1);
 
         svar2 = quiz.findViewById(R.id.svar2);
@@ -64,8 +63,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (svar2.getText() == rigtigesvar)
+                if (svar2.getText() == rigtigesvar) {
                     opdaterSpørgsmål();
+                }
                 else
                     spilSlut();
             }
@@ -104,10 +104,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     public void opdaterSpørgsmål() {
-        Log.d("xxx", "opdaterSpørgsmål "+spørgsmålnr);
-//        new Exception("hej ehej").printStackTrace();
-
-        Log.d("xxx", "opdaterSpørgsmål "+sp.getminespørgsmål(spørgsmålnr));
+        info.setText("Gæt på det rigtige svar!");
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
         svar2.setText(sp.getsvar2(spørgsmålnr));
@@ -115,9 +112,21 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar4.setText(sp.getsvar4(spørgsmålnr));
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
+        if (spørgsmålnr > 7){
+            svar1.setVisibility(View.GONE);
+            svar2.setVisibility(View.GONE);
+            svar3.setVisibility(View.GONE);
+            svar4.setVisibility(View.GONE);
+            spørgsmål.setText("Du gættede rigtigt på dem alle :)");
+        }
+
     }
 
     private void spilSlut() {
-        info.setText("Forkert svar! Prøv igen");
+        spørgsmål.setText("Forkert svar! Prøv igen :)");
+        svar1.setVisibility(View.GONE);
+        svar2.setVisibility(View.GONE);
+        svar3.setVisibility(View.GONE);
+        svar4.setVisibility(View.GONE);
     }
 }
