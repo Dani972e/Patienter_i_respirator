@@ -112,7 +112,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar4.setText(sp.getsvar4(spørgsmålnr));
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
-        if (spørgsmålnr > 8){
+        if (spørgsmålnr > 7){
             svar1.setVisibility(View.GONE);
             svar2.setVisibility(View.GONE);
             svar3.setVisibility(View.GONE);
