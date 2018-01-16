@@ -1,6 +1,8 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +16,10 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragm
 import com.respirator.i.patienter.patienter_i_respirator.fragments.PainFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFragment;
 
+import java.util.Locale;
+
+import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final int btn_amount = 5;
@@ -23,9 +29,33 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView call_btn, keyboard_btn, home_btn;
     private TextView comm_view;
 
+    protected void onRestart()
+    {
+        super.onRestart();
+        recreate();
+    }
+
+    public void LoadLocale() {
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+
+        lang = langPref.getString("langPref",lang);
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+
+        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            LoadLocale();
+        }
+
         onWindowFocusChanged(true);
 
         setContentView(R.layout.comm_activity);
@@ -44,7 +74,6 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
             btnArray[i].setOnClickListener(this);
 
         }
-
     }
 
     @Override

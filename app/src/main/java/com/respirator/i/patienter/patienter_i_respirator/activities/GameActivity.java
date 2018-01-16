@@ -1,6 +1,8 @@
 package com.respirator.i.patienter.patienter_i_respirator.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,6 +14,10 @@ import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFra
 import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.QuizFragment;
 import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
+
+import java.util.Locale;
+
+import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
 
 //import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 
@@ -25,14 +31,35 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private TextView game_view;
     private ImageView home_btn;
 
+    protected void onRestart()
+    {
+        super.onRestart();
+        recreate();
+    }
+
+    public void LoadLocale() {
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+
+        lang = langPref.getString("langPref",lang);
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+
+        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         onWindowFocusChanged(true);
 
-        setContentView(R.layout.game_activity);
+        if (savedInstanceState != null) {
+            LoadLocale();
+        }
 
+        setContentView(R.layout.game_activity);
 
         gameText_view = findViewById(R.id.gameText_view);
         call_btn = findViewById(R.id.call_btn);
@@ -45,8 +72,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             btnArray[i] = findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
         }
-
-
     }
 
     @Override
@@ -58,7 +83,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_turquoise);
             }
-
         }
 
 

@@ -2,6 +2,8 @@ package com.respirator.i.patienter.patienter_i_respirator.activities;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,12 +13,38 @@ import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
+import java.util.Locale;
+
+import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 
+    protected void onRestart()
+    {
+        super.onRestart();
+        recreate();
+    }
+
+    public void LoadLocale() {
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+
+        lang = langPref.getString("langPref",lang);
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+
+        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            LoadLocale();
+        }
         setContentView(R.layout.keyboard_activity);
 
         EditText keyboard = findViewById(R.id.keyboard);

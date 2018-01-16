@@ -24,7 +24,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static String lang = "";
 
+    protected void onRestart()
+    {
+        super.onRestart();
+        recreate();
+    }
+
     public void LoadLocale() {
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+
+        lang = langPref.getString("langPref",lang);
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
 
@@ -61,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (lang.equalsIgnoreCase("en")){
             LoadLocale();
         }
+        else if (savedInstanceState != null) {
+            LoadLocale();
+        }
 
         onWindowFocusChanged(true);
         setContentView(R.layout.main_activity);
@@ -91,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
-
     }
 
 

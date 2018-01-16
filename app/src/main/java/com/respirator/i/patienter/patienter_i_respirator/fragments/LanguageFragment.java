@@ -55,7 +55,6 @@ public class LanguageFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, Bundle
             savedInstanceState) {
-        // Inflate the layout for this fragment
 
         final View language = inflater.inflate(R.layout.language_fragment, container, false);
 

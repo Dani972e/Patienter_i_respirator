@@ -30,9 +30,9 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
 
     private TextView settings_view;
 
-    public ImageView home_btn, langBtn;
+    public ImageView home_btn, langBtn, soundBtn, inputBtn, resetBtn, fontBtn;
 
-    public static boolean reload, langClick;
+    public static boolean reload, langClick, resetClick, fontClick, soundClick, inputClick;
 
     @Override
     protected void onRestart()
@@ -47,6 +47,10 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
     {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putBoolean("langBtn", langClick);
+        savedInstanceState.putBoolean("resetBtn", resetClick);
+        savedInstanceState.putBoolean("fontBtn", fontClick);
+        savedInstanceState.putBoolean("soundBtn", soundClick);
+        savedInstanceState.putBoolean("inputBtn", inputClick);
     }
 
     public void LoadLocale() {
@@ -73,6 +77,10 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.settings_activity);
         settings_view = findViewById(R.id.settings_view);
         langBtn = findViewById(R.id.language_btn);
+        soundBtn = findViewById(R.id.sound_btn);
+        resetBtn = findViewById(R.id.reset_btn);
+        inputBtn = findViewById(R.id.input_btn);
+        fontBtn = findViewById(R.id.fontsize_btn);
         home_btn = findViewById(R.id.home_btn);
         home_btn.setOnClickListener(this);
 
@@ -86,8 +94,24 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
                 langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
                 langClick = false;
             }
-
+            else if (soundClick) {
+                soundBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                soundClick = false;
+            }
+            else if (inputClick) {
+                inputBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                inputClick = false;
+            }
+            else if (fontClick) {
+                fontBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                fontClick = false;
+            }
+            else if (resetClick) {
+                resetBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                resetClick = false;
+            }
         }
+
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
@@ -116,18 +140,23 @@ public class SettingsAct extends AppCompatActivity implements View.OnClickListen
         switch (view.getId()) {
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
+                inputClick = true;
                 break;
-            case R.id.sore_btn:
+            case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
+                soundClick = true;
             break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
+                fontClick = true;
                 break;
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
+                langClick = true;
                 break;
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
+                resetClick = true;
                 break;
             case R.id.home_btn:
                 Intent homeAct = new Intent(this,MainActivity.class);
