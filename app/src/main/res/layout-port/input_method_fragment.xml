@@ -21,16 +21,32 @@
             android:textColor="@color/grey"
             android:textSize="40sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/inputG"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="0.846" />
 
-        <Button
+        <RadioGroup
+            android:id="@+id/inputG"
+            android:layout_width="120pt"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.379">
+
+        <RadioButton
             android:id="@+id/touch_btn"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="60pt"
+            android:textAlignment="center"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -39,7 +55,9 @@
             android:text="@string/touch"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="20sp"
+            android:checked="true"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_default="percent"
@@ -50,11 +68,11 @@
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".3" />
 
-
-        <Button
+        <RadioButton
             android:id="@+id/facialControl_btn"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="60pt"
+            android:textAlignment="center"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -63,7 +81,8 @@
             android:text="@string/hovedstyring"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_default="percent"
@@ -73,6 +92,7 @@
             app:layout_constraintVertical_bias="0.5"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".3" />
+        </RadioGroup>
 
     </android.support.constraint.ConstraintLayout>
 

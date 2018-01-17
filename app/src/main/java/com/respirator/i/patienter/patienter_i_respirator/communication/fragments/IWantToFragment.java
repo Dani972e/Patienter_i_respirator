@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-import org.w3c.dom.Text;
-
-import static com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment.fontsize;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
 
 
 public class IWantToFragment extends Fragment implements View.OnClickListener {

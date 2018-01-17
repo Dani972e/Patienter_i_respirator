@@ -31,11 +31,8 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         // Required empty public constructor
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View quiz = inflater.inflate(R.layout.quiz_fragment, container, false);
         svar1 = quiz.findViewById(R.id.svar1);
@@ -92,10 +89,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-
         return quiz;
-
-
     }
 
     @Override
@@ -105,7 +99,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     }
 
     public void opdaterSpørgsmål() {
-        info.setText("Gæt på det rigtige svar!");
+        info.setText(R.string.quizTitel_1);
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
         svar2.setText(sp.getsvar2(spørgsmålnr));
@@ -118,13 +112,13 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             svar2.setVisibility(View.GONE);
             svar3.setVisibility(View.GONE);
             svar4.setVisibility(View.GONE);
-            spørgsmål.setText("Du gættede rigtigt på dem alle :)");
+            spørgsmål.setText(R.string.guessTrue);
         }
 
     }
 
     private void spilSlut() {
-        spørgsmål.setText("Forkert svar! Prøv igen :)");
+        spørgsmål.setText(R.string.guessWrong);
         svar1.setVisibility(View.GONE);
         svar2.setVisibility(View.GONE);
         svar3.setVisibility(View.GONE);

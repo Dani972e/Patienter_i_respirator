@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Patienter_i_respirator.iml" filepath="$PROJECT_DIR$/Patienter_i_respirator.iml" />
-      <module fileurl="file://C:\Users\Thomas\AndroidStudioProjects\Patienter_i_respirrator\Patienter_i_respirator.iml" filepath="C:\Users\Thomas\AndroidStudioProjects\Patienter_i_respirrator\Patienter_i_respirator.iml" />
-      <module fileurl="file://C:\Users\Anusi\AndroidStudioProjects\Patienter_i_respirator\Patienter_i_respirrator.iml" filepath="C:\Users\Anusi\AndroidStudioProjects\Patienter_i_respirator\Patienter_i_respirrator.iml" />
-      <module fileurl="file://C:\Users\Johnny\AndroidStudioProjects\Patienter_i_respirator\Patienter_i_respirrator.iml" filepath="C:\Users\Johnny\AndroidStudioProjects\Patienter_i_respirator\Patienter_i_respirrator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

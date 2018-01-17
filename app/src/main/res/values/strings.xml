@@ -37,7 +37,9 @@
     <string name="sygeplejerskenVinder">Tillykke! sygeplejersken vandt runden</string>
     <string name="uafgjort">Desværre, det blev uafgjort!</string>
     <string name="førsteTur">Patienten starter med at sætte et kryds</string>
-
+    <string name="quizTitel_1">Gæt på det rigtige svar!</string>
+    <string name="guessTrue">Du gættede rigtigt!</string>
+    <string name="guessWrong">Forkert gæt! Prøv igen</string>
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>
@@ -119,7 +121,12 @@
     <string name="language">Sprog</string>
     <string name="reset_view">Nulstil indstillinger</string>
     <string name="moon_image">Memory Moon</string>
-
+    <string name="resetCancel">Annuller</string>
+    <string name="resetTitle">Nulstil indstillinger</string>
+    <string name="resetMsg">Dette vil nulstille indstillinger til standard instillinger</string>
+    <string name="resetBtn">Nulstil</string>
+    <string name="resetToast">Indstillinger er nulstillet</string>
+    <string name="inputToast">Ikke implementeret endnu</string>
 
     // Keyboard
     <string name="skrivpåtastaturet">Kære patient, brug tastaturet for at skrive en besked til sygeplejersken</string>

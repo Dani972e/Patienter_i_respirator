@@ -18,9 +18,8 @@ import com.respirator.i.patienter.patienter_i_respirator.settings.activities.Set
 
 import java.util.Locale;
 
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
 import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
-import static com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment.fontsize;
-
 
 public class LanguageFragment extends Fragment {
 

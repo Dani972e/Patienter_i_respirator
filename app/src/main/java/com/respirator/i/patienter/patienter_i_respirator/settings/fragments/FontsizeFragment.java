@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.settings.activities.SettingsActivity;
 
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
+
 public class FontsizeFragment extends Fragment {
 
     public RadioGroup fontG;
@@ -23,8 +25,6 @@ public class FontsizeFragment extends Fragment {
     public RadioButton small, medium, large;
 
     int checked;
-
-    public static int fontsize = 1;
 
     public TextView fontsizeTxt;
 
@@ -77,7 +77,6 @@ public class FontsizeFragment extends Fragment {
             LargeFontSize();
             large.setChecked(true);
         }
-
 
         fontG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

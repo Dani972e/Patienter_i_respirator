@@ -22,6 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -40,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/svar1"
-        app:layout_constraintVertical_bias="0.043"
+        app:layout_constraintVertical_bias="0.041"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -59,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/svar2"
-        app:layout_constraintVertical_bias="0.062"
+        app:layout_constraintVertical_bias="0.078"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -78,40 +79,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/svar3"
-        app:layout_constraintVertical_bias="0.06999999"
+        app:layout_constraintVertical_bias="0.068"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/spørgsmål"
-        android:layout_width="931dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="52dp"
-        android:text=""
         android:gravity="center"
+        android:text=""
         android:textColor="@color/darkGrey"
-        android:textSize="28dp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/svar1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.901" />
 
     <TextView
         android:id="@+id/quizInfo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:textSize="40sp"
         android:text="INFO"
         android:textColor="@color/darkGrey"
+        app:layout_constraintBottom_toTopOf="@+id/spørgsmål"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
 </android.support.constraint.ConstraintLayout>
 

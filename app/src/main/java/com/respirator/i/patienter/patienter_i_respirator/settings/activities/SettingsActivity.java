@@ -35,7 +35,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     public ImageView home_btn, langBtn, soundBtn, inputBtn, resetBtn, fontBtn;
 
-    public static boolean langReload, fontsizeReload, langClick, resetClick, fontClick, soundClick, inputClick;
+    public static boolean langReload, fontsizeReload, resetReload, langClick, resetClick, fontClick, soundClick, inputClick;
 
     @Override
     protected void onRestart()
@@ -43,6 +43,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onRestart();
         langReload = true;
         fontsizeReload = true;
+        resetReload = true;
         recreate();
         finish();
     }
@@ -174,6 +175,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             fontsizeReload = false;
             settings_view.setVisibility(View.INVISIBLE);
             fontBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+        }
+        else if (resetReload) {
+            getFragmentManager().beginTransaction().add(R.id.settingsFragmentContainer, new ResetFragment(), "R.id.reset_btn").commit();
+            resetReload = false;
+            settings_view.setVisibility(View.INVISIBLE);
+            resetBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
         }
 
         if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {

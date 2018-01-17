@@ -21,6 +21,9 @@
     <string name="uafgjort">It is a tie!</string>
     <string name="moon_image">Memory Moon</string>
     <string name="førsteTur">The patient starts to set a cross</string>
+    <string name="quizTitel_1">Guess the correct answer!</string>
+    <string name="guessTrue">You guess correct!</string>
+    <string name="guessWrong">Wrong answer! Try again</string>
 
     // Call
     <string name="kald">Call</string>
@@ -109,6 +112,12 @@
     <string name="inputmetode">Inputmethod</string>
     <string name="reset">Reset</string>
     <string name="touch">Touch</string>
+    <string name="resetToast">Settings are now reset</string>
+    <string name="resetCancel">Cancel</string>
+    <string name="resetTitle">Reset settings</string>
+    <string name="resetMsg">This will reset setting to default settings</string>
+    <string name="resetBtn">Reset</string>
+    <string name="inputToast">Not implemented yet</string>
 
     // Diverse
     <string name="tilbage">Back</string>
@@ -117,6 +126,7 @@
     <string name="svar">Answer</string>
     <string name="startside">Home</string>
     <string name="callMsg">Calling the Nurse</string>
+
 
 
 </resources>

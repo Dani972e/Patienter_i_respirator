@@ -49,11 +49,6 @@ public class QuizQuestions {
         String svar = korrektesvar[a];
         return svar;
     }
-
-
-
-
-
-    }
+}
 
 

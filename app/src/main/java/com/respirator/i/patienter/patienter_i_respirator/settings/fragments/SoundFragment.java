@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-import static com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment.fontsize;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
 
 /**
  * A simple {@link Fragment} subclass.
