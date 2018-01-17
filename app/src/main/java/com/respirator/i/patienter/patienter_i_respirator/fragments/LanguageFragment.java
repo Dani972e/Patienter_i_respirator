@@ -21,11 +21,11 @@ import static com.respirator.i.patienter.patienter_i_respirator.activities.MainA
 
 public class LanguageFragment extends Fragment {
 
-    RadioGroup languageG;
+    private RadioGroup languageG;
 
-    RadioButton danish, english;
+    private RadioButton danish, english;
 
-    int checked;
+    private int checked;
 
     public Locale locale;
 
@@ -42,14 +42,14 @@ public class LanguageFragment extends Fragment {
         startActivity(refresh);
     }
 
-    public  void LoadLocale() {
+    public void LoadLocale() {
         locale = new Locale(lang);
         Locale.setDefault(locale);
 
         config = new Configuration();
         config.setLocale(locale);
 
-        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     @Override
@@ -58,17 +58,16 @@ public class LanguageFragment extends Fragment {
 
         final View language = inflater.inflate(R.layout.language_fragment, container, false);
 
-        SharedPreferences langPref = getContext().getSharedPreferences("langPref",0);
+        SharedPreferences langPref = getContext().getSharedPreferences("langPref", 0);
         final SharedPreferences.Editor editor = langPref.edit();
 
         languageG = language.findViewById(R.id.langaugeG);
         danish = language.findViewById(R.id.danish_btn);
         english = language.findViewById(R.id.english_btn);
 
-        if (langPref.getString("langPref",lang).equalsIgnoreCase("en")) {
+        if (langPref.getString("langPref", lang).equalsIgnoreCase("en")) {
             english.setChecked(true);
-        }
-        else if (langPref.getString("langPref",lang).equalsIgnoreCase("")){
+        } else if (langPref.getString("langPref", lang).equalsIgnoreCase("")) {
             danish.setChecked(true);
         }
 
@@ -79,14 +78,14 @@ public class LanguageFragment extends Fragment {
                 switch (checked) {
                     case 0:
                         lang = "en";
-                        editor.putString("langChoice",lang);
+                        editor.putString("langChoice", lang);
                         editor.apply();
                         LoadLocale();
                         Refresh();
                         break;
                     case 1:
                         lang = "";
-                        editor.putString("langChoice",lang);
+                        editor.putString("langChoice", lang);
                         editor.apply();
                         LoadLocale();
                         Refresh();

@@ -19,8 +19,8 @@ import com.respirator.i.patienter.patienter_i_respirator.R;
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
-    Button svar1, svar2, svar3, svar4;
-    TextView spørgsmål, info;
+    private Button svar1, svar2, svar3, svar4;
+    private TextView spørgsmål, info;
 
     private QuizQuestions sp = new QuizQuestions();
     private String rigtigesvar;

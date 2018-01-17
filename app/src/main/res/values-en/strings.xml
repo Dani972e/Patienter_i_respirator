@@ -19,6 +19,7 @@
     <string name="sygeplejerskenVinder">The nurse won the round!</string>
     <string name="uafgjort">It is a tie!</string>
     <string name="moon_image">Memory Moon</string>
+    <string name="førsteTur">The patient starts to set a cross</string>
 
     // Call
     <string name="kald">Call</string>
