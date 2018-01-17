@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
@@ -23,6 +24,7 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
 
 
     private ImageView ImageView1, ImageView2, ImageView3, ImageView4, ImageView5, ImageView6;
+    private TextView gameText_view;
 
     //array til billeder
     private Integer[] billedeArray = {101, 102, 103, 201, 202, 203};
@@ -44,6 +46,8 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View memory = inflater.inflate(R.layout.memory_game_fragment, container, false);
+
+        gameText_view = getActivity().findViewById(R.id.gameText_view);
 
         ImageView1 = memory.findViewById(R.id.ImageView1);
         ImageView2 = memory.findViewById(R.id.ImageView2);
@@ -113,6 +117,8 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
                 huskeLogik(ImageView6, billedet);
             }
         });
+
+
         return memory;
     }
 
@@ -163,6 +169,7 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
             ImageView4.setEnabled(false);
             ImageView5.setEnabled(false);
             ImageView6.setEnabled(false);
+
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
@@ -235,6 +242,10 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
         ImageView4.setEnabled(true);
         ImageView5.setEnabled(true);
         ImageView6.setEnabled(true);
+
+        spilVundet();
+
+
     }
 
 
@@ -248,6 +259,22 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
         billede23 = R.mipmap.memory_venus;
 
     }
+
+    private void spilVundet() {
+
+        if (ImageView1.getVisibility() == View.INVISIBLE &&
+                ImageView2.getVisibility() == View.INVISIBLE &&
+                ImageView3.getVisibility() == View.INVISIBLE &&
+                ImageView4.getVisibility() == View.INVISIBLE &&
+                ImageView5.getVisibility() == View.INVISIBLE &&
+                ImageView6.getVisibility() == View.INVISIBLE) {
+
+            gameText_view.setText(R.string.spilVundet);
+
+        }
+    }
+
+
 
 
 }

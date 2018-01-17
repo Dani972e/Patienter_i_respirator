@@ -3,6 +3,7 @@ package com.respirator.i.patienter.patienter_i_respirator.main;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
@@ -87,7 +88,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
+
+        boolean EMULATOR = Build.PRODUCT.contains("sdk") || Build.MODEL.contains("Emulator");
+        if (!EMULATOR) {
+            Fabric.with(this, new Crashlytics());
+        }
+
+        //Fabric.with(this, new Crashlytics());
 
         SharedPreferences langPref = getApplication().getSharedPreferences("langPref", 0);
         SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);

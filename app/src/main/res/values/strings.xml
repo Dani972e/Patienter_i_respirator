@@ -30,6 +30,7 @@
     <string name="sygeplejerske">Sygeplejersken: 0</string>
     <string name="patient">Patienten: 0</string>
     <string name="nulstil">Nulstil spillet</string>
+    <string name="spilVundet">Tillykke du har vundet!</string>
     <string name="kryds">X</string>
     <string name="bolle">O</string>
     <string name="patientenVinder">Tillykke! Patienten vandt runden</string>
