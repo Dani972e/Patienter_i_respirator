@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.fragments;
+package com.respirator.i.patienter.patienter_i_respirator.game.quizGame;
 
 
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.game.quizGame.QuizQuestions;
 
 /**
  * A simple {@link Fragment} subclass.

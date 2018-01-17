@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.fragments;
+package com.respirator.i.patienter.patienter_i_respirator.communication.fragments;
 
 
 import android.app.Fragment;
@@ -10,14 +10,14 @@ import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
-public class WsQuestionsFragment extends Fragment implements View.OnClickListener {
+
+public class IWantToFragment extends Fragment implements View.OnClickListener {
 
     private final int btn_amount = 12;
     private final ImageView[] btnArray = new ImageView[btn_amount];
-    private final int[] btnId = {R.id.time_btn, R.id.doing_btn, R.id.said_btn, R.id.wrong_btn, R.id.happens_today_btn, R.id.am_i_here_btn, R.id.drink_btn, R.id.bed_btn, R.id.checked_btn, R.id.where_am_i_btn, R.id.laid_btn, R.id.my_stuff_btn};
+    private final int[] btnId = {R.id.pain_btn, R.id.sucked_btn, R.id.breath_btn2, R.id.tv_btn, R.id.lightOn_btn, R.id.silence_btn, R.id.chair_btn, R.id.bed_btn, R.id.turnAround_btn, R.id.walk_btn, R.id.visit_btn, R.id.toilet_btn};
 
-
-    public WsQuestionsFragment() {
+    public IWantToFragment() {
         // Required empty public constructor
     }
 
@@ -25,15 +25,13 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View ws = inflater.inflate(R.layout.ws_questions_fragment, container, false);
+        View iWantTo = inflater.inflate(R.layout.i_want_to_fragment, container, false);
 
         for (int i = 0; i < btnId.length; i++) {
-            btnArray[i] = ws.findViewById(btnId[i]);
+            btnArray[i] = iWantTo.findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
         }
-
-
-        return ws;
+        return iWantTo;
     }
 
     @Override
@@ -47,6 +45,15 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
 
 
         }
+
     }
+
+
+    public void playSoundButton(int btnId) {
+        switch (btnId) {
+
+        }
+    }
+
 
 }

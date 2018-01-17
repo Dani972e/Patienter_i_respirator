@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.activities;
+package com.respirator.i.patienter.patienter_i_respirator.communication.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,15 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.IAmFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.IWantToFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.MyAnswerFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.PainFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.WsQuestionsFragment;
+import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
+import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
+import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.IAmFragment;
+import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.IWantToFragment;
+import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.MyAnswerFragment;
+import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.PainFragment;
+import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.WsQuestionsFragment;
 
 import java.util.Locale;
 
-import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 public class CommActivity extends AppCompatActivity implements View.OnClickListener {
 

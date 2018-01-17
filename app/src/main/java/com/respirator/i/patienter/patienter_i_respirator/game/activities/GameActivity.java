@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.activities;
+package com.respirator.i.patienter.patienter_i_respirator.game.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,14 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.MemoryGameFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.PopBalloonGameFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.QuizFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.TicTacToeGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
+import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
+import com.respirator.i.patienter.patienter_i_respirator.game.fragments.MemoryGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.game.fragments.PopBalloonGameFragment;
+import com.respirator.i.patienter.patienter_i_respirator.game.quizGame.QuizFragment;
+import com.respirator.i.patienter.patienter_i_respirator.game.fragments.TicTacToeGameFragment;
 
 import java.util.Locale;
 
-import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 //import com.respirator.i.patienter.patienter_i_respirator.fragments.PuzzleGameFragment;
 

@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.activities;
+package com.respirator.i.patienter.patienter_i_respirator.main;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import com.crashlytics.android.Crashlytics;
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
+import com.respirator.i.patienter.patienter_i_respirator.communication.activities.CommActivity;
+import com.respirator.i.patienter.patienter_i_respirator.game.activities.GameActivity;
+import com.respirator.i.patienter.patienter_i_respirator.settings.activities.SettingsActivity;
 
 import java.util.Locale;
 

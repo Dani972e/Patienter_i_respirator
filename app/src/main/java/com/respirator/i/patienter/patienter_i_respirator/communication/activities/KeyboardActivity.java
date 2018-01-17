@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.activities;
+package com.respirator.i.patienter.patienter_i_respirator.communication.activities;
 
 import android.app.Service;
 import android.content.Intent;
@@ -12,10 +12,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
+import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
 
 import java.util.Locale;
 
-import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 public class KeyboardActivity extends AppCompatActivity implements View.OnClickListener {
 

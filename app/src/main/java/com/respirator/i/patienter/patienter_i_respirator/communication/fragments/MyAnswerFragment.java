@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.fragments;
+package com.respirator.i.patienter.patienter_i_respirator.communication.fragments;
 
 
 import android.app.Fragment;
@@ -11,27 +11,27 @@ import android.widget.ImageView;
 import com.respirator.i.patienter.patienter_i_respirator.R;
 
 
-public class IWantToFragment extends Fragment implements View.OnClickListener {
+public class MyAnswerFragment extends Fragment implements View.OnClickListener {
 
-    private final int btn_amount = 12;
+    private final int btn_amount = 4;
     private final ImageView[] btnArray = new ImageView[btn_amount];
-    private final int[] btnId = {R.id.pain_btn, R.id.sucked_btn, R.id.breath_btn2, R.id.tv_btn, R.id.lightOn_btn, R.id.silence_btn, R.id.chair_btn, R.id.bed_btn, R.id.turnAround_btn, R.id.walk_btn, R.id.visit_btn, R.id.toilet_btn};
+    private final int[] btnId  = {R.id.thanks_btn, R.id.iDontKnow_btn, R.id.later_btn, R.id.reset_btn};
 
-    public IWantToFragment() {
+    public MyAnswerFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View iWantTo = inflater.inflate(R.layout.i_want_to_fragment, container, false);
+        View myAnswers = inflater.inflate(R.layout.my_answer_fragment, container, false);
 
         for (int i = 0; i < btnId.length; i++) {
-            btnArray[i] = iWantTo.findViewById(btnId[i]);
+            btnArray[i] = myAnswers.findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
         }
-        return iWantTo;
+
+        return myAnswers;
     }
 
     @Override
@@ -47,13 +47,4 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
         }
 
     }
-
-
-    public void playSoundButton(int btnId) {
-        switch (btnId) {
-
-        }
-    }
-
-
 }

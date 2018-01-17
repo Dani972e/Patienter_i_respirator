@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.fragments;
+package com.respirator.i.patienter.patienter_i_respirator.settings.fragments;
 
 
 import android.app.Fragment;

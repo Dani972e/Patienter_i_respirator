@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.activities;
+package com.respirator.i.patienter.patienter_i_respirator.settings.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,15 +10,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.FontsizeFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.InputMethodFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.LanguageFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.ResetFragment;
-import com.respirator.i.patienter.patienter_i_respirator.fragments.SoundFragment;
+import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
+import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment;
+import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.InputMethodFragment;
+import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.LanguageFragment;
+import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.ResetFragment;
+import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.SoundFragment;
 
 import java.util.Locale;
 
-import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 

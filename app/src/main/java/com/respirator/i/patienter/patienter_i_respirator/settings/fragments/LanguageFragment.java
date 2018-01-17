@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.fragments;
+package com.respirator.i.patienter.patienter_i_respirator.settings.fragments;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -12,11 +12,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
-import com.respirator.i.patienter.patienter_i_respirator.activities.SettingsActivity;
+import com.respirator.i.patienter.patienter_i_respirator.settings.activities.SettingsActivity;
 
 import java.util.Locale;
 
-import static com.respirator.i.patienter.patienter_i_respirator.activities.MainActivity.lang;
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 
 public class LanguageFragment extends Fragment {
