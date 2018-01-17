@@ -9,7 +9,7 @@
     <string name="puslespil">Puzzle Game</string>
     <string name="popBalloner">Pop Balloons</string>
     <string name="popBallonerView">Pop the balloons by clicking</string>
-    <string name="poppetBalloner">Congratulations, you popped all the balloons</string>
+    <string name="poppetBalloner">you have popped all the balloons!</string>
     <string name="sygeplejerske">Nurse: 0</string>
     <string name="patient">Patient: 0</string>
     <string name="nulstil">Reset Game</string>

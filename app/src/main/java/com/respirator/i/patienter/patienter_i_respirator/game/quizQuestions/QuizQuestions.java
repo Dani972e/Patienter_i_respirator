@@ -1,4 +1,4 @@
-package com.respirator.i.patienter.patienter_i_respirator.game.quizGame;
+package com.respirator.i.patienter.patienter_i_respirator.game.quizQuestions;
 
 /**
  * Created by Thomas on 13-01-2018.

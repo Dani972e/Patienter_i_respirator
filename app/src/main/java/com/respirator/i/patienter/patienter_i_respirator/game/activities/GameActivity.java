@@ -14,7 +14,7 @@ import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
 import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
 import com.respirator.i.patienter.patienter_i_respirator.game.fragments.MemoryGameFragment;
 import com.respirator.i.patienter.patienter_i_respirator.game.fragments.PopBalloonGameFragment;
-import com.respirator.i.patienter.patienter_i_respirator.game.quizGame.QuizFragment;
+import com.respirator.i.patienter.patienter_i_respirator.game.fragments.QuizFragment;
 import com.respirator.i.patienter.patienter_i_respirator.game.fragments.TicTacToeGameFragment;
 
 import java.util.Locale;
