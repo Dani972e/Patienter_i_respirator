@@ -534,9 +534,9 @@
 
 
         <Button
-            android:id="@+id/btn_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/stabbing"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -546,15 +546,15 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.80"
+            app:layout_constraintHorizontal_bias="0.929"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.974" />
 
         <Button
-            android:id="@+id/btn_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/burning"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -563,16 +563,16 @@
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintEnd_toStartOf="@+id/stinging"
+            app:layout_constraintHorizontal_bias="0.969"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.974" />
 
         <Button
-            android:id="@+id/btn_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/stinging"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -581,16 +581,16 @@
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintEnd_toStartOf="@+id/pressuring"
+            app:layout_constraintHorizontal_bias="0.97"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.974" />
 
         <Button
-            android:id="@+id/btn_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/pressuring"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -599,16 +599,16 @@
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintEnd_toStartOf="@+id/stabbing"
+            app:layout_constraintHorizontal_bias="0.98"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.974" />
 
         <Button
-            android:id="@+id/btn_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/pounding"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -617,22 +617,22 @@
             android:textAllCaps="false"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.20"
+            app:layout_constraintEnd_toStartOf="@+id/burning"
+            app:layout_constraintHorizontal_bias="0.951"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.974" />
 
         <TextView
             android:id="@+id/pain_view"
             android:layout_width="wrap_content"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:text="@string/smerteområde"
             android:textAllCaps="false"
             android:textColor="@color/blue"
-            android:textSize="40sp"
+            android:textSize="0sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/behind_btn"

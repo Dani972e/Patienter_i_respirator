@@ -14,7 +14,6 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_rounded_blue"
-        android:contentDescription="TODO"
         android:padding="20dp"
         android:paddingBottom="25dp"
         android:scaleType="fitCenter"
@@ -40,7 +39,7 @@
         android:background="@drawable/button_rounded_blue"
         android:padding="45dp"
         android:paddingBottom="25dp"
-        android:scaleType="fitCenter"
+        android:scaleType="fitStart"
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_default="percent"
@@ -52,7 +51,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent=".196"
-        app:srcCompat="@drawable/ic_i" />
+        app:srcCompat="@drawable/ic_i_port" />
 
     <ImageView
         android:id="@+id/iWantTo_btn"
@@ -63,7 +62,7 @@
         android:background="@drawable/button_rounded_blue"
         android:padding="45dp"
         android:paddingBottom="25dp"
-        android:scaleType="fitCenter"
+        android:scaleType="fitStart"
         android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_default="percent"
@@ -75,7 +74,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent=".196"
-        app:srcCompat="@drawable/ic_i" />
+        app:srcCompat="@drawable/ic_i_port" />
 
     <ImageView
         android:id="@+id/wsQuestions_btn"
@@ -191,7 +190,7 @@
     <TextView
         android:id="@+id/call_view"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -226,7 +225,9 @@
 
     <TextView
         android:id="@+id/answer_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -245,7 +246,9 @@
 
     <TextView
         android:id="@+id/i_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -263,7 +266,9 @@
 
     <TextView
         android:id="@+id/iWantTo_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -281,18 +286,20 @@
 
     <TextView
         android:id="@+id/wsQuestion_view"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:lines="2"
+        android:maxLines="3"
         android:text="@string/hvSpørgsmål"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/wsQuestions_btn"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="@+id/wsQuestions_btn"
         app:layout_constraintRight_toRightOf="@+id/wsQuestions_btn"
         app:layout_constraintTop_toTopOf="@+id/wsQuestions_btn"
@@ -300,7 +307,9 @@
 
     <TextView
         android:id="@+id/pain_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -318,7 +327,9 @@
 
     <TextView
         android:id="@+id/comm_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -326,7 +337,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/CategoryView"
         android:textColor="@color/blue"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/keyboard_btn"
         app:layout_constraintEnd_toEndOf="parent"

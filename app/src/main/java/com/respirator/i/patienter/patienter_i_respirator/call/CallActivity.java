@@ -6,9 +6,11 @@ import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
@@ -16,13 +18,16 @@ import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
 
 import java.util.Locale;
 
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
 import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 public class CallActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView back_btn, home_btn;
+    public ImageView back_btn, home_btn;
 
-    Button help_btn;
+    public TextView backTxt, homeTxt;
+
+    public Button help_btn;
 
     protected void onRestart()
     {
@@ -43,6 +48,24 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
     }
 
+    private void SmallFontSize() {
+        help_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        backTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+    }
+
+    private void MediumFontSize() {
+        help_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,60);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        backTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+    }
+
+    private void LargeFontSize() {
+        help_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,70);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        backTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +77,8 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
         onWindowFocusChanged(true);
 
         setContentView(R.layout.call_activity);
-
+        backTxt = findViewById(R.id.back_view);
+        homeTxt = findViewById(R.id.home_view);
         back_btn = findViewById(R.id.back_btn);
         home_btn = findViewById(R.id.home_btn);
         help_btn = findViewById(R.id.help_btn);
@@ -64,7 +88,18 @@ public class CallActivity extends AppCompatActivity implements View.OnClickListe
         help_btn.setOnClickListener(this);
 
         SharedPreferences soundSettings = getSharedPreferences("soundChoice", 0);
+        SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);
         final boolean sound = soundSettings.getBoolean("1",true);
+
+        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+            SmallFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+            MediumFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+            LargeFontSize();
+        }
 
         final MediaPlayer help_sound = MediaPlayer.create(this, R.raw.sound1);
         final MediaPlayer help_sound2 = MediaPlayer.create(this, R.raw.sound2);

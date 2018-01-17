@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.respirator.i.patienter.patienter_i_respirator.settings.fragments.Soun
 
 import java.util.Locale;
 
+import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.fontsize;
 import static com.respirator.i.patienter.patienter_i_respirator.main.MainActivity.lang;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
@@ -29,17 +31,18 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     private final int[] btnId = {R.id.input_btn, R.id.sound_btn, R.id.fontsize_btn, R.id.language_btn, R.id.reset_btn};
 
-    private TextView settings_view;
+    private TextView settings_view, inputTxt, soundTxt, fontsizeTxt, langTxt, resetTxt, homeTxt;
 
     public ImageView home_btn, langBtn, soundBtn, inputBtn, resetBtn, fontBtn;
 
-    public static boolean reload, langClick, resetClick, fontClick, soundClick, inputClick;
+    public static boolean langReload, fontsizeReload, langClick, resetClick, fontClick, soundClick, inputClick;
 
     @Override
     protected void onRestart()
     {
         super.onRestart();
-        reload = true;
+        langReload = true;
+        fontsizeReload = true;
         recreate();
         finish();
     }
@@ -55,6 +58,36 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         savedInstanceState.putBoolean("inputBtn", inputClick);
     }
 
+    private void SmallFontSize() {
+        inputTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        soundTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        fontsizeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        langTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        resetTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        settings_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+    }
+
+    private void MediumFontSize() {
+        inputTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        soundTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        fontsizeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        langTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        resetTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        settings_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+    }
+
+    private void LargeFontSize() {
+        inputTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        soundTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        fontsizeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        langTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        resetTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        settings_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+    }
+
     public void LoadLocale() {
         SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
 
@@ -68,15 +101,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        if (savedInstanceState != null) {
-            LoadLocale();
-        }
-
+    public void CreateView() {
         setContentView(R.layout.settings_activity);
+        homeTxt = findViewById(R.id.home_view);
+        inputTxt = findViewById(R.id.input_view);
+        soundTxt = findViewById(R.id.sound_view);
+        fontsizeTxt = findViewById(R.id.fontsize_view);
+        langTxt = findViewById(R.id.language_view);
+        resetTxt = findViewById(R.id.reset_view);
         settings_view = findViewById(R.id.settings_view);
         langBtn = findViewById(R.id.language_btn);
         soundBtn = findViewById(R.id.sound_btn);
@@ -85,6 +117,19 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         fontBtn = findViewById(R.id.fontsize_btn);
         home_btn = findViewById(R.id.home_btn);
         home_btn.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null) {
+            LoadLocale();
+        }
+
+        SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);
+
+        CreateView();
 
         if (savedInstanceState != null) {
             if (getFragmentManager().findFragmentById(R.id.settingsFragmentContainer) != null) {
@@ -118,11 +163,27 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             btnArray[i].setOnClickListener(this);
         }
 
-        if (reload) {
+        if (langReload) {
             getFragmentManager().beginTransaction().add(R.id.settingsFragmentContainer, new LanguageFragment(), "R.id.language_btn").commit();
-            reload = false;
+            langReload = false;
             settings_view.setVisibility(View.INVISIBLE);
             langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+        }
+        else if (fontsizeReload) {
+            getFragmentManager().beginTransaction().add(R.id.settingsFragmentContainer, new FontsizeFragment(), "R.id.fontsize_btn").commit();
+            fontsizeReload = false;
+            settings_view.setVisibility(View.INVISIBLE);
+            fontBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+        }
+
+        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+            SmallFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+            MediumFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+            LargeFontSize();
         }
     }
 
@@ -153,7 +214,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 soundClick = true;
                 fontClick = false;
                 langClick = false;
-                resetClick = false;            break;
+                resetClick = false;
+                break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
                 inputClick = false;

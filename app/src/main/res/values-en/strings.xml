@@ -31,8 +31,8 @@
     <string name="CategoryView">Choose a category on the left side</string>
     <string name="mineSvar">My Answer</string>
     <string name="hvSpørgsmål">What, why, \n when, where...</string>
-    <string name="jegVilGerne">I want to ...</string>
-    <string name="jeg...">I ...</string>
+    <string name="jegVilGerne">I want to...</string>
+    <string name="jeg...">I...</string>
     <string name="jeg">I</string>
     <string name="jegKan">I can</string>
     <string name="smerte">Pain</string>
@@ -84,6 +84,8 @@
     <string name="skrivpåtastaturet">Dear patient, use the keyboard to write a message for the nurse</string>
     <string name="Jagende">Stabbing</string>
     <string name="Stikkende">Stinging</string>
+    <string name="keyboardText">Write to the nurse here</string>
+
 
     // Settings
     <string name="reset_view">Reset settings</string>

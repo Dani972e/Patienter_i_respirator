@@ -535,9 +535,9 @@
 
 
         <Button
-            android:id="@+id/btn_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/stabbing"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -553,9 +553,9 @@
             app:layout_constraintVertical_bias="0.6" />
 
         <Button
-            android:id="@+id/btn_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/burning"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -571,9 +571,9 @@
             app:layout_constraintVertical_bias="0.599" />
 
         <Button
-            android:id="@+id/btn_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/stinging"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -589,9 +589,9 @@
             app:layout_constraintVertical_bias="0.75" />
 
         <Button
-            android:id="@+id/btn_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/pressuring"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginTop="8dp"
             android:background="@drawable/button_rounded_blue"
             android:text="@string/Trykkende"
@@ -607,9 +607,9 @@
             app:layout_constraintVertical_bias="0.75" />
 
         <Button
-            android:id="@+id/btn_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/pounding"
+            android:layout_width="60pt"
+            android:layout_height="60pt"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -627,7 +627,7 @@
         <TextView
             android:id="@+id/pain_view"
             android:layout_width="wrap_content"
-            android:layout_height="64dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:text="@string/smerteområde"
@@ -635,6 +635,7 @@
             android:textColor="@color/blue"
             android:textSize="40sp"
             android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/behind_btn"
             app:layout_constraintStart_toEndOf="@+id/front_btn"

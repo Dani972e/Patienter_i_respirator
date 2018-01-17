@@ -154,7 +154,9 @@
 
     <TextView
         android:id="@+id/input_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -162,7 +164,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/inputmetode"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/input_btn"
         app:layout_constraintEnd_toEndOf="@+id/input_btn"
@@ -172,7 +174,9 @@
 
     <TextView
         android:id="@+id/sound_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -180,7 +184,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/lyd"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/sound_btn"
         app:layout_constraintEnd_toEndOf="@+id/sound_btn"
@@ -190,14 +194,16 @@
 
     <TextView
         android:id="@+id/fontsize_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="@string/skriftstørrelse"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/fontsize_btn"
         app:layout_constraintEnd_toEndOf="@+id/fontsize_btn"
@@ -207,7 +213,9 @@
 
     <TextView
         android:id="@+id/language_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -215,7 +223,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/sprog"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/language_btn"
         app:layout_constraintEnd_toEndOf="@+id/language_btn"
@@ -225,7 +233,9 @@
 
     <TextView
         android:id="@+id/reset_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -233,7 +243,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/gendan"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/reset_btn"
         app:layout_constraintEnd_toEndOf="@+id/reset_btn"
@@ -243,7 +253,9 @@
 
     <TextView
         android:id="@+id/settings_view"
-        android:layout_width="wrap_content"
+        android:maxLines="2"
+        android:textAlignment="center"
+        android:layout_width="0pt"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -255,11 +267,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fontsize_btn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <FrameLayout
         android:id="@+id/settingsFragmentContainer"

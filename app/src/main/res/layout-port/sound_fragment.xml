@@ -33,7 +33,7 @@
             app:layout_constraintHorizontal_bias="0.412"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.271"
+            app:layout_constraintVertical_bias="0.294"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".14" />
 
@@ -56,12 +56,12 @@
             app:layout_constraintHorizontal_bias="0.598"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.271"
+            app:layout_constraintVertical_bias="0.295"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".14" />
 
         <RadioGroup
-            android:id="@+id/sounds"
+            android:id="@+id/soundsG"
             android:layout_width="wrap_content"
             android:layout_height="120dp"
             android:layout_marginBottom="8dp"
@@ -73,7 +73,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.61">
+            app:layout_constraintVertical_bias="0.576">
 
             <RadioButton
                 android:id="@+id/callsound_btn"
@@ -149,11 +149,11 @@
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/sounds"
+            app:layout_constraintEnd_toEndOf="@+id/soundsG"
             app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="@+id/sounds"
+            app:layout_constraintStart_toStartOf="@+id/soundsG"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.51" />
+            app:layout_constraintVertical_bias="0.471" />
 
         <TextView
             android:id="@+id/volume_view"
@@ -170,9 +170,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/sound_down"
+            app:layout_constraintHorizontal_bias="0.431"
             app:layout_constraintStart_toStartOf="@+id/sound_up"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2" />
+            app:layout_constraintVertical_bias="0.204" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

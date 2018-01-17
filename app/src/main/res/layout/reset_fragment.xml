@@ -21,7 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.721" />
 
     <Button
         android:id="@+id/reset_btn"
@@ -35,15 +35,15 @@
         android:text="@string/reset"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent=".25"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent=".25"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent=".25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.335"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent=".25" />
 
 </android.support.constraint.ConstraintLayout>

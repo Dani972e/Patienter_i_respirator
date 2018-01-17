@@ -2,14 +2,19 @@ package com.respirator.i.patienter.patienter_i_respirator.communication.fragment
 
 
 import android.app.Fragment;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+
+import static com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment.fontsize;
 
 
 public class PainFragment extends Fragment implements View.OnClickListener {
@@ -29,22 +34,58 @@ public class PainFragment extends Fragment implements View.OnClickListener {
 
     private final int button_amount = 5;
     private final Button[] buttonArray = new Button[button_amount];
-    private final int[] buttonId = {R.id.btn_1, R.id.btn_2, R.id.btn_3, R.id.btn_4, R.id.btn_5};
+    private final int[] buttonId = {R.id.burning, R.id.stinging, R.id.stabbing, R.id.pounding, R.id.pressuring};
 
     private ImageView front_btn, behind_btn;
 
+    public Button burnTxt, stabTtx, stingTxt, pressuringTxt, poundingTxt;
+
+    public TextView painTxt;
 
     public PainFragment() {
         // Required empty public constructor
     }
 
+    private void SmallFontSize() {
+        burnTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        stingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        stabTtx.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        pressuringTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+        poundingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+    }
+
+    private void MediumFontSize() {
+        burnTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        stingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        stabTtx.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        pressuringTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40);
+        poundingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+    }
+
+    private void LargeFontSize() {
+        burnTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        stingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        stabTtx.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        pressuringTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 50);
+        poundingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         View pain = inflater.inflate(R.layout.pain_fragment, container, false);
 
+        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+
+        burnTxt = pain.findViewById(R.id.burning);
+        stabTtx = pain.findViewById(R.id.stabbing);
+        stingTxt = pain.findViewById(R.id.stinging);
+        pressuringTxt = pain.findViewById(R.id.pressuring);
+        poundingTxt = pain.findViewById(R.id.pounding);
+        painTxt = pain.findViewById(R.id.pain_view);
         front_btn = pain.findViewById(R.id.front_btn);
         behind_btn = pain.findViewById(R.id.behind_btn);
         front_btn.setOnClickListener(this);
@@ -68,6 +109,15 @@ public class PainFragment extends Fragment implements View.OnClickListener {
             buttonArray[i].setVisibility(View.INVISIBLE);
         }
 
+        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+            SmallFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+            MediumFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+            LargeFontSize();
+        }
 
         return pain;
     }

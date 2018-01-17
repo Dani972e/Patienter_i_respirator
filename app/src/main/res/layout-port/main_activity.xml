@@ -7,7 +7,7 @@
 
     <ImageView
         android:id="@+id/game_btn"
-        android:layout_width="0dp"
+        android:layout_width="220pt"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -31,7 +31,7 @@
 
     <ImageView
         android:id="@+id/communication_btn"
-        android:layout_width="0dp"
+        android:layout_width="220pt"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -100,7 +100,7 @@
         android:text="@string/kald"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="43sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,13 +21,15 @@ import java.util.Locale;
 
 import io.fabric.sdk.android.Fabric;
 
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageView call_btn, game_btn, communication_btn, settings_btn;
-    private TextView authors;
+    public ImageView call_btn, game_btn, communication_btn, settings_btn;
+
+    public TextView authors, gameTxt, comTxt, callTxt;
 
     public static String lang = "";
+
+    public static int fontsize = 1;
 
     protected void onRestart()
     {
@@ -47,12 +50,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
     }
 
-    public void CreateBtn() {
+    private void SmallFontSize() {
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        gameTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        comTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+    }
+
+    private void MediumFontSize() {
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        gameTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        comTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+    }
+
+    private void LargeFontSize() {
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,60);
+        gameTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,60);
+        comTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,60);
+    }
+
+    public void CreateView() {
         call_btn = findViewById(R.id.call_btn);
         authors = findViewById(R.id.authors);
         game_btn = findViewById(R.id.game_btn);
         communication_btn = findViewById(R.id.communication_btn);
         settings_btn = findViewById(R.id.settings_btn);
+        callTxt = findViewById(R.id.call_view);
+        gameTxt = findViewById(R.id.game_view);
+        comTxt = findViewById(R.id.communication_view);
 
         call_btn.setOnClickListener(this);
         game_btn.setOnClickListener(this);
@@ -65,8 +89,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
 
-        SharedPreferences langPref = getSharedPreferences("langPref", 0);
-        lang = langPref.getString("langChoice", lang);
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref", 0);
+        SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);
+        lang = langPref.getString("langPref", lang);
 
         if (lang.equalsIgnoreCase("")) {
             LoadLocale();
@@ -81,7 +106,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         onWindowFocusChanged(true);
         setContentView(R.layout.main_activity);
 
-        CreateBtn();
+        CreateView();
+
+        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+            SmallFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+            MediumFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+            LargeFontSize();
+        }
     }
 
     @Override

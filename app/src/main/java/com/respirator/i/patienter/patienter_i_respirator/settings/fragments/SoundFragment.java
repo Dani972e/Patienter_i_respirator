@@ -7,14 +7,18 @@ import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
+
+import static com.respirator.i.patienter.patienter_i_respirator.settings.fragments.FontsizeFragment.fontsize;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,30 +27,59 @@ public class SoundFragment extends Fragment implements View.OnClickListener {
 
     private Button sound_up, sound_down;
 
-    RadioButton sound1_btn, sound2_btn;
+    public RadioButton sound1_btn, sound2_btn;
+
+    public TextView volumeTxt, callTxt;
 
     public AudioManager audioManager;
 
-    private RadioGroup sounds;
+    private RadioGroup soundsG;
 
     int checked;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    private void SmallFontSize() {
+        volumeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+        sound1_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        sound2_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        sound_up.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+        sound_down.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+    }
 
+    private void MediumFontSize() {
+        volumeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        sound1_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        sound2_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        sound_up.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+        sound_down.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
+    }
+
+    private void LargeFontSize() {
+        volumeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        sound1_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        sound2_btn.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        sound_up.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+        sound_down.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View sound = inflater.inflate(R.layout.sound_fragment, container, false);
 
         SharedPreferences soundSettings = getContext().getSharedPreferences("soundChoice", 0);
         final SharedPreferences.Editor editor = soundSettings.edit();
 
-        sounds = sound.findViewById(R.id.sounds);
+        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+
+        volumeTxt = sound.findViewById(R.id.volume_view);
+        callTxt = sound.findViewById(R.id.callsound_view);
+        soundsG = sound.findViewById(R.id.soundsG);
         sound1_btn = sound.findViewById(R.id.callsound_btn);
         sound2_btn = sound.findViewById(R.id.callsound2_btn);
         sound_up = sound.findViewById(R.id.sound_up);
         sound_down = sound.findViewById(R.id.sound_down);
-
         sound_up.setOnClickListener(this);
         sound_down.setOnClickListener(this);
 
@@ -62,10 +95,20 @@ public class SoundFragment extends Fragment implements View.OnClickListener {
             sound2_btn.setChecked(true);
         }
 
-        sounds.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+            SmallFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+            MediumFontSize();
+        }
+        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+            LargeFontSize();
+        }
+
+        soundsG.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                checked = sounds.indexOfChild(radioGroup.findViewById(checkedId));
+                checked = soundsG.indexOfChild(radioGroup.findViewById(checkedId));
                 switch (checked) {
                     case 0:
                         editor.putBoolean("1",true).apply();
@@ -74,6 +117,8 @@ public class SoundFragment extends Fragment implements View.OnClickListener {
                     case 1:
                         editor.putBoolean("1",false).apply();
                         help_sound2.start();
+                        break;
+                    default:
                         break;
                 }
             }
