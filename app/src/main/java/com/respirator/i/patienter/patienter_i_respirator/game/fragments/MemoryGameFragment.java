@@ -119,22 +119,22 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
     private void huskeLogik(ImageView ImageView, int billede) {
         // vedhæfter billederne til imageviews
         if (billedeArray[billede] == 101) {
-            ImageView.setImageResource(R.mipmap.star_memory);
+            ImageView.setImageResource(R.mipmap.memory_earth);
 
         } else if (billedeArray[billede] == 102) {
-            ImageView.setImageResource(R.mipmap.sun_memory);
+            ImageView.setImageResource(R.mipmap.memory_sun);
 
         } else if (billedeArray[billede] == 103) {
-            ImageView.setImageResource(R.mipmap.moon_memory);
+            ImageView.setImageResource(R.mipmap.memory_venus);
 
         } else if (billedeArray[billede] == 201) {
-            ImageView.setImageResource(R.mipmap.star_memory);
+            ImageView.setImageResource(R.mipmap.memory_earth);
 
         } else if (billedeArray[billede] == 202) {
-            ImageView.setImageResource(R.mipmap.sun_memory);
+            ImageView.setImageResource(R.mipmap.memory_sun);
 
         } else if (billedeArray[billede] == 203) {
-            ImageView.setImageResource(R.mipmap.moon_memory);
+            ImageView.setImageResource(R.mipmap.memory_venus);
         }
 
 
