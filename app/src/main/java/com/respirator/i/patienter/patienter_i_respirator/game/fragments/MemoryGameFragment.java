@@ -240,12 +240,12 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
 
     private void indlæsBilleder() {
 
-        billede11 = R.mipmap.star_memory;
-        billede12 = R.mipmap.sun_memory;
-        billede13 = R.mipmap.moon_memory;
-        billede21 = R.mipmap.star_memory;
-        billede22 = R.mipmap.sun_memory;
-        billede23 = R.mipmap.moon_memory;
+        billede11 = R.mipmap.memory_earth;
+        billede12 = R.mipmap.memory_sun;
+        billede13 = R.mipmap.memory_venus;
+        billede21 = R.mipmap.memory_earth;
+        billede22 = R.mipmap.memory_sun;
+        billede23 = R.mipmap.memory_venus;
 
     }
 
