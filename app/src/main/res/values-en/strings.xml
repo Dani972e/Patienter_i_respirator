@@ -2,6 +2,8 @@
 <resources>
 
     // Game
+    <string name="spilIgen">Press the button to the left to play again</string>
+    <string name="GætToEns">Guess two identical images to get a pair!</string>
     <string name="spil">Games</string>
     <string name="vælgEtSpil">Choose a game on the left side</string>
     <string name="huskespil">Memory Game</string>
