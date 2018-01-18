@@ -1,0 +1,484 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.respirator.i.patienter.patienter_i_respirator.communication.fragments.IAmFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TableLayout
+        android:id="@+id/i_am_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/row_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/happy_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded_blue"
+
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_i_am_happy"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/okay_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/okay_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_i_am_okay"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tired_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="65dp"
+                    android:paddingStart="17dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_i_am_tired"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/okay_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/happy_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/jegErGlad"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/happy_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/happy_btn"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="@+id/happy_btn"
+                    app:layout_constraintTop_toTopOf="@+id/happy_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/okay_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErTilpas"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/okay_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/okay_btn"
+                    app:layout_constraintStart_toStartOf="@+id/okay_btn"
+                    app:layout_constraintTop_toTopOf="@+id/okay_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/tired_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErTræt"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tired_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/tired_btn"
+                    app:layout_constraintStart_toStartOf="@+id/tired_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="12dp">
+
+
+                <ImageView
+                    android:id="@+id/frustrated_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_frustrated"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/scared_btn"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/scared_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_scared"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/worried_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_worried"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/scared_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/frustrated_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErFrustreret"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/frustrated_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/frustrated_btn"
+                    app:layout_constraintStart_toStartOf="@+id/frustrated_btn"
+                    app:layout_constraintTop_toTopOf="@+id/frustrated_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/scared_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErBange"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/scared_btn"
+                    app:layout_constraintStart_toStartOf="@+id/scared_btn"
+                    app:layout_constraintTop_toTopOf="@+id/scared_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/worried_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErBekymret"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/worried_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/worried_btn"
+                    app:layout_constraintStart_toStartOf="@+id/worried_btn"
+                    app:layout_constraintTop_toTopOf="@+id/worried_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/bored_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_bored"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/breath_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/breath_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_breath"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/thirsty_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_thirsty"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/breath_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/bored_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegKederMig"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/bored_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/bored_btn"
+                    app:layout_constraintStart_toStartOf="@+id/bored_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/breath_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/FåLuft"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/breath_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/breath_btn"
+                    app:layout_constraintStart_toStartOf="@+id/breath_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/thirsty_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErTørstig"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/thirsty_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/thirsty_btn"
+                    app:layout_constraintStart_toStartOf="@+id/thirsty_btn"
+                    app:layout_constraintTop_toTopOf="@+id/thirsty_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/warm_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:paddingRight="30dp"
+                    android:src="@drawable/ic_warm"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cold_btn"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/cold_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_cold"
+                    android:tint="@color/white"
+                    android:paddingRight="35dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/sore_btn"
+                    android:layout_width="280dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/button_rounded_blue"
+                    android:paddingBottom="50dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_sore"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/cold_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/warm_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErVarm"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/warm_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/warm_btn"
+                    app:layout_constraintStart_toStartOf="@+id/warm_btn"
+                    app:layout_constraintTop_toTopOf="@+id/warm_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/cold_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErKold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cold_btn"
+                    app:layout_constraintStart_toStartOf="@+id/cold_btn"
+                    app:layout_constraintTop_toTopOf="@+id/cold_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/sore_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/JegErØm"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sore_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/sore_btn"
+                    app:layout_constraintStart_toStartOf="@+id/sore_btn"
+                    app:layout_constraintTop_toTopOf="@+id/sore_btn"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </TableRow>
+
+
+    </TableLayout>
+</FrameLayout>

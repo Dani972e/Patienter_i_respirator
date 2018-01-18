@@ -3,12 +3,11 @@
     <style name="MyTheme" parent="Theme.AppCompat.NoActionBar">
 
         <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:navigationMode">normal</item>
 
 
     </style>
 
-    <style name="MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

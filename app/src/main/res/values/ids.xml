@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageMemory1" type="id" />
+    <item name="imageMemory2" type="id" />
+    <item name="imageMemory3" type="id" />
+    <item name="imageMemory4" type="id" />
+</resources>

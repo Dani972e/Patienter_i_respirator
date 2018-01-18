@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.respirator.i.patienter.patienter_i_respirator">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/MyTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameActivity" />
-        <activity android:name=".CommunicationActivity" />
-        <activity android:name=".CallActivity"></activity>
+        <activity android:name=".call.CallActivity"/>
+        <activity android:name=".settings.activities.SettingsActivity" />
+        <activity android:name=".communication.activities.CommActivity" />
+        <activity android:name=".game.activities.GameActivity" />
+        <activity android:name=".communication.activities.KeyboardActivity"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="14e41d8927a3f101f817b4f16d501fda97cee543" />
     </application>
 
 </manifest>

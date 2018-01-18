@@ -1,4 +1,137 @@
 <resources>
-    <string name="app_name">Patienter_i_respirator</string>
+    <string name="app_name">gr06 Patienter i respirator</string>
     <string name="title_activity_communication">CommunicationActivity</string>
+
+    //Dansk
+    <string name="svar">Svar</string>
+    // Hvor bliver den her brugt henne?
+
+    // Diverse
+    <string name="kald">Kald</string>
+    <string name="tastatur">Tastatur</string>
+    <string name="kommunikation">Kommunikation</string>
+    <string name="spil">Spil</string>
+    <string name="tilbage">Tilbage</string>
+    <string name="startside">Startside</string>
+    <string name="callMsg">Kalder på sygeplejesken</string>
+    <string name="forfatter">Daniel Anusic Christopher Chytræus Thomas Lorentzen Johnny Chen</string>
+
+    // Call
+    <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
+
+    // Game
+    <string name="spilIgen">Tryk i venstre side for at spille igen</string>
+    <string name="GætToEns">Gæt to éns for at få et par!</string>
+    <string name="vælgEtSpil">Vælg et spil i venstre side</string>
+    <string name="huskespil">Huskespil</string>
+    <string name="krydsOgBolle">Kryds og bolle</string>
+    <string name="Quiz">Quiz</string>
+    <string name="popBalloner">Pop Balloner</string>
+    <string name="popBallonerView">Pop ballonerne ved at vælge dem</string>
+    <string name="poppetBalloner">Tillykke, du fik poppet alle ballonerne!</string>
+    <string name="sygeplejerske">Sygeplejersken: 0</string>
+    <string name="patient">Patienten: 0</string>
+    <string name="nulstil">Nulstil spillet</string>
+    <string name="spilVundet">Tillykke du har vundet!</string>
+    <string name="kryds">X</string>
+    <string name="bolle">O</string>
+    <string name="patientenVinder">Tillykke! Patienten vandt runden</string>
+    <string name="sygeplejerskenVinder">Tillykke! sygeplejersken vandt runden</string>
+    <string name="uafgjort">Desværre, det blev uafgjort!</string>
+    <string name="førsteTur">Patienten starter med at sætte et kryds</string>
+    <string name="quizTitel_1">Gæt på det rigtige svar!</string>
+    <string name="guessTrue">Du gættede rigtigt!</string>
+    <string name="guessWrong">Forkert gæt! Prøv igen</string>
+    <string name="quiz">Quiz</string>
+
+    // Communication
+    <string name="CategoryView">Vælg en kategori i venstre side</string>
+    <string name="mineSvar">Mine svar</string>
+    <string name="hvSpørgsmål">Hvad, hvorfor, \nhvornår, hvor...</string>
+    <string name="jegVilGerne">Jeg vil gerne...</string>
+    <string name="jeg...">Jeg...</string>
+    <string name="jeg">Jeg</string>
+    <string name="jegKan">Jeg kan</string>
+    <string name="smerte">Smerte</string>
+    <string name="jegVedIkke">Jeg ved ikke</string>
+    <string name="tak">Tak</string>
+    <string name="senere">Senere</string>
+    <string name="jegErGlad">Jeg er\n<b>glad</b></string>
+    <string name="JegErTilpas">Jeg er\n<b>tilpas</b></string>
+    <string name="JegErTræt">Jeg er\n<b>træt</b></string>
+    <string name="JegErFrustreret">Jeg er\n<b>frustreret</b></string>
+    <string name="JegErBange">Jeg er\n<b>bange</b></string>
+    <string name="JegErBekymret">Jeg er\n<b>bekymret</b></string>
+    <string name="JegKederMig">Jeg\n<b>keder mig</b></string>
+    <string name="FåLuft">Jeg kan\n<b>ikke få luft</b></string>
+    <string name="JegErTørstig">Jeg er\n<b>tørstig</b></string>
+    <string name="JegErVarm">Jeg er\n<b>varm</b></string>
+    <string name="JegErKold">Jeg er\n<b>kold</b></string>
+    <string name="JegErØm">Jeg er\n<b>øm</b></string>
+    <string name="jegVilGerneHaveSmertestillende">Jeg vil gerne\n<b>have smertestillende</b></string>
+    <string name="jegVilGerneSuges">Jeg vil gerne\n<b>suges</b></string>
+    <string name="jegVilGerneHaveLuft">Jeg vil gerne\n<b>have luft</b></string>
+    <string name="jegVilGerneIkkeSeFjernsyn">Jeg vil gerne/ikke\n<b>se fjernsyn</b></string>
+    <string name="jegVilGerneHaveTændtSlukketLys">Jeg vil gerne have\n<b>tændt/slukket lys</b></string>
+    <string name="jegVilGerneHaveRo">Jeg vil gerne\n<b>have ro</b></string>
+    <string name="jegVilGerneSiddeIStolen">Jeg vil gerne\n<b>sidde i stolen</b></string>
+    <string name="jegVilGerneLiggeISengen">Jeg vil gerne\n<b>ligge i sengen</b></string>
+    <string name="jegVilGerneVendes">Jeg vil gerne\n<b>vendes</b></string>
+    <string name="jegVilGernePåTur">Jeg vil gerne\n<b>på tur</b></string>
+    <string name="jegVilGerneHaveBesøg">Jeg vil gerne\n<b>have besøg</b></string>
+    <string name="jegVilGernePåToilettet">Jeg vil gerne\n<b>på toilettet</b></string>
+    <string name="hvadErKlokken">Hvad er\n<b>klokken?</b></string>
+    <string name="hvadGørI">Hvad\n<b>gør I?</b></string>
+    <string name="hvadSagdeDu">Hvad\n<b>sagde du?</b></string>
+    <string name="hvadFejlerJeg">Hvad\n<b>fejler jeg?</b></string>
+    <string name="hvadSkalDerSkeIDag">Hvad skal der\n<b>ske i dag?</b></string>
+    <string name="hvorforErJegHer">Hvorfor\n<b>er jeg her?</b></string>
+    <string name="hvornårKanJegDrikke">Hvornår\n<b>kan jeg drikke?</b></string>
+    <string name="hvornårErDerStuegang">Hvornår\n<b>er der stuegang?</b></string>
+    <string name="hvornårSkalJegTilUndersøgelse">Hvornår skal jeg\n<b>til undersøgelse?</b></string>
+    <string name="hvorErJeg">Hvor\n<b>er jeg?</b></string>
+    <string name="hvorLængeHarJegLiggetHer">Hvor længe\n<b>har jeg ligget her?</b></string>
+    <string name="hvorErMineTing">Hvor er\n<b>mine ting?</b></string>
+    <string name="smerteområde">Vælg et smerteområdet</string>
+    <string name="Jagende">Jagende</string>
+    <string name="Brændene">Brændene</string>
+    <string name="Stikkende">Stikkende</string>
+    <string name="Dunkende">Dunkende</string>
+    <string name="Trykkende">Trykkende</string>
+    <string name="Gendan">Ændre indstillinger</string>
+    <string name="keyboardText">Skriv til sygeplejesken her</string>
+
+    // Settings
+    <string name="hovedstyring">Hovedstyring og touch</string>
+    <string name="touch">Touch</string>
+    <string name="reset">Nulstil</string>
+    <string name="inputmetode">Inputmetode</string>
+    <string name="gendan">Nulstil</string>
+    <string name="lydstyrke">Lydstyrke</string>
+    <string name="kaldelyd">Kaldelyd</string>
+    <string name="up">+</string>
+    <string name="down">-</string>
+    <string name="kaldelyd_1">Kaldelyd 1</string>
+    <string name="kaldelyd_2">Kaldelyd 2</string>
+    <string name="lille">lille</string>
+    <string name="mellem">mellem</string>
+    <string name="stor">stor</string>
+    <string name="sprog">Sprog</string>
+    <string name="lyd">Lyd</string>
+    <string name="skriftstørrelse">Skriftstørrelse</string>
+    <string name="danish">Dansk</string>
+    <string name="english">Engelsk</string>
+    <string name="language">Sprog</string>
+    <string name="reset_view">Nulstil indstillinger</string>
+    <string name="moon_image">Memory Moon</string>
+    <string name="resetCancel">Annuller</string>
+    <string name="resetTitle">Nulstil indstillinger</string>
+    <string name="resetMsg">Dette vil nulstille indstillinger til standard instillinger</string>
+    <string name="resetBtn">Nulstil</string>
+    <string name="resetToast">Indstillinger er nulstillet</string>
+    <string name="inputToast">Ikke implementeret endnu</string>
+
+    // Keyboard
+    <string name="skrivpåtastaturet">Kære patient, brug tastaturet for at skrive en besked til sygeplejersken</string>
+
 </resources>
