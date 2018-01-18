@@ -99,12 +99,17 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         if (view == Nulstil)
             spørgsmålnr = 0;
-            Nulstil.setVisibility(View.GONE);
+        svar1.setText(sp.getsvar1(spørgsmålnr));
+        svar2.setText(sp.getsvar2(spørgsmålnr));
+        svar3.setText(sp.getsvar3(spørgsmålnr));
+        svar4.setText(sp.getsvar4(spørgsmålnr));
         svar1.setVisibility(View.VISIBLE);
         svar2.setVisibility(View.VISIBLE);
         svar3.setVisibility(View.VISIBLE);
         svar4.setVisibility(View.VISIBLE);
+        Nulstil.setVisibility(View.GONE);
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
+        rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
 
 
 

@@ -24,7 +24,7 @@
     <string name="moon_image">Memory Moon</string>
     <string name="førsteTur">The patient starts to set a cross</string>
     <string name="quizTitel_1">Guess the correct answer!</string>
-    <string name="guessTrue">You guess correct!</string>
+    <string name="guessTrue">You guessed all five questions correctly!</string>
     <string name="guessWrong">Wrong answer! Try again</string>
 
     // Call
