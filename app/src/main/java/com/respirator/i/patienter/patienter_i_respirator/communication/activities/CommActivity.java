@@ -32,9 +32,11 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
     private final int[] btnId = {R.id.answer_btn, R.id.i_btn, R.id.iWantTo_btn, R.id.wsQuestions_btn, R.id.pain_btn};
 
-    public ImageView call_btn, keyboard_btn, home_btn;
+    public ImageView call_btn, keyboard_btn, home_btn, answerBtn, iBtn, iWantBtn, wsBtn, painBtn;
 
     private TextView comm_view, callTxt, painTxt, wsQuestionTxt, iWantToTxt, iTxt, answerTxt, homeTxt, keyboardTxt;
+
+    public static int activeMenu;
 
     protected void onRestart() {
         super.onRestart();
@@ -92,6 +94,11 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
     public void CreateView() {
         setContentView(R.layout.comm_activity);
+        answerBtn = findViewById(R.id.answer_btn);
+        iBtn = findViewById(R.id.i_btn);
+        iWantBtn = findViewById(R.id.iWantTo_btn);
+        wsBtn = findViewById(R.id.wsQuestions_btn);
+        painBtn = findViewById(R.id.pain_btn);
         callTxt = findViewById(R.id.call_view);
         painTxt = findViewById(R.id.pain_view);
         wsQuestionTxt = findViewById(R.id.wsQuestion_view);
@@ -127,13 +134,33 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
             if (getFragmentManager().findFragmentById(R.id.commFragmentContainer) != null) {
                 comm_view.setVisibility(View.INVISIBLE);
             }
+
+            switch (activeMenu) {
+                case 0:
+                    answerBtn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case 1:
+                    iBtn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case 2:
+                    iWantBtn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case 3:
+                    wsBtn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case 4:
+                    painBtn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                default:
+                    break;
+            }
         }
 
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
-
         }
+
         if (fontsizePref.getInt("fontsizePref", fontsize) == 0) {
             SmallFontSize();
         } else if (fontsizePref.getInt("fontsizePref", fontsize) == 1) {
@@ -159,29 +186,65 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
                 startActivity(call_act);
+                MyAnswerFragment.activeAnswer = 0;
+                IWantToFragment.activeIWant = 0;
+                IAmFragment.activeI = 0;
+                WsQuestionsFragment.activeWs = 0;
+
                 break;
             case R.id.answer_btn:
                 getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new MyAnswerFragment()).commit();
+                activeMenu = 0;
+                IAmFragment.activeI = 0;
+                IWantToFragment.activeIWant = 0;
+                WsQuestionsFragment.activeWs = 0;
+
                 break;
             case R.id.i_btn:
                 getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new IAmFragment()).commit();
+                activeMenu = 1;
+                MyAnswerFragment.activeAnswer = 0;
+                IWantToFragment.activeIWant = 0;
+                WsQuestionsFragment.activeWs = 0;
+
                 break;
             case R.id.iWantTo_btn:
                 getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new IWantToFragment()).commit();
+                activeMenu = 2;
+                MyAnswerFragment.activeAnswer = 0;
+                IAmFragment.activeI = 0;
+                WsQuestionsFragment.activeWs = 0;
                 break;
             case R.id.wsQuestions_btn:
                 getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new WsQuestionsFragment()).commit();
+                activeMenu = 3;
+                MyAnswerFragment.activeAnswer = 0;
+                IAmFragment.activeI = 0;
+                IWantToFragment.activeIWant = 0;
                 break;
             case R.id.pain_btn:
                 getFragmentManager().beginTransaction().replace(R.id.commFragmentContainer, new PainFragment()).commit();
+                activeMenu = 4;
+                MyAnswerFragment.activeAnswer = 0;
+                IAmFragment.activeI = 0;
+                WsQuestionsFragment.activeWs = 0;
+                IWantToFragment.activeIWant = 0;
                 break;
             case R.id.keyboard_btn:
                 Intent keyboard_activity = new Intent(this, KeyboardActivity.class);
                 startActivity(keyboard_activity);
+                MyAnswerFragment.activeAnswer = 0;
+                IWantToFragment.activeIWant = 0;
+                IAmFragment.activeI = 0;
+                WsQuestionsFragment.activeWs = 0;
                 break;
             case R.id.home_btn:
                 Intent main_activity = new Intent(this, MainActivity.class);
                 startActivity(main_activity);
+                MyAnswerFragment.activeAnswer = 0;
+                IWantToFragment.activeIWant = 0;
+                IAmFragment.activeI = 0;
+                WsQuestionsFragment.activeWs = 0;
                 break;
             default:
                 break;

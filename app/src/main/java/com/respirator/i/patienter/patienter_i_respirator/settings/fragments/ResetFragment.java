@@ -55,7 +55,6 @@ public class ResetFragment extends Fragment implements View.OnClickListener {
 
     public void Refresh() {
         Intent refresh = new Intent(getContext(), SettingsActivity.class);
-        SettingsActivity.resetClick = true;
         SettingsActivity.resetReload = true;
         startActivity(refresh);
     }

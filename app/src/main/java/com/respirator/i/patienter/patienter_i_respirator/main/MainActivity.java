@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.settings_btn:
                 Intent settings_activity = new Intent(this, SettingsActivity.class);
                 startActivity(settings_activity);
+                SettingsActivity.activeSetting = 0;
                 break;
             case R.id.game_btn:
                 Intent game_activity = new Intent(this, GameActivity.class);

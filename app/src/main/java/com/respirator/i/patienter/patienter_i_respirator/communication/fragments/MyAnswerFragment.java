@@ -25,6 +25,10 @@ public class MyAnswerFragment extends Fragment implements View.OnClickListener {
 
     public TextView thanksTxt, dontKnowTxt, laterTxt, changeSettingsTxt;
 
+    public static int activeAnswer;
+
+    public ImageView thanksImg, dkImg, laterImg, changeImg;
+
     public MyAnswerFragment() {
         // Required empty public constructor
     }
@@ -57,6 +61,10 @@ public class MyAnswerFragment extends Fragment implements View.OnClickListener {
 
         SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
 
+        thanksImg = myAnswers.findViewById(R.id.thanks_btn);
+        dkImg = myAnswers.findViewById(R.id.iDontKnow_btn);
+        laterImg = myAnswers.findViewById(R.id.later_btn);
+        changeImg = myAnswers.findViewById(R.id.reset_btn);
         thanksTxt = myAnswers.findViewById(R.id.thanks_view);
         dontKnowTxt = myAnswers.findViewById(R.id.iDontKnow_view);
         laterTxt = myAnswers.findViewById(R.id.later_view);
@@ -77,6 +85,25 @@ public class MyAnswerFragment extends Fragment implements View.OnClickListener {
             LargeFontSize();
         }
 
+        if (savedInstanceState != null) {
+            switch (activeAnswer) {
+                case R.id.thanks_btn:
+                    thanksImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.iDontKnow_btn:
+                    dkImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.later_btn:
+                    laterImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.reset_btn:
+                    changeImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         return myAnswers;
     }
 
@@ -85,6 +112,7 @@ public class MyAnswerFragment extends Fragment implements View.OnClickListener {
         for (ImageView btn : btnArray) {
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                activeAnswer = view.getId();
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_blue);
             }

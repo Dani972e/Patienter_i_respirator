@@ -30,12 +30,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private final int btn_amount = 4;
     private final ImageView[] btnArray = new ImageView[btn_amount];
     private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.quiz_btn};
-    public ImageView call_btn, home_btn;
+    public ImageView call_btn, home_btn, tictacBtn, quizBtn, balloonBtn, memoryBtn;
     public TextView gameText_view, game_view, ticTacTxt, quizTxt, balloonTxt, memoryTxt, callTxt, homeTxt;
     public static int activeFrag;
 
-    protected void onRestart()
-    {
+    protected void onRestart() {
         super.onRestart();
         recreate();
     }
@@ -88,6 +87,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     public void CreateView() {
         setContentView(R.layout.game_activity);
+        tictacBtn = findViewById(R.id.ticTacToe_btn);
+        quizBtn = findViewById(R.id.quiz_btn);
+        balloonBtn = findViewById(R.id.balloon_btn);
+        memoryBtn = findViewById(R.id.memoryGame_btn);
         callTxt = findViewById(R.id.call_view);
         ticTacTxt = findViewById(R.id.tictactoe_view);
         quizTxt = findViewById(R.id.quiz_view);
@@ -122,15 +125,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 switch (activeFrag) {
                     case 0:
                         gameText_view.setText(R.string.førsteTur);
+                        tictacBtn.setBackgroundResource(R.drawable.button_rounded_darkturquoise);
                         break;
                     case 1:
                         gameText_view.setText(R.string.Quiz);
+                        quizBtn.setBackgroundResource(R.drawable.button_rounded_darkturquoise);
                         break;
                     case 2:
                         gameText_view.setText(R.string.huskespil);
+                        memoryBtn.setBackgroundResource(R.drawable.button_rounded_darkturquoise);
                         break;
                     case 3:
                         gameText_view.setText(R.string.popBallonerView);
+                        balloonBtn.setBackgroundResource(R.drawable.button_rounded_darkturquoise);
                         break;
                     default:
                         break;

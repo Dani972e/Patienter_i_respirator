@@ -32,14 +32,18 @@ public class PainFragment extends Fragment implements View.OnClickListener {
 
 
     private final int button_amount = 5;
-    private final Button[] buttonArray = new Button[button_amount];
-    private final int[] buttonId = {R.id.burning, R.id.stinging, R.id.stabbing, R.id.pounding, R.id.pressuring};
+    private final ImageView[] buttonArray = new ImageView[button_amount];
+    private final int[] buttonId = {R.id.burningImg, R.id.stingingImg, R.id.stabbingImg, R.id.poundingImg, R.id.pressuringImg};
+
+    private final int textAmount = 5;
+    private final TextView[] textArray = new TextView[textAmount];
+    private final int[] textID = {R.id.burningTxt, R.id.stingingTxt, R.id.stabbingTxt, R.id.poundingTxt, R.id.pressuringTxt};
 
     private ImageView front_btn, behind_btn;
 
-    public Button burnTxt, stabTtx, stingTxt, pressuringTxt, poundingTxt;
+    public TextView burnTxt, stabTtx, stingTxt, pressuringTxt, poundingTxt, painTxt;
 
-    public TextView painTxt;
+    public ImageView burnImg, stabImg, stingImg, pressuringImg, poundingImg;
 
     public PainFragment() {
         // Required empty public constructor
@@ -79,11 +83,17 @@ public class PainFragment extends Fragment implements View.OnClickListener {
 
         SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
 
-        burnTxt = pain.findViewById(R.id.burning);
-        stabTtx = pain.findViewById(R.id.stabbing);
-        stingTxt = pain.findViewById(R.id.stinging);
-        pressuringTxt = pain.findViewById(R.id.pressuring);
-        poundingTxt = pain.findViewById(R.id.pounding);
+
+        burnImg = pain.findViewById(R.id.burningImg);
+        stabImg = pain.findViewById(R.id.stabbingImg);
+        stingImg = pain.findViewById(R.id.stingingImg);
+        pressuringImg = pain.findViewById(R.id.pressuringImg);
+        poundingImg = pain.findViewById(R.id.poundingImg);
+        burnTxt = pain.findViewById(R.id.burningTxt);
+        stabTtx = pain.findViewById(R.id.stabbingTxt);
+        stingTxt = pain.findViewById(R.id.stingingTxt);
+        pressuringTxt = pain.findViewById(R.id.pressuringTxt);
+        poundingTxt = pain.findViewById(R.id.poundingTxt);
         painTxt = pain.findViewById(R.id.pain_view);
         front_btn = pain.findViewById(R.id.front_btn);
         behind_btn = pain.findViewById(R.id.behind_btn);
@@ -107,6 +117,12 @@ public class PainFragment extends Fragment implements View.OnClickListener {
             buttonArray[i].setOnClickListener(this);
             buttonArray[i].setVisibility(View.INVISIBLE);
         }
+
+        for (int i = 0; i < textArray.length; i++) {
+            textArray[i] = pain.findViewById(textID[i]);
+            textArray[i].setVisibility(View.INVISIBLE);
+        }
+
 
         if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
             SmallFontSize();
@@ -236,7 +252,7 @@ public class PainFragment extends Fragment implements View.OnClickListener {
                 break;
         }
 
-        for (Button btn : buttonArray) {
+        for (ImageView btn : buttonArray) {
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
             } else {
@@ -249,6 +265,9 @@ public class PainFragment extends Fragment implements View.OnClickListener {
     public void showButtons() {
         for (int i = 0; i < buttonId.length; i++) {
             buttonArray[i].setVisibility(View.VISIBLE);
+        }
+        for (int i = 0; i < textID.length; i++) {
+            textArray[i].setVisibility(View.VISIBLE);
         }
     }
 }

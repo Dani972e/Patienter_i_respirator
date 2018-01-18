@@ -22,9 +22,13 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
 
     private final ImageView[] btnArray = new ImageView[btn_amount];
 
-    private final int[] btnId = {R.id.time_btn, R.id.doing_btn, R.id.said_btn, R.id.wrong_btn, R.id.happens_today_btn, R.id.am_i_here_btn, R.id.drink_btn, R.id.bed_btn, R.id.checked_btn, R.id.where_am_i_btn, R.id.laid_btn, R.id.my_stuff_btn};
+    private final int[] btnId = {R.id.time_btn, R.id.doing_btn, R.id.said_btn, R.id.wrong_btn, R.id.happens_today_btn, R.id.am_i_here_btn, R.id.drink_btn, R.id.bed2_btn, R.id.checked_btn, R.id.where_am_i_btn, R.id.laid_btn, R.id.my_stuff_btn};
 
     public TextView timeTxt, doingTxt, saidTxt, wrongTxt, happensTxt, whyTxt, drinkTxt, hallTxt, checkedTxt, whereTxt, longTxt, stuffTxt;
+
+    public ImageView timeImg, doingImg, saidImg, wrongImg, happensImg, whyImg, drinkImg, hallImg, checkedImg, whereImg, longImg, stuffImg;
+
+    public static int activeWs;
 
     public WsQuestionsFragment() {
         // Required empty public constructor
@@ -82,6 +86,19 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
 
         SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
 
+        timeImg = ws.findViewById(R.id.time_btn);
+        doingImg = ws.findViewById(R.id.doing_btn);
+        saidImg = ws.findViewById(R.id.said_btn);
+        wrongImg = ws.findViewById(R.id.wrong_btn);
+        happensImg = ws.findViewById(R.id.happens_today_btn);
+        whyImg = ws.findViewById(R.id.am_i_here_btn);
+        drinkImg = ws.findViewById(R.id.drink_btn);
+        hallImg = ws.findViewById(R.id.bed2_btn);
+        checkedImg = ws.findViewById(R.id.checked_btn);
+        whereImg = ws.findViewById(R.id.where_am_i_btn);
+        longImg = ws.findViewById(R.id.laid_btn);
+        stuffImg = ws.findViewById(R.id.my_stuff_btn);
+
         timeTxt = ws.findViewById(R.id.time_view);
         doingTxt = ws.findViewById(R.id.doing_view);
         saidTxt = ws.findViewById(R.id.said_view);
@@ -110,6 +127,49 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
             LargeFontSize();
         }
 
+        if (savedInstanceState != null) {
+
+            switch (activeWs) {
+                case R.id.time_btn:
+                    timeImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.doing_btn:
+                    doingImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.said_btn:
+                    saidImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.wrong_btn:
+                    wrongImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.happens_today_btn:
+                    happensImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.am_i_here_btn:
+                    whyImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.drink_btn:
+                    drinkImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.bed2_btn:
+                    hallImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.checked_btn:
+                    checkedImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.where_am_i_btn:
+                    whereImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.laid_btn:
+                    longImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.my_stuff_btn:
+                    stuffImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                default:
+                    break;
+            }
+        }
         return ws;
     }
 
@@ -118,6 +178,7 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
         for (ImageView btn : btnArray) {
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                activeWs = view.getId();
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_blue);
             }

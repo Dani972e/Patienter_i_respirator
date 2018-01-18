@@ -57,7 +57,7 @@
                     android:id="@+id/said_btn"
                     android:layout_width="280dp"
                     android:layout_height="146dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
                     android:background="@drawable/button_rounded_blue"
                     android:paddingBottom="50dp"
                     android:scaleType="center"
@@ -66,7 +66,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/sucked_btn"
+                    app:layout_constraintStart_toEndOf="@+id/doing_btn"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
@@ -273,7 +273,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/bed_btn"
+                    android:id="@+id/bed2_btn"
                     android:layout_width="280dp"
                     android:layout_height="146dp"
                     android:background="@drawable/button_rounded_blue"
@@ -333,10 +333,10 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/bed_btn"
-                    app:layout_constraintEnd_toEndOf="@+id/bed_btn"
-                    app:layout_constraintStart_toStartOf="@+id/bed_btn"
-                    app:layout_constraintTop_toTopOf="@+id/bed_btn"
+                    app:layout_constraintBottom_toBottomOf="@+id/bed2_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/bed2_btn"
+                    app:layout_constraintStart_toStartOf="@+id/bed2_btn"
+                    app:layout_constraintTop_toTopOf="@+id/bed2_btn"
                     app:layout_constraintVertical_bias="1.0" />
 
                 <TextView
@@ -353,7 +353,7 @@
                     android:textSize="20sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/checked_btn"
-                    app:layout_constraintStart_toEndOf="@+id/bed_btn"
+                    app:layout_constraintStart_toEndOf="@+id/bed2_btn"
                     app:layout_constraintTop_toTopOf="@+id/checked_btn"
                     app:layout_constraintVertical_bias="1.0" />
 
@@ -381,7 +381,6 @@
                     android:src="@drawable/ic_where_am_i"
                     android:tint="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/cold_btn"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -406,7 +405,7 @@
                     android:id="@+id/my_stuff_btn"
                     android:layout_width="280dp"
                     android:layout_height="146dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
                     android:background="@drawable/button_rounded_blue"
                     android:paddingBottom="50dp"
                     android:scaleType="center"
@@ -415,7 +414,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/cold_btn"
+                    app:layout_constraintStart_toEndOf="@+id/laid_btn"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 

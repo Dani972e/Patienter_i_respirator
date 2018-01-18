@@ -60,7 +60,6 @@ public class LanguageFragment extends Fragment {
     public void Refresh() {
         Intent refresh = new Intent(getContext(), SettingsActivity.class);
         SettingsActivity.langReload = true;
-        SettingsActivity.langClick = true;
         startActivity(refresh);
     }
 

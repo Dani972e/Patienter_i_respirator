@@ -20,9 +20,7 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
     private int patientPoint;
     private int nursePoint;
 
-    private TextView patient_view;
-    private TextView nurse_view;
-    private TextView gameText_view;
+    private TextView patient_view, gameText_view, nurse_view;
 
     public TicTacToeGameFragment() {
         // Required empty public constructor

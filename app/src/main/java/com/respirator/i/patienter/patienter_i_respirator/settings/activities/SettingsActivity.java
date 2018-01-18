@@ -9,6 +9,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
@@ -35,28 +36,13 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     public ImageView home_btn, langBtn, soundBtn, inputBtn, resetBtn, fontBtn;
 
-    public static boolean langReload, fontsizeReload, resetReload, langClick, resetClick, fontClick, soundClick, inputClick;
+    public static boolean langReload, fontsizeReload, resetReload;
 
+    public static int activeSetting;
     @Override
-    protected void onRestart()
-    {
+    protected void onRestart() {
         super.onRestart();
-        langReload = true;
-        fontsizeReload = true;
-        resetReload = true;
         recreate();
-        finish();
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState)
-    {
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putBoolean("langBtn", langClick);
-        savedInstanceState.putBoolean("resetBtn", resetClick);
-        savedInstanceState.putBoolean("fontBtn", fontClick);
-        savedInstanceState.putBoolean("soundBtn", soundClick);
-        savedInstanceState.putBoolean("inputBtn", inputClick);
     }
 
     private void SmallFontSize() {
@@ -137,25 +123,24 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 settings_view.setVisibility(View.INVISIBLE);
             }
 
-            if (langClick) {
-                langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-                langClick = false;
-            }
-            else if (soundClick) {
-                soundBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-                soundClick = false;
-            }
-            else if (inputClick) {
-                inputBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-                inputClick = false;
-            }
-            else if (fontClick) {
-                fontBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-                fontClick = false;
-            }
-            else if (resetClick) {
-                resetBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
-                resetClick = false;
+            switch (activeSetting) {
+                case 0:
+                    inputBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                    break;
+                case 1:
+                    soundBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                    break;
+                case 2:
+                    fontBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                    break;
+                case 3:
+                    langBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                    break;
+                case 4:
+                    resetBtn.setBackgroundResource(R.drawable.button_rounded_darkgrey);
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -209,43 +194,23 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.input_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new InputMethodFragment()).commit();
-                inputClick = true;
-                soundClick = false;
-                fontClick = false;
-                langClick = false;
-                resetClick = false;
+                activeSetting = 0;
                 break;
             case R.id.sound_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new SoundFragment()).commit();
-                inputClick = false;
-                soundClick = true;
-                fontClick = false;
-                langClick = false;
-                resetClick = false;
+                activeSetting = 1;
                 break;
             case R.id.fontsize_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new FontsizeFragment()).commit();
-                inputClick = false;
-                soundClick = false;
-                fontClick = true;
-                langClick = false;
-                resetClick = false;
+                activeSetting = 2;
                 break;
             case R.id.language_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new LanguageFragment()).commit();
-                inputClick = false;
-                soundClick = false;
-                fontClick = false;
-                langClick = true;
-                resetClick = false;
+                activeSetting = 3;
                 break;
             case R.id.reset_btn:
                 getFragmentManager().beginTransaction().replace(R.id.settingsFragmentContainer, new ResetFragment()).commit();
-                inputClick = false;
-                soundClick = false;
-                fontClick = false;
-                langClick = false;
-                resetClick = true;
+                activeSetting = 4;
                 break;
             case R.id.home_btn:
                 Intent homeAct = new Intent(this,MainActivity.class);
@@ -253,5 +218,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             default:
                 break;
         }
+
     }
 }

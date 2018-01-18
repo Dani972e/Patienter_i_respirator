@@ -35,7 +35,6 @@ public class FontsizeFragment extends Fragment {
     public void Refresh() {
         Intent refresh = new Intent(getContext(), SettingsActivity.class);
         SettingsActivity.fontsizeReload = true;
-        SettingsActivity.fontClick = true;
         startActivity(refresh);
     }
 

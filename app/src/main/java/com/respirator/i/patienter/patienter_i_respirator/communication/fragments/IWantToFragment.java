@@ -27,6 +27,10 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
 
     public TextView painReliefTxt, suctionTxt, breathTxt, tvTxt, lightTxt, silenceTxt, chairTxt, bedTxt, turnTxt, walkTxt, visitTxt, toiletTxt;
 
+    public ImageView  painReliefImg, suctionImg, breathImg, tvImg, lightImg, silenceImg, chairImg, bedImg, turnImg, walkImg, visitImg, toiletImg;
+
+    public static int activeIWant;
+
     public IWantToFragment() {
         // Required empty public constructor
     }
@@ -84,6 +88,19 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
 
         SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
 
+        painReliefImg = iWantTo.findViewById(R.id.pain_btn);
+        suctionImg = iWantTo.findViewById(R.id.sucked_btn);
+        breathImg = iWantTo.findViewById(R.id.breath_btn2);
+        tvImg = iWantTo.findViewById(R.id.tv_btn);
+        lightImg = iWantTo.findViewById(R.id.lightOn_btn);
+        silenceImg = iWantTo.findViewById(R.id.silence_btn);
+        chairImg = iWantTo.findViewById(R.id.chair_btn);
+        bedImg = iWantTo.findViewById(R.id.bed_btn);
+        turnImg = iWantTo.findViewById(R.id.turnAround_btn);
+        walkImg = iWantTo.findViewById(R.id.walk_btn);
+        visitImg = iWantTo.findViewById(R.id.visit_btn);
+        toiletImg = iWantTo.findViewById(R.id.toilet_btn);
+
         painReliefTxt = iWantTo.findViewById(R.id.painReliever_view);
         suctionTxt = iWantTo.findViewById(R.id.sucked_view);
         breathTxt = iWantTo.findViewById(R.id.breath_view2);
@@ -112,6 +129,49 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
             LargeFontSize();
         }
 
+        if (savedInstanceState != null) {
+
+            switch (activeIWant) {
+                case R.id.pain_btn:
+                    painReliefImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.sucked_btn:
+                    suctionImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.breath_btn2:
+                    breathImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.tv_btn:
+                    tvImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.lightOn_btn:
+                    lightImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.silence_btn:
+                    silenceImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.chair_btn:
+                    chairImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.toilet_btn:
+                    toiletImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.bed_btn:
+                    bedImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.turnAround_btn:
+                    turnImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.walk_btn:
+                    walkImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.visit_btn:
+                    visitImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                default:
+                    break;
+            }
+        }
         return iWantTo;
     }
 
@@ -120,6 +180,7 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
         for (ImageView btn : btnArray) {
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                activeIWant = view.getId();
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_blue);
             }

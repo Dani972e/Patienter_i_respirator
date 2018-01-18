@@ -27,6 +27,9 @@ public class IAmFragment extends Fragment implements View.OnClickListener {
 
     public TextView happyTxt, okayTxt, tiredTxt, frustatedTxt, scaredTxt, worriedTxt, boredTxt, breathTxt, thirstyTxt, hotTxt, coldTxt, soreTxt;
 
+    public ImageView happyImg, okayImg, tiredImg, frustatedImg, scaredImg, worriedImg, boredImg, breathImg, thirstyImg, hotImg, coldImg, soreImg;
+
+    public static int activeI;
 
     public IAmFragment() {
         // Required empty public constructor
@@ -83,6 +86,19 @@ public class IAmFragment extends Fragment implements View.OnClickListener {
 
         SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
 
+        happyImg = iAm.findViewById(R.id.happy_btn);
+        okayImg = iAm.findViewById(R.id.okay_btn);
+        tiredImg = iAm.findViewById(R.id.tired_btn);
+        frustatedImg = iAm.findViewById(R.id.frustrated_btn);
+        scaredImg = iAm.findViewById(R.id.scared_btn);
+        worriedImg = iAm.findViewById(R.id.worried_btn);
+        boredImg = iAm.findViewById(R.id.bored_btn);
+        breathImg = iAm.findViewById(R.id.breath_btn);
+        thirstyImg = iAm.findViewById(R.id.thirsty_btn);
+        coldImg = iAm.findViewById(R.id.cold_btn);
+        hotImg = iAm.findViewById(R.id.warm_btn);
+        soreImg = iAm.findViewById(R.id.sore_btn);
+
         happyTxt = iAm.findViewById(R.id.happy_view);
         okayTxt = iAm.findViewById(R.id.okay_view);
         tiredTxt = iAm.findViewById(R.id.tired_view);
@@ -112,10 +128,52 @@ public class IAmFragment extends Fragment implements View.OnClickListener {
             LargeFontSize();
         }
 
+        if (savedInstanceState != null) {
+
+            switch (activeI) {
+                case R.id.happy_btn:
+                    happyImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.okay_btn:
+                    okayImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.tired_btn:
+                    tiredImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.frustrated_btn:
+                    frustatedImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.scared_btn:
+                    scaredImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.worried_btn:
+                    worriedImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.bored_btn:
+                    boredImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.breath_btn:
+                    breathImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.thirsty_btn:
+                    thirstyImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.cold_btn:
+                    coldImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.sore_btn:
+                    soreImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                case R.id.warm_btn:
+                    hotImg.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                    break;
+                default:
+                    break;
+            }
+        }
         return iAm;
 
     }
-
 
     @Override
     public void onClick(View view) {
@@ -123,6 +181,7 @@ public class IAmFragment extends Fragment implements View.OnClickListener {
         for (ImageView btn : btnArray) {
             if (btn.equals(view)) {
                 btn.setBackgroundResource(R.drawable.button_rounded_darkblue);
+                activeI = view.getId();
             } else {
                 btn.setBackgroundResource(R.drawable.button_rounded_blue);
             }
