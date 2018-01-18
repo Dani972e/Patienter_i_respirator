@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import com.respirator.i.patienter.patienter_i_respirator.R;
 import com.respirator.i.patienter.patienter_i_respirator.call.CallActivity;
-import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
 import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.IAmFragment;
 import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.IWantToFragment;
 import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.MyAnswerFragment;
 import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.PainFragment;
 import com.respirator.i.patienter.patienter_i_respirator.communication.fragments.WsQuestionsFragment;
+import com.respirator.i.patienter.patienter_i_respirator.main.MainActivity;
 
 import java.util.Locale;
 
@@ -36,59 +36,58 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextView comm_view, callTxt, painTxt, wsQuestionTxt, iWantToTxt, iTxt, answerTxt, homeTxt, keyboardTxt;
 
-    protected void onRestart()
-    {
+    protected void onRestart() {
         super.onRestart();
         recreate();
     }
 
     public void LoadLocale() {
-        SharedPreferences langPref = getApplication().getSharedPreferences("langPref",0);
+        SharedPreferences langPref = getApplication().getSharedPreferences("langPref", 0);
 
-        lang = langPref.getString("langPref",lang);
+        lang = langPref.getString("langPref", lang);
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
 
         Configuration config = new Configuration();
         config.setLocale(locale);
 
-        getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
     private void SmallFontSize() {
-        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
-        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
-        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
-        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,15);
+        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
     }
 
     private void MediumFontSize() {
-        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,40);
-        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
-        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
-        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 40);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 50);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
+        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
     }
 
     private void LargeFontSize() {
-        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP,50);
-        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,60);
-        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,23);
-        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,22);
-        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
-        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
-        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
-        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
-        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+        comm_view.setTextSize(TypedValue.COMPLEX_UNIT_SP, 50);
+        callTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 60);
+        painTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        wsQuestionTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22);
+        iWantToTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        iTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        answerTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        homeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        keyboardTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
     }
 
     public void CreateView() {
@@ -122,7 +121,7 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
 
         CreateView();
 
-        SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref", 0);
 
         if (savedInstanceState != null) {
             if (getFragmentManager().findFragmentById(R.id.commFragmentContainer) != null) {
@@ -135,13 +134,11 @@ public class CommActivity extends AppCompatActivity implements View.OnClickListe
             btnArray[i].setOnClickListener(this);
 
         }
-        if (fontsizePref.getInt("fontsizePref",fontsize) == 0) {
+        if (fontsizePref.getInt("fontsizePref", fontsize) == 0) {
             SmallFontSize();
-        }
-        else if (fontsizePref.getInt("fontsizePref",fontsize) == 1) {
+        } else if (fontsizePref.getInt("fontsizePref", fontsize) == 1) {
             MediumFontSize();
-        }
-        else if (fontsizePref.getInt("fontsizePref",fontsize) == 2) {
+        } else if (fontsizePref.getInt("fontsizePref", fontsize) == 2) {
             LargeFontSize();
         }
     }

@@ -275,6 +275,4 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
     }
 
 
-
-
 }
