@@ -32,6 +32,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private final int[] btnId = {R.id.balloon_btn, R.id.memoryGame_btn, R.id.ticTacToe_btn, R.id.quiz_btn};
     public ImageView call_btn, home_btn;
     public TextView gameText_view, game_view, ticTacTxt, quizTxt, balloonTxt, memoryTxt, callTxt, homeTxt;
+    public static int activeFrag;
 
     protected void onRestart()
     {
@@ -114,6 +115,29 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         CreateView();
 
+        if (savedInstanceState != null) {
+            if (getFragmentManager().findFragmentById(R.id.gameFragmentContainer) != null) {
+                game_view.setVisibility(View.INVISIBLE);
+
+                switch (activeFrag) {
+                    case 0:
+                        gameText_view.setText(R.string.førsteTur);
+                        break;
+                    case 1:
+                        gameText_view.setText(R.string.Quiz);
+                        break;
+                    case 2:
+                        gameText_view.setText(R.string.huskespil);
+                        break;
+                    case 3:
+                        gameText_view.setText(R.string.popBallonerView);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
         for (int i = 0; i < btnId.length; i++) {
             btnArray[i] = findViewById(btnId[i]);
             btnArray[i].setOnClickListener(this);
@@ -141,23 +165,26 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-
         switch (view.getId()) {
-            case R.id.quiz_btn:
-                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new QuizFragment()).commit();
-                gameText_view.setText(R.string.Quiz);
-                break;
             case R.id.ticTacToe_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new TicTacToeGameFragment()).commit();
                 gameText_view.setText(R.string.førsteTur);
+                activeFrag = 0;
+                break;
+            case R.id.quiz_btn:
+                getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new QuizFragment()).commit();
+                gameText_view.setText(R.string.Quiz);
+                activeFrag = 1;
                 break;
             case R.id.memoryGame_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new MemoryGameFragment()).commit();
                 gameText_view.setText(R.string.huskespil);
+                activeFrag = 2;
                 break;
             case R.id.balloon_btn:
                 getFragmentManager().beginTransaction().replace(R.id.gameFragmentContainer, new PopBalloonGameFragment()).commit();
                 gameText_view.setText(R.string.popBallonerView);
+                activeFrag = 3;
                 break;
             case R.id.call_btn:
                 Intent call_act = new Intent(this, CallActivity.class);
