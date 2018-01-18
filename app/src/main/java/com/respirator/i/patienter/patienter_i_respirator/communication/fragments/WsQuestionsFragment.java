@@ -61,18 +61,18 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
     }
 
     private void LargeFontSize() {
-        timeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        doingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        saidTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        wrongTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        happensTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        whyTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        drinkTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        hallTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        checkedTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        whereTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        longTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-        stuffTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+        timeTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        doingTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        saidTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        wrongTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        happensTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        whyTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        drinkTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        hallTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        checkedTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        whereTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        longTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
+        stuffTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 23);
     }
 
     @Override

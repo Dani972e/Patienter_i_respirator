@@ -25,10 +25,16 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     private QuizQuestions sp = new QuizQuestions();
     private String rigtigesvar;
-    private int spørgsmålnr = 0;
+    private static int spørgsmålnr;
 
     public QuizFragment() {
         // Required empty public constructor
+    }
+
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("spørgsmålnr", spørgsmålnr);
     }
 
     @Override
@@ -46,7 +52,11 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         spørgsmål = quiz.findViewById(R.id.spørgsmål);
         info = quiz.findViewById(R.id.quizInfo);
 
-        opdaterSpørgsmål();
+        if (savedInstanceState == null) {
+            opdaterSpørgsmål();
+        }
+
+
 
         svar1.setOnClickListener(new View.OnClickListener() {
             @Override

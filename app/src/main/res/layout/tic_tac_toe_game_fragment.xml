@@ -16,10 +16,11 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="14dp"
             android:freezesText="true"
-            android:text="@string/patient"
+            android:text="@string/patientenVinder"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/nurse_view"
@@ -28,7 +29,7 @@
             android:layout_alignStart="@+id/patient_view"
             android:layout_below="@+id/patient_view"
             android:freezesText="true"
-            android:text="@string/sygeplejerske"
+            android:text="@string/sygeplejerskenVinder"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
