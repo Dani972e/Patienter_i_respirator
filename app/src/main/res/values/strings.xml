@@ -20,6 +20,8 @@
     <string name="kaldSygeplejerske">Kald på en sygeplejerske</string>
 
     // Game
+    <string name="spilIgen">Tryk i venstre side for at spille igen</string>
+    <string name="GætToEns">Gæt to éns for at få et par!</string>
     <string name="vælgEtSpil">Vælg et spil i venstre side</string>
     <string name="huskespil">Huskespil</string>
     <string name="krydsOgBolle">Kryds og bolle</string>

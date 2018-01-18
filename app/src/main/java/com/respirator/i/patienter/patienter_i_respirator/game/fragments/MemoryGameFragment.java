@@ -24,7 +24,7 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
 
 
     private ImageView ImageView1, ImageView2, ImageView3, ImageView4, ImageView5, ImageView6;
-    private TextView gameText_view;
+    private TextView gameText_view, GætToEns;
 
     //array til billeder
     private Integer[] billedeArray = {101, 102, 103, 201, 202, 203};
@@ -48,6 +48,7 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
         View memory = inflater.inflate(R.layout.memory_game_fragment, container, false);
 
         gameText_view = getActivity().findViewById(R.id.gameText_view);
+        GætToEns = memory.findViewById(R.id.GætToEns);
 
         ImageView1 = memory.findViewById(R.id.ImageView1);
         ImageView2 = memory.findViewById(R.id.ImageView2);
@@ -245,7 +246,6 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
 
         spilVundet();
 
-
     }
 
 
@@ -269,8 +269,9 @@ public class MemoryGameFragment extends Fragment //implements View.OnClickListen
                 ImageView5.getVisibility() == View.INVISIBLE &&
                 ImageView6.getVisibility() == View.INVISIBLE) {
 
-            gameText_view.setText(R.string.spilVundet);
 
+            gameText_view.setText(R.string.spilVundet);
+            GætToEns.setText(R.string.spilIgen);
         }
     }
 
