@@ -42,9 +42,6 @@
     <string name="quizTitel_1">Gæt på det rigtige svar!</string>
     <string name="guessTrue">Du gættede rigtigt!</string>
     <string name="guessWrong">Forkert gæt! Prøv igen</string>
-    <string name="sygeplejeskeScore">Sygeplejeske: </string>
-    <string name="patientScore">Patient: </string>
-    <string name="quiz">quiz</string>
 
     // Communication
     <string name="CategoryView">Vælg en kategori i venstre side</string>

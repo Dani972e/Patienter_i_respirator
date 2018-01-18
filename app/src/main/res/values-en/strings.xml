@@ -26,8 +26,6 @@
     <string name="quizTitel_1">Guess the correct answer!</string>
     <string name="guessTrue">You guess correct!</string>
     <string name="guessWrong">Wrong answer! Try again</string>
-    <string name="sygeplejeskeScore">Nurse: </string>
-    <string name="patientScore">Patient: </string>
 
     // Call
     <string name="kald">Call</string>
