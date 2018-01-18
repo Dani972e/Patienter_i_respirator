@@ -177,15 +177,5 @@ public class TicTacToeGameFragment extends Fragment implements View.OnClickListe
 
     }
 
-    /*
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        roundCount = savedInstanceState.getInt("roundCount");
-        patientPoint = savedInstanceState.getInt("patientPoint");
-        nursePoint = savedInstanceState.getInt("nursePoint");
-        patientTurn = savedInstanceState.getBoolean("patientTurn");
 
-   }
-    */
 }

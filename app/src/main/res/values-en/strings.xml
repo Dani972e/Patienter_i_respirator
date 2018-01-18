@@ -14,6 +14,7 @@
     <string name="poppetBalloner">You have popped all the balloons!</string>
     <string name="sygeplejerske">Nurse: </string>
     <string name="patient">Patient: 0</string>
+    <string name="sygeplejersken">Nurse: 0</string>
     <string name="nulstil">Reset Game</string>
     <string name="spilVundet">Congratulations you won!</string>
     <string name="kryds">X</string>
