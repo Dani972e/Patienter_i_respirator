@@ -47,7 +47,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         Nulstil.setOnClickListener(this);
 
         spørgsmål = quiz.findViewById(R.id.spørgsmål);
-        info = quiz.findViewById(R.id.quizInfo);
+
 
         opdaterSpørgsmål();
 
@@ -114,7 +114,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     public void opdaterSpørgsmål() {
         Nulstil.setVisibility(View.GONE);
-        info.setText(R.string.quizTitel_1);
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
         svar2.setText(sp.getsvar2(spørgsmålnr));
