@@ -20,7 +20,7 @@ import com.respirator.i.patienter.patienter_i_respirator.game.quizQuestions.Quiz
  */
 public class QuizFragment extends Fragment implements View.OnClickListener {
 
-    private Button svar1, svar2, svar3, svar4;
+    private Button svar1, svar2, svar3, svar4, Nulstil;
     private TextView spørgsmål, info;
 
     private QuizQuestions sp = new QuizQuestions();
@@ -42,6 +42,9 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar3 = quiz.findViewById(R.id.svar3);
 
         svar4 = quiz.findViewById(R.id.svar4);
+
+        Nulstil = quiz.findViewById(R.id.ResetQuiz);
+        Nulstil.setOnClickListener(this);
 
         spørgsmål = quiz.findViewById(R.id.spørgsmål);
         info = quiz.findViewById(R.id.quizInfo);
@@ -94,11 +97,23 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        if (view == Nulstil)
+            spørgsmålnr = 0;
+            Nulstil.setVisibility(View.GONE);
+        svar1.setVisibility(View.VISIBLE);
+        svar2.setVisibility(View.VISIBLE);
+        svar3.setVisibility(View.VISIBLE);
+        svar4.setVisibility(View.VISIBLE);
+        spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
+
+
+
 
 
     }
 
     public void opdaterSpørgsmål() {
+        Nulstil.setVisibility(View.GONE);
         info.setText(R.string.quizTitel_1);
         spørgsmål.setText(sp.getminespørgsmål(spørgsmålnr));
         svar1.setText(sp.getsvar1(spørgsmålnr));
@@ -108,6 +123,7 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         rigtigesvar = sp.getkorrektsvar(spørgsmålnr);
         spørgsmålnr++;
         if (spørgsmålnr > 7){
+            Nulstil.setVisibility(View.VISIBLE);
             svar1.setVisibility(View.GONE);
             svar2.setVisibility(View.GONE);
             svar3.setVisibility(View.GONE);
@@ -123,5 +139,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         svar2.setVisibility(View.GONE);
         svar3.setVisibility(View.GONE);
         svar4.setVisibility(View.GONE);
+        Nulstil.setVisibility(View.VISIBLE);
     }
 }
