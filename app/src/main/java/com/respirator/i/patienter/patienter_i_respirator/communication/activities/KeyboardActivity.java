@@ -31,7 +31,7 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
 
     public ImageView back_btn, home_btn, call_btn;
 
-    public EditText keyboard, swag;
+    public EditText keyboard;
 
     protected void onRestart()
     {
@@ -83,7 +83,6 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
         back_btn = findViewById(R.id.back_btn);
         home_btn = findViewById(R.id.home_btn);
         call_btn = findViewById(R.id.call_btn);
-        swag = findViewById(R.id.swag);
         back_btn.setOnClickListener(this);
         home_btn.setOnClickListener(this);
         call_btn.setOnClickListener(this);
