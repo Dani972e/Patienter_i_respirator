@@ -15,6 +15,7 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
+android.defaultConfig.vectorDrawables.useSupportLibrary = true
 
 android {
     compileSdkVersion 26

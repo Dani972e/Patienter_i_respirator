@@ -86,7 +86,7 @@ public class IWantToFragment extends Fragment implements View.OnClickListener {
 
         View iWantTo = inflater.inflate(R.layout.i_want_to_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         painReliefImg = iWantTo.findViewById(R.id.pain_btn);
         suctionImg = iWantTo.findViewById(R.id.sucked_btn);

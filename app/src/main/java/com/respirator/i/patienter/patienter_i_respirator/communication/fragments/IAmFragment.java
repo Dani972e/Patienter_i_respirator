@@ -84,7 +84,7 @@ public class IAmFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View iAm = inflater.inflate(R.layout.i_am_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         happyImg = iAm.findViewById(R.id.happy_btn);
         okayImg = iAm.findViewById(R.id.okay_btn);

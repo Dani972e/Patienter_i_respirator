@@ -59,7 +59,7 @@ public class MyAnswerFragment extends Fragment implements View.OnClickListener {
 
         View myAnswers = inflater.inflate(R.layout.my_answer_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         thanksImg = myAnswers.findViewById(R.id.thanks_btn);
         dkImg = myAnswers.findViewById(R.id.iDontKnow_btn);

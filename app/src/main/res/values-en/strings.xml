@@ -90,7 +90,7 @@
     <string name="skrivpåtastaturet">Dear patient, use the keyboard to write a message for the nurse</string>
     <string name="Jagende">Stabbing</string>
     <string name="Stikkende">Stinging</string>
-    <string name="keyboardText">Write to the nurse here</string>
+    <string name="keyboardText">Click here to write to the nurse</string>
 
 
     // Settings

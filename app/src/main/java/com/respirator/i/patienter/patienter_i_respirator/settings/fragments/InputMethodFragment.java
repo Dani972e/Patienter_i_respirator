@@ -3,6 +3,7 @@ package com.respirator.i.patienter.patienter_i_respirator.settings.fragments;
 
 import android.app.Fragment;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -57,7 +58,7 @@ public class InputMethodFragment extends Fragment {
 
         View input = inflater.inflate(R.layout.input_method_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         inputTxt = input.findViewById(R.id.inputMethod_view);
         inputG = input.findViewById(R.id.inputG);
@@ -84,7 +85,7 @@ public class InputMethodFragment extends Fragment {
                     case 1:
                         touch.setChecked(true);
                         headTouch.setChecked(false);
-                        Toast.makeText(getContext(),R.string.inputToast,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),R.string.inputToast,Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         break;

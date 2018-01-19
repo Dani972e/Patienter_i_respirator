@@ -81,7 +81,7 @@ public class PainFragment extends Fragment implements View.OnClickListener {
 
         View pain = inflater.inflate(R.layout.pain_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
 
         burnImg = pain.findViewById(R.id.burningImg);

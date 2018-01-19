@@ -33,7 +33,7 @@ public class FontsizeFragment extends Fragment {
     }
 
     public void Refresh() {
-        Intent refresh = new Intent(getContext(), SettingsActivity.class);
+        Intent refresh = new Intent(getActivity(), SettingsActivity.class);
         SettingsActivity.fontsizeReload = true;
         startActivity(refresh);
     }
@@ -55,7 +55,7 @@ public class FontsizeFragment extends Fragment {
 
         final View fontsizeFrag = inflater.inflate(R.layout.fontsize_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
         final SharedPreferences.Editor editor = fontsizePref.edit();
 
         fontsizeTxt = fontsizeFrag.findViewById(R.id.fontsize_view);

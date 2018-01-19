@@ -50,17 +50,17 @@ public class ResetFragment extends Fragment implements View.OnClickListener {
     }
 
     public void ShowToast() {
-        Toast.makeText(getContext(),R.string.resetToast,Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),R.string.resetToast,Toast.LENGTH_LONG).show();
     }
 
     public void Refresh() {
-        Intent refresh = new Intent(getContext(), SettingsActivity.class);
+        Intent refresh = new Intent(getActivity(), SettingsActivity.class);
         SettingsActivity.resetReload = true;
         startActivity(refresh);
     }
 
     public void LoadLocale() {
-        SharedPreferences langPref = getContext().getSharedPreferences("langPref",0);
+        SharedPreferences langPref = getActivity().getSharedPreferences("langPref",0);
 
         lang = langPref.getString("langPref",lang);
         Locale locale = new Locale(lang);
@@ -76,7 +76,7 @@ public class ResetFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
        View reset = inflater.inflate(R.layout.reset_fragment, container, false);
 
-       SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+       SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
        resetTxt = reset.findViewById(R.id.reset_text);
        resetBtn = reset.findViewById(R.id.reset_btn);
@@ -98,17 +98,17 @@ public class ResetFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view == resetBtn) {
-            AlertDialog.Builder reset = new AlertDialog.Builder(getContext());
+            AlertDialog.Builder reset = new AlertDialog.Builder(getActivity());
             reset.setTitle(R.string.resetTitle);
             reset.setMessage(R.string.resetMsg);
             reset.setPositiveButton(R.string.resetBtn,new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+                    SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
                     final SharedPreferences.Editor editor1 = fontsizePref.edit();
-                    SharedPreferences soundSettings = getContext().getSharedPreferences("soundChoice", 0);
+                    SharedPreferences soundSettings = getActivity().getSharedPreferences("soundChoice", 0);
                     final SharedPreferences.Editor editor2 = soundSettings.edit();
-                    SharedPreferences langPref = getContext().getSharedPreferences("langPref",0);
+                    SharedPreferences langPref = getActivity().getSharedPreferences("langPref",0);
                     final SharedPreferences.Editor editor3 = langPref.edit();
 
                     lang = "";

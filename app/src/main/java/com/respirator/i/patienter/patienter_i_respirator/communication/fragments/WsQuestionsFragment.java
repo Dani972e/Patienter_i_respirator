@@ -84,7 +84,7 @@ public class WsQuestionsFragment extends Fragment implements View.OnClickListene
 
         View ws = inflater.inflate(R.layout.ws_questions_fragment, container, false);
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         timeImg = ws.findViewById(R.id.time_btn);
         doingImg = ws.findViewById(R.id.doing_btn);
