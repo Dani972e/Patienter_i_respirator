@@ -99,7 +99,7 @@
     <string name="Dunkende">Dunkende</string>
     <string name="Trykkende">Trykkende</string>
     <string name="Gendan">Ændre indstillinger</string>
-    <string name="keyboardText">Skriv til sygeplejesken her</string>
+    <string name="keyboardText">Klik her for at skrive til sygeplejesken</string>
 
     // Settings
     <string name="hovedstyring">Hovedstyring og touch</string>

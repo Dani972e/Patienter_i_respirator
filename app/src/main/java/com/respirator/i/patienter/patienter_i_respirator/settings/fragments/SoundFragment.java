@@ -68,10 +68,10 @@ public class SoundFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View sound = inflater.inflate(R.layout.sound_fragment, container, false);
 
-        SharedPreferences soundSettings = getContext().getSharedPreferences("soundChoice", 0);
+        SharedPreferences soundSettings = getActivity().getSharedPreferences("soundChoice", 0);
         final SharedPreferences.Editor editor = soundSettings.edit();
 
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         volumeTxt = sound.findViewById(R.id.volume_view);
         callTxt = sound.findViewById(R.id.callsound_view);
@@ -85,8 +85,8 @@ public class SoundFragment extends Fragment implements View.OnClickListener {
 
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
-        final MediaPlayer help_sound = MediaPlayer.create(getContext(), R.raw.sound1);
-        final MediaPlayer help_sound2 = MediaPlayer.create(getContext(), R.raw.sound2);
+        final MediaPlayer help_sound = MediaPlayer.create(getActivity(), R.raw.sound1);
+        final MediaPlayer help_sound2 = MediaPlayer.create(getActivity(), R.raw.sound2);
 
         if (soundSettings.getBoolean("1",true)) {
             sound1_btn.setChecked(true);

@@ -1,6 +1,8 @@
 package com.respirator.i.patienter.patienter_i_respirator.communication.activities;
 
+import android.app.Application;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -8,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -83,7 +86,6 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
         back_btn.setOnClickListener(this);
         home_btn.setOnClickListener(this);
         call_btn.setOnClickListener(this);
-        keyboard.setOnClickListener(this);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,9 +96,6 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
         }
 
         CreateView();
-
-        InputMethodManager imm = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(keyboard, 0);
 
         SharedPreferences fontsizePref = getApplication().getSharedPreferences("fontsizePref",0);
 
@@ -125,6 +124,11 @@ public class KeyboardActivity extends AppCompatActivity implements View.OnClickL
             case R.id.call_btn:
                 Intent callActivity = new Intent(this, CallActivity.class);
                 startActivity(callActivity);
+            case R.id.keyboard:
+                InputMethodManager imm = (InputMethodManager) getApplication().getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.showSoftInput(keyboard, InputMethodManager.SHOW_IMPLICIT);
+                break;
+            default:
                 break;
         }
     }

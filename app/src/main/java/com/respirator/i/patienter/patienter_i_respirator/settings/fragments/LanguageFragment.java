@@ -58,7 +58,7 @@ public class LanguageFragment extends Fragment {
     }
 
     public void Refresh() {
-        Intent refresh = new Intent(getContext(), SettingsActivity.class);
+        Intent refresh = new Intent(getActivity(), SettingsActivity.class);
         SettingsActivity.langReload = true;
         startActivity(refresh);
     }
@@ -79,8 +79,8 @@ public class LanguageFragment extends Fragment {
 
         final View language = inflater.inflate(R.layout.language_fragment, container, false);
 
-        SharedPreferences langPref = getContext().getSharedPreferences("langPref",0);
-        SharedPreferences fontsizePref = getContext().getSharedPreferences("fontsizePref",0);
+        SharedPreferences langPref = getActivity().getSharedPreferences("langPref",0);
+        SharedPreferences fontsizePref = getActivity().getSharedPreferences("fontsizePref",0);
 
         final SharedPreferences.Editor editor = langPref.edit();
 
